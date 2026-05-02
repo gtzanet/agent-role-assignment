@@ -1,0 +1,32 @@
+{
+  "scenario": "one_agent_per_task",
+  "sim_config": "experiments/exp_wf02/evaluation_one_agent_per_task_config.yaml",
+  "train_episodes": 100,
+  "train_iterations": 500,
+  "training_csv": "experiments/exp_wf02/training_one_agent_per_task_episodes.csv",
+  "iterations": 500,
+  "eval_interval": 10.0,
+  "n_steps": 9,
+  "total_violations_across_steps": 51,
+  "mean_step_total_violations": 5.666666666666667,
+  "training_mean_episode_total_violations": 40.82,
+  "agents": [
+    "agent0",
+    "agent1",
+    "agent2",
+    "agent3",
+    "agent4",
+    "agent5"
+  ],
+  "service_agent_mapping": {
+    "s0": "agent0",
+    "s1": "agent1",
+    "s2": "agent2",
+    "s3": "agent3",
+    "s4": "agent4",
+    "s5": "agent5"
+  },
+  "node0_avg_cpu_usage_pct_mean": 84.82323232323232,
+  "node1_avg_cpu_usage_pct_mean": 53.03030303030303,
+  "node2_avg_cpu_usage_pct_mean": 25.984848484848484
+}

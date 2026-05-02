@@ -1,0 +1,28 @@
+{
+  "scenario": "one_agent_per_workflow",
+  "sim_config": "experiments/exp_wf02/evaluation_one_agent_per_workflow_config.yaml",
+  "train_episodes": 100,
+  "train_iterations": 500,
+  "training_csv": "experiments/exp_wf02/training_one_agent_per_workflow_episodes.csv",
+  "iterations": 500,
+  "eval_interval": 10.0,
+  "n_steps": 9,
+  "total_violations_across_steps": 48,
+  "mean_step_total_violations": 5.333333333333333,
+  "training_mean_episode_total_violations": 36.19,
+  "agents": [
+    "agent0",
+    "agent1"
+  ],
+  "service_agent_mapping": {
+    "s0": "agent0",
+    "s1": "agent0",
+    "s2": "agent0",
+    "s3": "agent1",
+    "s4": "agent1",
+    "s5": "agent1"
+  },
+  "node0_avg_cpu_usage_pct_mean": 87.67676767676768,
+  "node1_avg_cpu_usage_pct_mean": 53.38383838383838,
+  "node2_avg_cpu_usage_pct_mean": 26.28787878787879
+}

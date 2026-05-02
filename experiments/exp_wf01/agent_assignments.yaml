@@ -1,0 +1,7 @@
+control:
+  agent_controls_replicas: true
+  agent_controls_placement: false
+  agent_control_assignments:
+    s0.scaling: agent0
+    s1.scaling: agent0
+    s2.scaling: agent1

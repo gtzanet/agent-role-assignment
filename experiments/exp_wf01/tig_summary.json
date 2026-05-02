@@ -1,0 +1,35 @@
+{
+  "dataset": "/Users/gtzanettis/Documents/Projects/agent-task-distribution/data/wf01/dataset.csv",
+  "causal_threshold": 0.1,
+  "delta_mode": "interventional",
+  "delta_bins": 5,
+  "delta_max_parents": 3,
+  "tasks": [
+    "s0_avg_threads",
+    "s1_avg_threads",
+    "s2_avg_threads"
+  ],
+  "kpis": [
+    "wf0_avg_e2e_latency",
+    "wf0_violation_rate",
+    "node0_cpu_usage_pct",
+    "node1_cpu_usage_pct",
+    "node2_cpu_usage_pct"
+  ],
+  "task_action_space": [
+    4.0,
+    4.0,
+    4.0
+  ],
+  "c_max": 100.0,
+  "rho": 0.1,
+  "n_tig_edges": 1,
+  "timing": {
+    "prepare_s": 1.3867439579999998,
+    "query_s": 26.011283333999998,
+    "total_s": 27.400418958,
+    "candidate_pairs": 15,
+    "reachable_pairs": 15,
+    "skipped_unreachable": 0
+  }
+}

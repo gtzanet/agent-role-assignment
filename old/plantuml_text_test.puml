@@ -1,0 +1,18 @@
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Arial
+skinparam defaultFontSize 24
+skinparam defaultFontColor #000000
+skinparam sequenceArrowColor #000000
+skinparam ParticipantFontColor #000000
+skinparam ActorFontColor #000000
+
+title TEXT VISIBILITY TEST
+
+actor User
+participant System
+
+User -> System: Hello text should be visible
+System --> User: Response text should be visible
+
+@enduml

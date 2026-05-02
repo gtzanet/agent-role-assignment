@@ -1,0 +1,41 @@
+causal_graph:
+  node_types:
+    s0_avg_latency: intermediary
+    s0_arrival_rate: intermediary
+    s0_departure_rate: intermediary
+    s0_avg_throughput: intermediary
+    s0_avg_queue_size: intermediary
+    s0_avg_threads: input
+    s1_avg_latency: intermediary
+    s1_arrival_rate: intermediary
+    s1_departure_rate: intermediary
+    s1_avg_throughput: intermediary
+    s1_avg_queue_size: intermediary
+    s1_avg_threads: input
+    s2_avg_latency: intermediary
+    s2_arrival_rate: intermediary
+    s2_departure_rate: intermediary
+    s2_avg_throughput: intermediary
+    s2_avg_queue_size: intermediary
+    s2_avg_threads: input
+    s3_avg_latency: intermediary
+    s3_arrival_rate: intermediary
+    s3_departure_rate: intermediary
+    s3_avg_throughput: intermediary
+    s3_avg_queue_size: intermediary
+    s3_avg_threads: input
+    wf0_avg_e2e_latency: kpi
+    wf0_violation_rate: kpi
+    wf1_avg_e2e_latency: kpi
+    wf1_violation_rate: kpi
+    node0_avg_cpu_threads: intermediary
+    node0_cpu_usage_pct: kpi
+    node1_avg_cpu_threads: intermediary
+    node1_cpu_usage_pct: kpi
+    node2_avg_cpu_threads: intermediary
+    node2_cpu_usage_pct: kpi
+  decision_space_sizes:
+    s0_avg_threads: 4
+    s1_avg_threads: 4
+    s2_avg_threads: 4
+    s3_avg_threads: 4

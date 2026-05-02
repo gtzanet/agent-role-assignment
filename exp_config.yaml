@@ -1,0 +1,64 @@
+# Controlled experiment configuration for run_experiment.py
+# Run with: python run_experiment.py --exp-config exp_config.yaml
+#
+# IMPORTANT FOR HOMOGENEOUS EXPERIMENTS
+# - run_experiment.py allows only the exact top-level keys below.
+# - Keep this file identical across runs, changing only one factor at a time.
+# - Freeze randomness with a fixed seed.
+# - dataset_dir should point to a generated dataset directory containing:
+#   dataset_config.yaml, sim_config.yaml, and the dataset CSV.
+
+# Output root for timestamped experiment folders.
+experiments_dir: experiments
+
+# Optional explicit output folder name. Use null for auto timestamp.
+experiment_id: null
+
+# Pipeline stage upper bound for this runner: 2, 3, 4, or 5.
+step: 5
+
+# Required input dataset directory (relative to repository root or absolute).
+# run_experiment.py strictly loads both dataset CSV and sim_config.yaml from here.
+dataset_dir: data/20260413_143523
+
+# Workflow metadata mapping for column -> node type/decision space.
+workflow_config: workflow_causal_graph.yaml
+
+# Episode iterations override used in Step 5 evaluation/training.
+# Set explicitly for reproducibility (avoid implicit fallback).
+iterations: 500
+
+# Fixed RNG seed for reproducible stochastic draws.
+seed: 42
+
+# Step 2: causal discovery settings.
+causal_threshold: 0.1
+causal_algorithm: correlation
+
+# Step 3: TIG and delta settings.
+delta_mode: interventional
+delta_bins: 5
+delta_max_parents: 3
+delta_max_workers: null
+replica_action_space: 10
+thread_action_space: 4
+c_max: 100.0
+rho: 0.1
+
+# Step 4: partition settings.
+partition_algorithm: greedy_modularity
+n_agents: 2
+
+# Optional KPI weights for TIG pull vectors, example: "1.0,0.5,2.0"
+omega: null
+
+# Step 5 training settings. Set explicitly for controlled comparisons.
+step5_train_episodes: 100
+step5_train_iterations: 500
+
+# ONE-FACTOR-AT-A-TIME PROTOCOL (comments only, not parsed as keys)
+# 1) To vary number of workflows: edit workflow_simulator/config.yaml topology.workflows only.
+# 2) To vary number of nodes: edit workflow_simulator/config.yaml infrastructure.n_nodes only.
+# 3) To vary node CPU capacity: edit workflow_simulator/config.yaml infrastructure.cpu_max only.
+# 4) To vary workflow depth/shape: edit workflow edges only.
+# 5) Keep seed, iterations, training episodes, causal/tig/partition settings fixed.

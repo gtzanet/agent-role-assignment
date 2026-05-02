@@ -1,0 +1,28 @@
+@startuml
+title Simple Experiment Sequence
+
+actor User
+participant Pipeline
+participant Simulator
+participant CausalDiscovery
+participant TIG
+participant Partitioner
+participant Evaluator
+
+User -> Pipeline: Start experiment with config
+Pipeline -> Simulator: Collect dataset
+Simulator --> Pipeline: Dataset CSV
+
+Pipeline -> CausalDiscovery: Build causal graph from dataset
+CausalDiscovery --> Pipeline: Causal graph
+
+Pipeline -> TIG: Compute task interaction graph
+TIG --> Pipeline: Weighted TIG
+
+Pipeline -> Partitioner: Partition TIG into communities
+Partitioner --> Pipeline: Communities
+
+Pipeline -> Evaluator: Configure and run evaluation
+Evaluator --> User: Evaluation metrics
+
+@enduml

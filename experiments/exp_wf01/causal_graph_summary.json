@@ -1,0 +1,46 @@
+{
+  "dataset": "/Users/gtzanettis/Documents/Projects/agent-task-distribution/data/wf01/dataset.csv",
+  "threshold": 0.1,
+  "n_nodes": 26,
+  "n_edges": 245,
+  "inputs": [
+    "s0_avg_threads",
+    "s1_avg_threads",
+    "s2_avg_threads"
+  ],
+  "kpis": [
+    "node0_cpu_usage_pct",
+    "node1_cpu_usage_pct",
+    "node2_cpu_usage_pct",
+    "wf0_avg_e2e_latency",
+    "wf0_violation_rate"
+  ],
+  "nodes": [
+    "node0_avg_cpu_threads",
+    "node0_cpu_usage_pct",
+    "node1_avg_cpu_threads",
+    "node1_cpu_usage_pct",
+    "node2_avg_cpu_threads",
+    "node2_cpu_usage_pct",
+    "s0_arrival_rate",
+    "s0_avg_latency",
+    "s0_avg_queue_size",
+    "s0_avg_threads",
+    "s0_avg_throughput",
+    "s0_departure_rate",
+    "s1_arrival_rate",
+    "s1_avg_latency",
+    "s1_avg_queue_size",
+    "s1_avg_threads",
+    "s1_avg_throughput",
+    "s1_departure_rate",
+    "s2_arrival_rate",
+    "s2_avg_latency",
+    "s2_avg_queue_size",
+    "s2_avg_threads",
+    "s2_avg_throughput",
+    "s2_departure_rate",
+    "wf0_avg_e2e_latency",
+    "wf0_violation_rate"
+  ]
+}

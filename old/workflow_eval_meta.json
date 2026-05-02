@@ -1,0 +1,30 @@
+{
+  "tasks": [
+    "Service_0_Replicas",
+    "Service_1_Replicas",
+    "Service_2_Replicas",
+    "Service_3_Replicas"
+  ],
+  "kpis": [
+    "E2E_Latency_Workflow_0",
+    "Service_0_Node_CPU_Usage",
+    "Service_1_Node_CPU_Usage",
+    "E2E_Latency_Workflow_1",
+    "Service_2_Node_CPU_Usage",
+    "Service_3_Node_CPU_Usage"
+  ],
+  "causal_algorithm": "workflow_notears",
+  "tig_pull_metric": "cosine",
+  "tig_push_metric": "logistic",
+  "partition_algorithm": "spectral",
+  "partitions": {
+    "1": [
+      "Service_0_Replicas"
+    ],
+    "0": [
+      "Service_1_Replicas",
+      "Service_2_Replicas",
+      "Service_3_Replicas"
+    ]
+  }
+}

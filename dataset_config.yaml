@@ -1,0 +1,39 @@
+# Full configuration for generate_dataset.py
+# Run with: python generate_dataset.py
+
+# Simulator config path relative to repository root (main dir) (or absolute)
+config: sim_config.yaml
+
+# Workflow metadata config path relative to repository root (or absolute)
+workflow_config: workflow_causal_graph.yaml
+
+# Base output directory for datasets (each run gets its own subfolder)
+output_base_dir: data
+
+# Optional explicit dataset subfolder name. If null, current timestamp is used.
+dataset_id: null
+
+# CSV filename created inside the dataset folder
+dataset_filename: dataset.csv
+
+# Optional override for simulation iterations per sample. If null, uses simulation.iterations from config.
+iterations: null
+
+# Data collection/convergence
+min_samples: 10
+max_samples: 200
+convergence_threshold: 0.05
+convergence_window: 80
+
+# Thread perturbation settings during collection
+perturb_threads: true
+perturb_prob: 0.5
+thread_min: 1
+thread_max: 4
+
+# Optional random seed override. If null, uses simulation.seed from config.
+seed: null
+
+# Causal graph convergence checker settings
+causal_threshold: 0.0
+causal_algorithm: correlation # one of: notears, correlation, lingam

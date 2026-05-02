@@ -1,0 +1,78 @@
+topology:
+  n_services: 18
+  workflows:
+  - id: 0
+    lam: &id001
+      0: 0.35
+      30: 0.55
+      100: 0.45
+      350: 0.85
+    root_service: 0
+    edges:
+    - - 0
+      - 1
+    - - 1
+      - 2
+  - id: 1
+    lam: *id001
+    root_service: 3
+    edges:
+    - - 3
+      - 4
+    - - 4
+      - 5
+  - id: 2
+    lam: *id001
+    root_service: 6
+    edges:
+    - - 6
+      - 7
+    - - 7
+      - 8
+  - id: 3
+    lam: *id001
+    root_service: 9
+    edges:
+    - - 9
+      - 10
+    - - 10
+      - 11
+  - id: 4
+    lam: *id001
+    root_service: 12
+    edges:
+    - - 12
+      - 13
+    - - 13
+      - 14
+  - id: 5
+    lam: *id001
+    root_service: 15
+    edges:
+    - - 15
+      - 16
+    - - 16
+      - 17
+infrastructure:
+  n_nodes: 3
+  cpu_max: 4
+  ram: 8
+  freq: 1000
+simulation:
+  iterations: 500
+  timeout: 600000
+  eval_interval: 10.0
+  seed: 42
+rl:
+  epsilon: 0.3
+  epsilon_min: 0.05
+  epsilon_decay: 0.992
+  alpha: 0.1
+  gamma: 0.9
+training:
+  n_episodes: 1000
+  eval_greedy_every: 10
+reward:
+  e2e_lat_target: 8.0
+  reward_cpu_weight: 0.5
+  reward_lat_viol_weight: 0.5

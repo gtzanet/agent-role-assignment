@@ -1,0 +1,25 @@
+{
+  "scenario": "selected",
+  "sim_config": "experiments/exp_wf01/evaluation_selected_config.yaml",
+  "train_episodes": 100,
+  "train_iterations": 500,
+  "training_csv": "experiments/exp_wf01/training_selected_episodes.csv",
+  "iterations": 500,
+  "eval_interval": 10.0,
+  "n_steps": 18,
+  "total_violations_across_steps": 34,
+  "mean_step_total_violations": 1.8888888888888888,
+  "training_mean_episode_total_violations": 33.33,
+  "agents": [
+    "agent0",
+    "agent1"
+  ],
+  "service_agent_mapping": {
+    "s0": "agent0",
+    "s1": "agent0",
+    "s2": "agent1"
+  },
+  "node0_avg_cpu_usage_pct_mean": 60.025252525252526,
+  "node1_avg_cpu_usage_pct_mean": 33.25757575757576,
+  "node2_avg_cpu_usage_pct_mean": 15.252525252525253
+}
