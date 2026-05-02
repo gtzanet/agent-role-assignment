@@ -20,6 +20,7 @@ n_agents: 2
 omega: null
 step5_train_episodes: 100
 step5_train_iterations: 500
+causal_analyzer_url: http://localhost:5050
 exp_config_source: /Users/gtzanettis/Documents/Projects/agent-task-distribution/exp_config_wf01_workers6.yaml
 dataset_csv: /Users/gtzanettis/Documents/Projects/agent-task-distribution/data/wf01/dataset.csv
 sim_config: /Users/gtzanettis/Documents/Projects/agent-task-distribution/data/wf01/sim_config.yaml

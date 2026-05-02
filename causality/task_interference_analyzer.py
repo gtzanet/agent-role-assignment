@@ -4,7 +4,7 @@ import json
 import os
 import sys
 import time
-from concurrent.futures import ProcessPoolExecutor, as_completed
+from concurrent.futures import ThreadPoolExecutor, as_completed
 import psutil
 from datetime import datetime
 from dataclasses import dataclass
@@ -18,7 +18,7 @@ import pandas as pd
 import yaml
 from sklearn.cluster import SpectralClustering
 
-from causality.causal_inference import CausalAnalyzer, _compute_effects_worker
+from causality.causal_inference import CausalAnalyzer, CausalAnalyzerWrapper
 from environment import CausalGraph, NodeType
 
 
@@ -146,10 +146,19 @@ class TaskInterferenceGraph:
 
 
 class TaskInterferenceAnalyzer:
-    def __init__(self, causal_graph: CausalGraph, variable_groups: dict[str, Iterable[str]]):
+    def __init__(
+        self,
+        causal_graph: CausalGraph,
+        variable_groups: dict[str, Iterable[str]],
+        causal_analyzer_url: str | None = None,
+    ):
         self.cg = causal_graph
         self.variable_groups = self._normalize_variable_groups(variable_groups)
-        self.causal_analyzer = CausalAnalyzer(causal_graph)
+        self.causal_analyzer = (
+            CausalAnalyzerWrapper(causal_graph, causal_analyzer_url)
+            if causal_analyzer_url is not None
+            else CausalAnalyzer(causal_graph)
+        )
         self.last_tig: TaskInterferenceGraph | None = None
         self._last_delta_timing: dict[str, float | int] = {}
 
@@ -311,46 +320,32 @@ class TaskInterferenceAnalyzer:
             key = (task, pair_component_idx[(task, kpi)])
             grouped_pairs.setdefault(key, []).append((i, j, kpi))
 
-        # Extract picklable args per group before entering the process pool.
-        # InferenceEngine is stateful and non-picklable; we pass only the BayesianNetwork
-        # so each worker constructs a fresh engine in its own process.
-        group_submit_args: dict[tuple[str, int | None], tuple] = {}
-        for (task, component_idx), entries in grouped_pairs.items():
-            kpi_nodes = [kpi for _, _, kpi in entries]
-            raw_ranges_group = {kpi: kpi_ranges[kpi] for kpi in kpi_nodes}
-            if component_idx is not None and component_idx in self.causal_analyzer.component_models:
-                component_nodes, bn, _ = self.causal_analyzer.component_models[component_idx]
-                cols = [c for c in component_nodes if c in self.causal_analyzer.data_df.columns]
-                data_records = self.causal_analyzer.data_df[cols].to_dict(orient="list")
-                reps = {k: v for k, v in self.causal_analyzer.representatives.items() if k in component_nodes}
-                group_submit_args[(task, component_idx)] = (
-                    task, kpi_nodes, raw_ranges_group, component_nodes, bn, data_records, reps, str(output_dir) if output_dir is not None else None
-                )
-
         t_query_start = time.perf_counter()
-        _mem_snapshot("before_process_pool")
+        _mem_snapshot("before_queries")
         n_workers = min(len(grouped_pairs), max_workers if max_workers is not None else (os.cpu_count() or 4))
-        with ProcessPoolExecutor(max_workers=n_workers) as executor:
-            futures = {}
-            for (task, component_idx), entries in grouped_pairs.items():
-                args = group_submit_args.get((task, component_idx))
-                if args is not None:
-                    futures[executor.submit(_compute_effects_worker, *args)] = entries
-                else:
-                    # No component model — fill zeros without spawning
-                    for i, j, _ in entries:
-                        delta[i, j] = 0.0
-                    progress.update(len(entries))
 
+        def _call_task_effects(item: tuple) -> tuple[list, dict[str, float]]:
+            (task, component_idx), entries = item
+            kpi_nodes_local = [kpi for _, _, kpi in entries]
+            raw_ranges_group = {kpi: kpi_ranges[kpi] for kpi in kpi_nodes_local}
+            if component_idx is not None and component_idx in self.causal_analyzer.component_models:
+                effects = self.causal_analyzer.interventional_effects_for_task(
+                    task, kpi_nodes_local, raw_ranges_group, component_idx=component_idx
+                )
+            else:
+                effects = {kpi: 0.0 for kpi in kpi_nodes_local}
+            return entries, effects
+
+        with ThreadPoolExecutor(max_workers=n_workers) as executor:
+            futures = {executor.submit(_call_task_effects, item): item for item in grouped_pairs.items()}
             for future in as_completed(futures):
-                entries = futures[future]
-                effects = future.result()
+                entries, effects = future.result()
                 for i, j, kpi in entries:
                     delta[i, j] = float(effects.get(kpi, 0.0))
                 progress.update(len(entries))
 
         progress.close()
-        _mem_snapshot("after_process_pool")
+        _mem_snapshot("after_queries")
 
         self._last_delta_timing = {
             "prepare_s": t_after_prepare - t_start,

@@ -1,6 +1,7 @@
 experiments_dir: experiments
 experiment_id: exp_wf01
 step: 5
+causal_analyzer_url: "http://localhost:5050"
 dataset_dir: data/wf01
 workflow_config: workflow_causal_graph.yaml
 iterations: 500

@@ -1,2 +1,4 @@
 task_i,task_j,weight
-s0_avg_threads,s1_avg_threads,0.6978303231496092
+s0_avg_threads,s1_avg_threads,0.697830323149616
+s0_avg_threads,s2_avg_threads,0.08939888191904242
+s1_avg_threads,s2_avg_threads,0.16283976012660842

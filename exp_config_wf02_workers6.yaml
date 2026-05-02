@@ -1,6 +1,7 @@
 experiments_dir: experiments
 experiment_id: exp_wf02
 step: 5
+causal_analyzer_url: "http://localhost:5050"
 dataset_dir: data/wf02
 workflow_config: experiments/wf02_profile_workflow_superset.yaml
 iterations: 500

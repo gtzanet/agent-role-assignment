@@ -4,4 +4,4 @@ control:
   agent_control_assignments:
     s0.scaling: agent0
     s1.scaling: agent0
-    s2.scaling: agent1
+    s2.scaling: agent0

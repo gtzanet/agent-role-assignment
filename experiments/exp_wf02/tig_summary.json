@@ -33,9 +33,9 @@
   "rho": 0.1,
   "n_tig_edges": 15,
   "timing": {
-    "prepare_s": 2.583885417,
-    "query_s": 348.333782,
-    "total_s": 350.924389042,
+    "prepare_s": 0.08141074999999987,
+    "query_s": 951.817706083,
+    "total_s": 951.8999090420001,
     "candidate_pairs": 42,
     "reachable_pairs": 42,
     "skipped_unreachable": 0

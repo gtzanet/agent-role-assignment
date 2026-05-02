@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import io
 import numpy as np
 import pandas as pd
 import networkx as nx
@@ -470,5 +471,116 @@ class CausalAnalyzer:
             # Reset interventions
             for var in component_intervention:
                 ie.reset_do(var)
-        
+
         return results
+
+
+class CausalAnalyzerWrapper:
+    """HTTP proxy for a CausalAnalyzer running on a remote Flask server.
+
+    Implements the same public interface as CausalAnalyzer so it can be used
+    as a drop-in replacement. The BayesianNetwork lives only on the server,
+    eliminating the cost of duplicating it across local OS processes.
+
+    The server is expected to be fully initialised (causal graph + BN built)
+    before the wrapper is used. cg is accepted for interface compatibility but
+    is not sent to the server — the server builds its own graph at startup.
+
+    Usage:
+        wrapper = CausalAnalyzerWrapper(cg, base_url="http://localhost:5050")
+        wrapper.prepare_from_observations(raw_df, columns)
+        effects = wrapper.interventional_effects_for_task(task, kpis, raw_ranges)
+    """
+
+    def __init__(self, cg: CausalGraph, base_url: str):  # cg accepted for interface compatibility
+        del cg
+        import requests as _req
+        self._requests = _req
+        self._base_url = base_url.rstrip("/")
+        self.data_df: pd.DataFrame | None = None
+        self.representatives: dict[str, dict[int, float]] | None = None
+        self.node_to_component: dict[str, int] = {}
+        # component_models holds (nodes, None, None) — BN lives on the server
+        self.component_models: dict[int, tuple[list[str], None, None]] = {}
+
+    def _post(self, endpoint: str, payload: dict) -> dict:
+        resp = self._requests.post(f"{self._base_url}/{endpoint}", json=payload)
+        resp.raise_for_status()
+        return resp.json()
+
+    @staticmethod
+    def _deserialize_df(payload: str) -> pd.DataFrame:
+        return pd.read_json(io.StringIO(payload), orient="split")
+
+    def prepare_from_observations(
+        self,
+        raw_df: pd.DataFrame,  # noqa: ARG002 — server owns the data
+        columns: list[str],
+        bins: int = 5,          # noqa: ARG002 — fixed at server startup
+        max_parents: int = 3,   # noqa: ARG002 — fixed at server startup
+    ) -> tuple[pd.DataFrame, dict[str, dict[int, float]], dict]:
+        # raw_df, bins, and max_parents are owned by the server (fixed at startup).
+        # Only columns is sent so the server can filter its pre-built state.
+        del raw_df, bins, max_parents  # accepted for interface compatibility only
+        result = self._post("prepare_from_observations", {"columns": columns})
+        self.data_df = self._deserialize_df(result["data_df"])
+        self.representatives = {
+            col: {int(k): float(v) for k, v in bins_map.items()}
+            for col, bins_map in result["representatives"].items()
+        }
+        self.node_to_component = {k: int(v) for k, v in result["node_to_component"].items()}
+        self.component_models = {
+            int(idx): (nodes, None, None)
+            for idx, nodes in result["component_nodes_by_idx"].items()
+        }
+        return self.data_df, self.representatives, self.component_models
+
+    def interventional_effects_for_task(
+        self,
+        task_node: str,
+        kpi_nodes: list[str],
+        raw_ranges: dict[str, tuple[float, float]],
+        component_idx: int | None = None,
+        _inference_engine=None,  # ignored — kept for interface compatibility
+    ) -> dict[str, float]:
+        result = self._post("interventional_effects_for_task", {
+            "task_node": task_node,
+            "kpi_nodes": kpi_nodes,
+            "raw_ranges": {k: list(v) for k, v in raw_ranges.items()},
+            "component_idx": component_idx,
+        })
+        return result["effects"]
+
+    def interventional_effect(
+        self,
+        task_node: str,
+        kpi_node: str,
+        raw_min: float,
+        raw_max: float,
+        component_idx: int | None = None,
+        task_vals: list[int] | None = None,
+    ) -> float:
+        result = self._post("interventional_effect", {
+            "task_node": task_node,
+            "kpi_node": kpi_node,
+            "raw_min": raw_min,
+            "raw_max": raw_max,
+            "component_idx": component_idx,
+            "task_vals": task_vals,
+        })
+        return float(result["effect"])
+
+    def observational_query(self, evidence: dict[str, int] | None = None) -> dict[str, dict]:
+        result = self._post("observational_query", {"evidence": evidence})
+        return result["distributions"]
+
+    def counterfactual_query(
+        self,
+        evidence: dict[str, int],
+        intervention: dict[str, int],
+    ) -> dict[str, dict]:
+        result = self._post("counterfactual_query", {
+            "evidence": evidence,
+            "intervention": intervention,
+        })
+        return result["distributions"]

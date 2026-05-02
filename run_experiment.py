@@ -99,6 +99,7 @@ def _default_exp_config() -> dict[str, object]:
         "omega": None,
         "step5_train_episodes": None,
         "step5_train_iterations": None,
+        "causal_analyzer_url": None,
     }
 
 
@@ -503,7 +504,7 @@ def build_tig(args: argparse.Namespace, exp_dir: Path, dataset_csv: Path) -> tup
 
     workflow_config_path = _resolve_workflow_config_path(args.workflow_config)
     variable_groups = _load_variable_groups_from_config(workflow_config_path, list(df.columns))
-    analyzer = TaskInterferenceAnalyzer(cg, variable_groups)
+    analyzer = TaskInterferenceAnalyzer(cg, variable_groups, causal_analyzer_url=args.causal_analyzer_url)
 
     omega = None
     if args.omega:
@@ -607,7 +608,7 @@ def get_partition(
 
         workflow_config_path = _resolve_workflow_config_path(args.workflow_config)
         variable_groups = _load_variable_groups_from_config(workflow_config_path, tasks)
-        analyzer = TaskInterferenceAnalyzer(cg, variable_groups)
+        analyzer = TaskInterferenceAnalyzer(cg, variable_groups, causal_analyzer_url=args.causal_analyzer_url)
 
     if len(tasks) == 0:
         raise RuntimeError("TIG matrix has no tasks to partition.")
