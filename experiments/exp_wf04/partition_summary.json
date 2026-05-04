@@ -1,0 +1,14 @@
+{
+  "algorithm": "greedy_modularity",
+  "n_agents_requested": 2,
+  "n_communities": 7,
+  "community_sizes": {
+    "0": 4,
+    "1": 2,
+    "2": 2,
+    "3": 1,
+    "4": 1,
+    "5": 1,
+    "6": 1
+  }
+}

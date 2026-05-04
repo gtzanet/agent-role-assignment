@@ -354,67 +354,7 @@
     ],
     [
       "node0_avg_cpu_threads",
-      "s0_arrival_rate"
-    ],
-    [
-      "node0_avg_cpu_threads",
       "s0_avg_latency"
-    ],
-    [
-      "node0_avg_cpu_threads",
-      "s0_avg_queue_size"
-    ],
-    [
-      "node0_avg_cpu_threads",
-      "s1_avg_latency"
-    ],
-    [
-      "node0_avg_cpu_threads",
-      "s1_avg_queue_size"
-    ],
-    [
-      "node0_avg_cpu_threads",
-      "s1_avg_throughput"
-    ],
-    [
-      "node0_avg_cpu_threads",
-      "s3_arrival_rate"
-    ],
-    [
-      "node0_avg_cpu_threads",
-      "s3_departure_rate"
-    ],
-    [
-      "node0_avg_cpu_threads",
-      "s4_arrival_rate"
-    ],
-    [
-      "node0_avg_cpu_threads",
-      "s4_avg_latency"
-    ],
-    [
-      "node0_avg_cpu_threads",
-      "s4_avg_queue_size"
-    ],
-    [
-      "node0_avg_cpu_threads",
-      "s4_avg_throughput"
-    ],
-    [
-      "node0_avg_cpu_threads",
-      "s4_departure_rate"
-    ],
-    [
-      "node0_avg_cpu_threads",
-      "s5_arrival_rate"
-    ],
-    [
-      "node0_avg_cpu_threads",
-      "s5_departure_rate"
-    ],
-    [
-      "node0_avg_cpu_threads",
-      "s6_arrival_rate"
     ],
     [
       "node0_avg_cpu_threads",
@@ -426,14 +366,6 @@
     ],
     [
       "node0_avg_cpu_threads",
-      "s7_avg_latency"
-    ],
-    [
-      "node0_avg_cpu_threads",
-      "s7_avg_queue_size"
-    ],
-    [
-      "node0_avg_cpu_threads",
       "s7_departure_rate"
     ],
     [
@@ -442,19 +374,7 @@
     ],
     [
       "node0_avg_cpu_threads",
-      "s8_avg_latency"
-    ],
-    [
-      "node0_avg_cpu_threads",
-      "s8_avg_queue_size"
-    ],
-    [
-      "node0_avg_cpu_threads",
       "s8_departure_rate"
-    ],
-    [
-      "node0_avg_cpu_threads",
-      "wf0_avg_e2e_latency"
     ],
     [
       "node0_avg_cpu_threads",
@@ -467,10 +387,6 @@
     [
       "node0_cpu_usage_pct",
       "node2_cpu_usage_pct"
-    ],
-    [
-      "node0_cpu_usage_pct",
-      "wf0_avg_e2e_latency"
     ],
     [
       "node0_cpu_usage_pct",
@@ -494,51 +410,11 @@
     ],
     [
       "node1_avg_cpu_threads",
-      "s0_arrival_rate"
-    ],
-    [
-      "node1_avg_cpu_threads",
-      "s0_avg_latency"
-    ],
-    [
-      "node1_avg_cpu_threads",
-      "s0_avg_throughput"
-    ],
-    [
-      "node1_avg_cpu_threads",
-      "s1_avg_throughput"
-    ],
-    [
-      "node1_avg_cpu_threads",
-      "s3_arrival_rate"
-    ],
-    [
-      "node1_avg_cpu_threads",
-      "s3_avg_latency"
-    ],
-    [
-      "node1_avg_cpu_threads",
-      "s3_avg_queue_size"
-    ],
-    [
-      "node1_avg_cpu_threads",
-      "s3_avg_throughput"
-    ],
-    [
-      "node1_avg_cpu_threads",
       "s3_departure_rate"
     ],
     [
       "node1_avg_cpu_threads",
       "s4_arrival_rate"
-    ],
-    [
-      "node1_avg_cpu_threads",
-      "s4_avg_queue_size"
-    ],
-    [
-      "node1_avg_cpu_threads",
-      "s4_avg_throughput"
     ],
     [
       "node1_avg_cpu_threads",
@@ -550,23 +426,11 @@
     ],
     [
       "node1_avg_cpu_threads",
-      "s5_avg_queue_size"
-    ],
-    [
-      "node1_avg_cpu_threads",
       "s5_departure_rate"
     ],
     [
       "node1_avg_cpu_threads",
       "s6_arrival_rate"
-    ],
-    [
-      "node1_avg_cpu_threads",
-      "s6_avg_latency"
-    ],
-    [
-      "node1_avg_cpu_threads",
-      "s6_avg_throughput"
     ],
     [
       "node1_avg_cpu_threads",
@@ -578,15 +442,7 @@
     ],
     [
       "node1_avg_cpu_threads",
-      "s7_avg_latency"
-    ],
-    [
-      "node1_avg_cpu_threads",
       "s7_avg_queue_size"
-    ],
-    [
-      "node1_avg_cpu_threads",
-      "s7_avg_throughput"
     ],
     [
       "node1_avg_cpu_threads",
@@ -598,51 +454,11 @@
     ],
     [
       "node1_avg_cpu_threads",
-      "s8_avg_latency"
-    ],
-    [
-      "node1_avg_cpu_threads",
-      "s8_avg_queue_size"
-    ],
-    [
-      "node1_avg_cpu_threads",
       "s8_departure_rate"
-    ],
-    [
-      "node1_avg_cpu_threads",
-      "wf0_avg_e2e_latency"
-    ],
-    [
-      "node1_avg_cpu_threads",
-      "wf0_violation_rate"
-    ],
-    [
-      "node1_avg_cpu_threads",
-      "wf1_avg_e2e_latency"
-    ],
-    [
-      "node1_avg_cpu_threads",
-      "wf2_avg_e2e_latency"
     ],
     [
       "node1_cpu_usage_pct",
       "node2_cpu_usage_pct"
-    ],
-    [
-      "node1_cpu_usage_pct",
-      "wf0_avg_e2e_latency"
-    ],
-    [
-      "node1_cpu_usage_pct",
-      "wf0_violation_rate"
-    ],
-    [
-      "node1_cpu_usage_pct",
-      "wf1_avg_e2e_latency"
-    ],
-    [
-      "node1_cpu_usage_pct",
-      "wf2_avg_e2e_latency"
     ],
     [
       "node2_avg_cpu_threads",
@@ -658,59 +474,11 @@
     ],
     [
       "node2_avg_cpu_threads",
-      "s0_avg_latency"
-    ],
-    [
-      "node2_avg_cpu_threads",
-      "s0_avg_throughput"
-    ],
-    [
-      "node2_avg_cpu_threads",
-      "s0_departure_rate"
-    ],
-    [
-      "node2_avg_cpu_threads",
-      "s1_avg_latency"
-    ],
-    [
-      "node2_avg_cpu_threads",
-      "s1_avg_throughput"
-    ],
-    [
-      "node2_avg_cpu_threads",
-      "s1_departure_rate"
-    ],
-    [
-      "node2_avg_cpu_threads",
-      "s2_avg_throughput"
-    ],
-    [
-      "node2_avg_cpu_threads",
-      "s2_departure_rate"
-    ],
-    [
-      "node2_avg_cpu_threads",
-      "s3_avg_latency"
-    ],
-    [
-      "node2_avg_cpu_threads",
-      "s3_avg_queue_size"
-    ],
-    [
-      "node2_avg_cpu_threads",
-      "s3_avg_throughput"
-    ],
-    [
-      "node2_avg_cpu_threads",
       "s3_departure_rate"
     ],
     [
       "node2_avg_cpu_threads",
       "s4_arrival_rate"
-    ],
-    [
-      "node2_avg_cpu_threads",
-      "s4_avg_queue_size"
     ],
     [
       "node2_avg_cpu_threads",
@@ -726,23 +494,7 @@
     ],
     [
       "node2_avg_cpu_threads",
-      "s5_avg_throughput"
-    ],
-    [
-      "node2_avg_cpu_threads",
       "s5_departure_rate"
-    ],
-    [
-      "node2_avg_cpu_threads",
-      "s6_arrival_rate"
-    ],
-    [
-      "node2_avg_cpu_threads",
-      "s6_avg_latency"
-    ],
-    [
-      "node2_avg_cpu_threads",
-      "s6_avg_throughput"
     ],
     [
       "node2_avg_cpu_threads",
@@ -754,18 +506,6 @@
     ],
     [
       "node2_avg_cpu_threads",
-      "s7_avg_latency"
-    ],
-    [
-      "node2_avg_cpu_threads",
-      "s7_avg_queue_size"
-    ],
-    [
-      "node2_avg_cpu_threads",
-      "s7_avg_throughput"
-    ],
-    [
-      "node2_avg_cpu_threads",
       "s7_departure_rate"
     ],
     [
@@ -774,55 +514,7 @@
     ],
     [
       "node2_avg_cpu_threads",
-      "s8_avg_latency"
-    ],
-    [
-      "node2_avg_cpu_threads",
-      "s8_avg_queue_size"
-    ],
-    [
-      "node2_avg_cpu_threads",
       "s8_departure_rate"
-    ],
-    [
-      "node2_avg_cpu_threads",
-      "wf0_avg_e2e_latency"
-    ],
-    [
-      "node2_avg_cpu_threads",
-      "wf0_violation_rate"
-    ],
-    [
-      "node2_avg_cpu_threads",
-      "wf1_avg_e2e_latency"
-    ],
-    [
-      "node2_avg_cpu_threads",
-      "wf2_avg_e2e_latency"
-    ],
-    [
-      "node2_cpu_usage_pct",
-      "wf0_avg_e2e_latency"
-    ],
-    [
-      "node2_cpu_usage_pct",
-      "wf0_violation_rate"
-    ],
-    [
-      "node2_cpu_usage_pct",
-      "wf1_avg_e2e_latency"
-    ],
-    [
-      "node2_cpu_usage_pct",
-      "wf2_avg_e2e_latency"
-    ],
-    [
-      "s0_arrival_rate",
-      "node0_cpu_usage_pct"
-    ],
-    [
-      "s0_arrival_rate",
-      "node1_cpu_usage_pct"
     ],
     [
       "s0_arrival_rate",
@@ -834,19 +526,11 @@
     ],
     [
       "s0_arrival_rate",
-      "s0_avg_throughput"
-    ],
-    [
-      "s0_arrival_rate",
       "s0_departure_rate"
     ],
     [
       "s0_arrival_rate",
       "s1_arrival_rate"
-    ],
-    [
-      "s0_arrival_rate",
-      "s1_avg_latency"
     ],
     [
       "s0_arrival_rate",
@@ -862,83 +546,7 @@
     ],
     [
       "s0_arrival_rate",
-      "s2_avg_queue_size"
-    ],
-    [
-      "s0_arrival_rate",
       "s2_departure_rate"
-    ],
-    [
-      "s0_arrival_rate",
-      "s3_arrival_rate"
-    ],
-    [
-      "s0_arrival_rate",
-      "s3_avg_latency"
-    ],
-    [
-      "s0_arrival_rate",
-      "s3_avg_queue_size"
-    ],
-    [
-      "s0_arrival_rate",
-      "s3_departure_rate"
-    ],
-    [
-      "s0_arrival_rate",
-      "s4_arrival_rate"
-    ],
-    [
-      "s0_arrival_rate",
-      "s4_avg_queue_size"
-    ],
-    [
-      "s0_arrival_rate",
-      "s4_departure_rate"
-    ],
-    [
-      "s0_arrival_rate",
-      "s5_arrival_rate"
-    ],
-    [
-      "s0_arrival_rate",
-      "s5_departure_rate"
-    ],
-    [
-      "s0_arrival_rate",
-      "s6_avg_latency"
-    ],
-    [
-      "s0_arrival_rate",
-      "s6_avg_queue_size"
-    ],
-    [
-      "s0_arrival_rate",
-      "s6_avg_throughput"
-    ],
-    [
-      "s0_arrival_rate",
-      "s6_departure_rate"
-    ],
-    [
-      "s0_arrival_rate",
-      "s7_avg_latency"
-    ],
-    [
-      "s0_arrival_rate",
-      "s7_avg_throughput"
-    ],
-    [
-      "s0_arrival_rate",
-      "s7_departure_rate"
-    ],
-    [
-      "s0_arrival_rate",
-      "s8_avg_throughput"
-    ],
-    [
-      "s0_arrival_rate",
-      "s8_departure_rate"
     ],
     [
       "s0_arrival_rate",
@@ -949,24 +557,8 @@
       "wf0_violation_rate"
     ],
     [
-      "s0_arrival_rate",
-      "wf1_avg_e2e_latency"
-    ],
-    [
-      "s0_arrival_rate",
-      "wf2_avg_e2e_latency"
-    ],
-    [
       "s0_avg_latency",
       "node0_cpu_usage_pct"
-    ],
-    [
-      "s0_avg_latency",
-      "node1_cpu_usage_pct"
-    ],
-    [
-      "s0_avg_latency",
-      "node2_cpu_usage_pct"
     ],
     [
       "s0_avg_latency",
@@ -986,87 +578,11 @@
     ],
     [
       "s0_avg_latency",
-      "s1_avg_latency"
-    ],
-    [
-      "s0_avg_latency",
-      "s1_avg_queue_size"
-    ],
-    [
-      "s0_avg_latency",
       "s1_departure_rate"
     ],
     [
       "s0_avg_latency",
-      "s2_arrival_rate"
-    ],
-    [
-      "s0_avg_latency",
-      "s2_avg_queue_size"
-    ],
-    [
-      "s0_avg_latency",
-      "s2_departure_rate"
-    ],
-    [
-      "s0_avg_latency",
-      "s3_departure_rate"
-    ],
-    [
-      "s0_avg_latency",
-      "s4_arrival_rate"
-    ],
-    [
-      "s0_avg_latency",
-      "s4_avg_queue_size"
-    ],
-    [
-      "s0_avg_latency",
-      "s4_avg_throughput"
-    ],
-    [
-      "s0_avg_latency",
-      "s4_departure_rate"
-    ],
-    [
-      "s0_avg_latency",
-      "s5_arrival_rate"
-    ],
-    [
-      "s0_avg_latency",
-      "s5_avg_latency"
-    ],
-    [
-      "s0_avg_latency",
-      "s5_avg_queue_size"
-    ],
-    [
-      "s0_avg_latency",
-      "s5_avg_throughput"
-    ],
-    [
-      "s0_avg_latency",
-      "s5_departure_rate"
-    ],
-    [
-      "s0_avg_latency",
-      "s6_arrival_rate"
-    ],
-    [
-      "s0_avg_latency",
-      "s6_departure_rate"
-    ],
-    [
-      "s0_avg_latency",
       "s7_arrival_rate"
-    ],
-    [
-      "s0_avg_latency",
-      "s7_avg_latency"
-    ],
-    [
-      "s0_avg_latency",
-      "s7_avg_queue_size"
     ],
     [
       "s0_avg_latency",
@@ -1075,10 +591,6 @@
     [
       "s0_avg_latency",
       "s8_arrival_rate"
-    ],
-    [
-      "s0_avg_latency",
-      "s8_avg_queue_size"
     ],
     [
       "s0_avg_latency",
@@ -1093,96 +605,8 @@
       "wf0_violation_rate"
     ],
     [
-      "s0_avg_latency",
-      "wf2_violation_rate"
-    ],
-    [
-      "s0_avg_queue_size",
-      "node0_cpu_usage_pct"
-    ],
-    [
       "s0_avg_queue_size",
       "s0_avg_throughput"
-    ],
-    [
-      "s0_avg_queue_size",
-      "s0_departure_rate"
-    ],
-    [
-      "s0_avg_queue_size",
-      "s1_arrival_rate"
-    ],
-    [
-      "s0_avg_queue_size",
-      "s1_avg_latency"
-    ],
-    [
-      "s0_avg_queue_size",
-      "s1_departure_rate"
-    ],
-    [
-      "s0_avg_queue_size",
-      "s2_arrival_rate"
-    ],
-    [
-      "s0_avg_queue_size",
-      "s2_avg_queue_size"
-    ],
-    [
-      "s0_avg_queue_size",
-      "s2_departure_rate"
-    ],
-    [
-      "s0_avg_queue_size",
-      "s5_avg_latency"
-    ],
-    [
-      "s0_avg_queue_size",
-      "s5_avg_throughput"
-    ],
-    [
-      "s0_avg_queue_size",
-      "s6_arrival_rate"
-    ],
-    [
-      "s0_avg_queue_size",
-      "s6_departure_rate"
-    ],
-    [
-      "s0_avg_queue_size",
-      "s7_arrival_rate"
-    ],
-    [
-      "s0_avg_queue_size",
-      "s7_avg_latency"
-    ],
-    [
-      "s0_avg_queue_size",
-      "s7_avg_queue_size"
-    ],
-    [
-      "s0_avg_queue_size",
-      "s7_avg_throughput"
-    ],
-    [
-      "s0_avg_queue_size",
-      "s7_departure_rate"
-    ],
-    [
-      "s0_avg_queue_size",
-      "s8_arrival_rate"
-    ],
-    [
-      "s0_avg_queue_size",
-      "s8_avg_queue_size"
-    ],
-    [
-      "s0_avg_queue_size",
-      "s8_avg_throughput"
-    ],
-    [
-      "s0_avg_queue_size",
-      "s8_departure_rate"
     ],
     [
       "s0_avg_queue_size",
@@ -1230,71 +654,7 @@
     ],
     [
       "s0_avg_threads",
-      "s2_avg_queue_size"
-    ],
-    [
-      "s0_avg_threads",
       "s2_departure_rate"
-    ],
-    [
-      "s0_avg_threads",
-      "s3_avg_queue_size"
-    ],
-    [
-      "s0_avg_threads",
-      "s3_avg_threads"
-    ],
-    [
-      "s0_avg_threads",
-      "s3_departure_rate"
-    ],
-    [
-      "s0_avg_threads",
-      "s4_arrival_rate"
-    ],
-    [
-      "s0_avg_threads",
-      "s4_avg_latency"
-    ],
-    [
-      "s0_avg_threads",
-      "s4_avg_queue_size"
-    ],
-    [
-      "s0_avg_threads",
-      "s4_avg_throughput"
-    ],
-    [
-      "s0_avg_threads",
-      "s4_departure_rate"
-    ],
-    [
-      "s0_avg_threads",
-      "s5_arrival_rate"
-    ],
-    [
-      "s0_avg_threads",
-      "s5_avg_latency"
-    ],
-    [
-      "s0_avg_threads",
-      "s5_avg_queue_size"
-    ],
-    [
-      "s0_avg_threads",
-      "s5_avg_throughput"
-    ],
-    [
-      "s0_avg_threads",
-      "s5_departure_rate"
-    ],
-    [
-      "s0_avg_threads",
-      "s6_avg_threads"
-    ],
-    [
-      "s0_avg_threads",
-      "s6_avg_throughput"
     ],
     [
       "s0_avg_threads",
@@ -1306,27 +666,11 @@
     ],
     [
       "s0_avg_threads",
-      "s7_avg_latency"
-    ],
-    [
-      "s0_avg_threads",
-      "s7_avg_queue_size"
-    ],
-    [
-      "s0_avg_threads",
       "s7_departure_rate"
     ],
     [
       "s0_avg_threads",
       "s8_arrival_rate"
-    ],
-    [
-      "s0_avg_threads",
-      "s8_avg_queue_size"
-    ],
-    [
-      "s0_avg_threads",
-      "s8_avg_threads"
     ],
     [
       "s0_avg_threads",
@@ -1339,18 +683,6 @@
     [
       "s0_avg_threads",
       "wf0_violation_rate"
-    ],
-    [
-      "s0_avg_threads",
-      "wf1_avg_e2e_latency"
-    ],
-    [
-      "s0_avg_throughput",
-      "node1_cpu_usage_pct"
-    ],
-    [
-      "s0_avg_throughput",
-      "node2_cpu_usage_pct"
     ],
     [
       "s0_avg_throughput",
@@ -1378,27 +710,11 @@
     ],
     [
       "s0_avg_throughput",
-      "s2_avg_queue_size"
-    ],
-    [
-      "s0_avg_throughput",
       "s2_avg_throughput"
     ],
     [
       "s0_avg_throughput",
       "s2_departure_rate"
-    ],
-    [
-      "s0_avg_throughput",
-      "s3_avg_latency"
-    ],
-    [
-      "s0_avg_throughput",
-      "s3_avg_queue_size"
-    ],
-    [
-      "s0_avg_throughput",
-      "s3_avg_throughput"
     ],
     [
       "s0_avg_throughput",
@@ -1410,14 +726,6 @@
     ],
     [
       "s0_avg_throughput",
-      "s4_avg_queue_size"
-    ],
-    [
-      "s0_avg_throughput",
-      "s4_avg_throughput"
-    ],
-    [
-      "s0_avg_throughput",
       "s4_departure_rate"
     ],
     [
@@ -1426,23 +734,11 @@
     ],
     [
       "s0_avg_throughput",
-      "s5_avg_latency"
-    ],
-    [
-      "s0_avg_throughput",
       "s5_avg_queue_size"
     ],
     [
       "s0_avg_throughput",
-      "s5_avg_throughput"
-    ],
-    [
-      "s0_avg_throughput",
       "s5_departure_rate"
-    ],
-    [
-      "s0_avg_throughput",
-      "s6_arrival_rate"
     ],
     [
       "s0_avg_throughput",
@@ -1454,23 +750,11 @@
     ],
     [
       "s0_avg_throughput",
-      "s7_avg_queue_size"
-    ],
-    [
-      "s0_avg_throughput",
       "s7_departure_rate"
     ],
     [
       "s0_avg_throughput",
       "s8_arrival_rate"
-    ],
-    [
-      "s0_avg_throughput",
-      "s8_avg_latency"
-    ],
-    [
-      "s0_avg_throughput",
-      "s8_avg_queue_size"
     ],
     [
       "s0_avg_throughput",
@@ -1483,18 +767,6 @@
     [
       "s0_avg_throughput",
       "wf0_violation_rate"
-    ],
-    [
-      "s0_avg_throughput",
-      "wf1_avg_e2e_latency"
-    ],
-    [
-      "s0_avg_throughput",
-      "wf2_violation_rate"
-    ],
-    [
-      "s0_departure_rate",
-      "node2_cpu_usage_pct"
     ],
     [
       "s0_departure_rate",
@@ -1502,10 +774,6 @@
     ],
     [
       "s0_departure_rate",
-      "s1_avg_latency"
-    ],
-    [
-      "s0_departure_rate",
       "s1_avg_queue_size"
     ],
     [
@@ -1518,23 +786,11 @@
     ],
     [
       "s0_departure_rate",
-      "s2_avg_latency"
-    ],
-    [
-      "s0_departure_rate",
       "s2_avg_queue_size"
     ],
     [
       "s0_departure_rate",
       "s2_departure_rate"
-    ],
-    [
-      "s0_departure_rate",
-      "s3_arrival_rate"
-    ],
-    [
-      "s0_departure_rate",
-      "s3_avg_throughput"
     ],
     [
       "s0_departure_rate",
@@ -1546,15 +802,7 @@
     ],
     [
       "s0_departure_rate",
-      "s4_avg_latency"
-    ],
-    [
-      "s0_departure_rate",
       "s4_avg_queue_size"
-    ],
-    [
-      "s0_departure_rate",
-      "s4_avg_throughput"
     ],
     [
       "s0_departure_rate",
@@ -1566,31 +814,11 @@
     ],
     [
       "s0_departure_rate",
-      "s5_avg_latency"
-    ],
-    [
-      "s0_departure_rate",
       "s5_avg_queue_size"
     ],
     [
       "s0_departure_rate",
-      "s5_avg_throughput"
-    ],
-    [
-      "s0_departure_rate",
       "s5_departure_rate"
-    ],
-    [
-      "s0_departure_rate",
-      "s6_avg_latency"
-    ],
-    [
-      "s0_departure_rate",
-      "s6_avg_queue_size"
-    ],
-    [
-      "s0_departure_rate",
-      "s6_avg_throughput"
     ],
     [
       "s0_departure_rate",
@@ -1602,10 +830,6 @@
     ],
     [
       "s0_departure_rate",
-      "s7_avg_queue_size"
-    ],
-    [
-      "s0_departure_rate",
       "s7_departure_rate"
     ],
     [
@@ -1614,27 +838,11 @@
     ],
     [
       "s0_departure_rate",
-      "s8_avg_latency"
-    ],
-    [
-      "s0_departure_rate",
-      "s8_avg_queue_size"
-    ],
-    [
-      "s0_departure_rate",
       "s8_departure_rate"
     ],
     [
       "s0_departure_rate",
       "wf0_avg_e2e_latency"
-    ],
-    [
-      "s0_departure_rate",
-      "wf2_avg_e2e_latency"
-    ],
-    [
-      "s1_arrival_rate",
-      "s1_avg_latency"
     ],
     [
       "s1_arrival_rate",
@@ -1650,23 +858,11 @@
     ],
     [
       "s1_arrival_rate",
-      "s2_avg_latency"
-    ],
-    [
-      "s1_arrival_rate",
       "s2_avg_queue_size"
     ],
     [
       "s1_arrival_rate",
       "s2_departure_rate"
-    ],
-    [
-      "s1_arrival_rate",
-      "s3_arrival_rate"
-    ],
-    [
-      "s1_arrival_rate",
-      "s3_avg_throughput"
     ],
     [
       "s1_arrival_rate",
@@ -1678,15 +874,7 @@
     ],
     [
       "s1_arrival_rate",
-      "s4_avg_latency"
-    ],
-    [
-      "s1_arrival_rate",
       "s4_avg_queue_size"
-    ],
-    [
-      "s1_arrival_rate",
-      "s4_avg_throughput"
     ],
     [
       "s1_arrival_rate",
@@ -1698,31 +886,11 @@
     ],
     [
       "s1_arrival_rate",
-      "s5_avg_latency"
-    ],
-    [
-      "s1_arrival_rate",
       "s5_avg_queue_size"
     ],
     [
       "s1_arrival_rate",
-      "s5_avg_throughput"
-    ],
-    [
-      "s1_arrival_rate",
       "s5_departure_rate"
-    ],
-    [
-      "s1_arrival_rate",
-      "s6_avg_latency"
-    ],
-    [
-      "s1_arrival_rate",
-      "s6_avg_queue_size"
-    ],
-    [
-      "s1_arrival_rate",
-      "s6_avg_throughput"
     ],
     [
       "s1_arrival_rate",
@@ -1734,10 +902,6 @@
     ],
     [
       "s1_arrival_rate",
-      "s7_avg_queue_size"
-    ],
-    [
-      "s1_arrival_rate",
       "s7_departure_rate"
     ],
     [
@@ -1746,105 +910,17 @@
     ],
     [
       "s1_arrival_rate",
-      "s8_avg_latency"
-    ],
-    [
-      "s1_arrival_rate",
-      "s8_avg_queue_size"
-    ],
-    [
-      "s1_arrival_rate",
       "s8_departure_rate"
     ],
     [
       "s1_arrival_rate",
       "wf0_avg_e2e_latency"
-    ],
-    [
-      "s1_arrival_rate",
-      "wf2_avg_e2e_latency"
-    ],
-    [
-      "s1_avg_latency",
-      "node0_cpu_usage_pct"
-    ],
-    [
-      "s1_avg_latency",
-      "node2_cpu_usage_pct"
     ],
     [
       "s1_avg_latency",
       "s1_avg_queue_size"
     ],
     [
-      "s1_avg_latency",
-      "s1_avg_throughput"
-    ],
-    [
-      "s1_avg_latency",
-      "s1_departure_rate"
-    ],
-    [
-      "s1_avg_latency",
-      "s2_arrival_rate"
-    ],
-    [
-      "s1_avg_latency",
-      "s2_avg_throughput"
-    ],
-    [
-      "s1_avg_latency",
-      "s2_departure_rate"
-    ],
-    [
-      "s1_avg_latency",
-      "s3_departure_rate"
-    ],
-    [
-      "s1_avg_latency",
-      "s4_arrival_rate"
-    ],
-    [
-      "s1_avg_latency",
-      "s4_avg_latency"
-    ],
-    [
-      "s1_avg_latency",
-      "s4_avg_queue_size"
-    ],
-    [
-      "s1_avg_latency",
-      "s4_departure_rate"
-    ],
-    [
-      "s1_avg_latency",
-      "s5_arrival_rate"
-    ],
-    [
-      "s1_avg_latency",
-      "s5_avg_queue_size"
-    ],
-    [
-      "s1_avg_latency",
-      "s5_departure_rate"
-    ],
-    [
-      "s1_avg_latency",
-      "wf0_avg_e2e_latency"
-    ],
-    [
-      "s1_avg_latency",
-      "wf0_violation_rate"
-    ],
-    [
-      "s1_avg_queue_size",
-      "node0_cpu_usage_pct"
-    ],
-    [
-      "s1_avg_queue_size",
-      "s1_avg_throughput"
-    ],
-    [
       "s1_avg_queue_size",
       "s1_departure_rate"
     ],
@@ -1858,19 +934,7 @@
     ],
     [
       "s1_avg_queue_size",
-      "s2_avg_throughput"
-    ],
-    [
-      "s1_avg_queue_size",
       "s2_departure_rate"
-    ],
-    [
-      "s1_avg_queue_size",
-      "s3_avg_queue_size"
-    ],
-    [
-      "s1_avg_queue_size",
-      "s3_avg_throughput"
     ],
     [
       "s1_avg_queue_size",
@@ -1878,215 +942,23 @@
     ],
     [
       "s1_avg_queue_size",
-      "s4_arrival_rate"
-    ],
-    [
-      "s1_avg_queue_size",
-      "s4_avg_latency"
-    ],
-    [
-      "s1_avg_queue_size",
       "s4_avg_queue_size"
     ],
     [
       "s1_avg_queue_size",
-      "s4_avg_throughput"
-    ],
-    [
-      "s1_avg_queue_size",
-      "s4_departure_rate"
-    ],
-    [
-      "s1_avg_queue_size",
-      "s5_arrival_rate"
-    ],
-    [
-      "s1_avg_queue_size",
       "s5_avg_queue_size"
-    ],
-    [
-      "s1_avg_queue_size",
-      "s5_avg_throughput"
-    ],
-    [
-      "s1_avg_queue_size",
-      "s5_departure_rate"
-    ],
-    [
-      "s1_avg_queue_size",
-      "s6_avg_throughput"
-    ],
-    [
-      "s1_avg_queue_size",
-      "s6_departure_rate"
-    ],
-    [
-      "s1_avg_queue_size",
-      "s7_arrival_rate"
-    ],
-    [
-      "s1_avg_queue_size",
-      "s7_avg_queue_size"
-    ],
-    [
-      "s1_avg_queue_size",
-      "s7_avg_throughput"
-    ],
-    [
-      "s1_avg_queue_size",
-      "s7_departure_rate"
-    ],
-    [
-      "s1_avg_queue_size",
-      "s8_arrival_rate"
-    ],
-    [
-      "s1_avg_queue_size",
-      "s8_avg_throughput"
-    ],
-    [
-      "s1_avg_queue_size",
-      "s8_departure_rate"
-    ],
-    [
-      "s1_avg_queue_size",
-      "wf0_avg_e2e_latency"
-    ],
-    [
-      "s1_avg_queue_size",
-      "wf1_avg_e2e_latency"
-    ],
-    [
-      "s1_avg_threads",
-      "node1_avg_cpu_threads"
-    ],
-    [
-      "s1_avg_threads",
-      "node1_cpu_usage_pct"
     ],
     [
       "s1_avg_threads",
       "s1_avg_latency"
     ],
     [
-      "s1_avg_threads",
-      "s1_avg_queue_size"
-    ],
-    [
-      "s1_avg_threads",
-      "s2_avg_latency"
-    ],
-    [
-      "s1_avg_threads",
-      "s2_avg_queue_size"
-    ],
-    [
-      "s1_avg_threads",
-      "s2_avg_throughput"
-    ],
-    [
-      "s1_avg_threads",
-      "s4_avg_latency"
-    ],
-    [
-      "s1_avg_threads",
-      "s4_avg_threads"
-    ],
-    [
-      "s1_avg_threads",
-      "s5_avg_queue_size"
-    ],
-    [
-      "s1_avg_threads",
-      "wf2_violation_rate"
-    ],
-    [
-      "s1_avg_throughput",
-      "node0_cpu_usage_pct"
-    ],
-    [
-      "s1_avg_throughput",
-      "node1_cpu_usage_pct"
-    ],
-    [
-      "s1_avg_throughput",
-      "node2_cpu_usage_pct"
-    ],
-    [
       "s1_avg_throughput",
       "s2_avg_latency"
     ],
     [
       "s1_avg_throughput",
-      "s2_avg_queue_size"
-    ],
-    [
-      "s1_avg_throughput",
       "s2_avg_throughput"
-    ],
-    [
-      "s1_avg_throughput",
-      "s3_arrival_rate"
-    ],
-    [
-      "s1_avg_throughput",
-      "s3_avg_throughput"
-    ],
-    [
-      "s1_avg_throughput",
-      "s3_departure_rate"
-    ],
-    [
-      "s1_avg_throughput",
-      "s4_arrival_rate"
-    ],
-    [
-      "s1_avg_throughput",
-      "s4_avg_latency"
-    ],
-    [
-      "s1_avg_throughput",
-      "s4_avg_throughput"
-    ],
-    [
-      "s1_avg_throughput",
-      "s4_departure_rate"
-    ],
-    [
-      "s1_avg_throughput",
-      "s5_arrival_rate"
-    ],
-    [
-      "s1_avg_throughput",
-      "s5_departure_rate"
-    ],
-    [
-      "s1_avg_throughput",
-      "s6_arrival_rate"
-    ],
-    [
-      "s1_avg_throughput",
-      "s6_avg_queue_size"
-    ],
-    [
-      "s1_avg_throughput",
-      "s7_avg_latency"
-    ],
-    [
-      "s1_avg_throughput",
-      "s7_avg_queue_size"
-    ],
-    [
-      "s1_avg_throughput",
-      "s8_avg_latency"
-    ],
-    [
-      "s1_avg_throughput",
-      "wf0_violation_rate"
-    ],
-    [
-      "s1_departure_rate",
-      "node2_cpu_usage_pct"
     ],
     [
       "s1_departure_rate",
@@ -2094,23 +966,11 @@
     ],
     [
       "s1_departure_rate",
-      "s2_avg_latency"
-    ],
-    [
-      "s1_departure_rate",
       "s2_avg_queue_size"
     ],
     [
       "s1_departure_rate",
       "s2_departure_rate"
-    ],
-    [
-      "s1_departure_rate",
-      "s3_arrival_rate"
-    ],
-    [
-      "s1_departure_rate",
-      "s3_avg_throughput"
     ],
     [
       "s1_departure_rate",
@@ -2122,15 +982,7 @@
     ],
     [
       "s1_departure_rate",
-      "s4_avg_latency"
-    ],
-    [
-      "s1_departure_rate",
       "s4_avg_queue_size"
-    ],
-    [
-      "s1_departure_rate",
-      "s4_avg_throughput"
     ],
     [
       "s1_departure_rate",
@@ -2142,31 +994,11 @@
     ],
     [
       "s1_departure_rate",
-      "s5_avg_latency"
-    ],
-    [
-      "s1_departure_rate",
       "s5_avg_queue_size"
     ],
     [
       "s1_departure_rate",
-      "s5_avg_throughput"
-    ],
-    [
-      "s1_departure_rate",
       "s5_departure_rate"
-    ],
-    [
-      "s1_departure_rate",
-      "s6_avg_latency"
-    ],
-    [
-      "s1_departure_rate",
-      "s6_avg_queue_size"
-    ],
-    [
-      "s1_departure_rate",
-      "s6_avg_throughput"
     ],
     [
       "s1_departure_rate",
@@ -2178,10 +1010,6 @@
     ],
     [
       "s1_departure_rate",
-      "s7_avg_queue_size"
-    ],
-    [
-      "s1_departure_rate",
       "s7_departure_rate"
     ],
     [
@@ -2190,27 +1018,11 @@
     ],
     [
       "s1_departure_rate",
-      "s8_avg_latency"
-    ],
-    [
-      "s1_departure_rate",
-      "s8_avg_queue_size"
-    ],
-    [
-      "s1_departure_rate",
       "s8_departure_rate"
     ],
     [
       "s1_departure_rate",
       "wf0_avg_e2e_latency"
-    ],
-    [
-      "s1_departure_rate",
-      "wf2_avg_e2e_latency"
-    ],
-    [
-      "s2_arrival_rate",
-      "s2_avg_latency"
     ],
     [
       "s2_arrival_rate",
@@ -2222,14 +1034,6 @@
     ],
     [
       "s2_arrival_rate",
-      "s3_arrival_rate"
-    ],
-    [
-      "s2_arrival_rate",
-      "s3_avg_throughput"
-    ],
-    [
-      "s2_arrival_rate",
       "s3_departure_rate"
     ],
     [
@@ -2238,15 +1042,7 @@
     ],
     [
       "s2_arrival_rate",
-      "s4_avg_latency"
-    ],
-    [
-      "s2_arrival_rate",
       "s4_avg_queue_size"
-    ],
-    [
-      "s2_arrival_rate",
-      "s4_avg_throughput"
     ],
     [
       "s2_arrival_rate",
@@ -2258,31 +1054,11 @@
     ],
     [
       "s2_arrival_rate",
-      "s5_avg_latency"
-    ],
-    [
-      "s2_arrival_rate",
       "s5_avg_queue_size"
     ],
     [
       "s2_arrival_rate",
-      "s5_avg_throughput"
-    ],
-    [
-      "s2_arrival_rate",
       "s5_departure_rate"
-    ],
-    [
-      "s2_arrival_rate",
-      "s6_avg_latency"
-    ],
-    [
-      "s2_arrival_rate",
-      "s6_avg_queue_size"
-    ],
-    [
-      "s2_arrival_rate",
-      "s6_avg_throughput"
     ],
     [
       "s2_arrival_rate",
@@ -2294,23 +1070,11 @@
     ],
     [
       "s2_arrival_rate",
-      "s7_avg_queue_size"
-    ],
-    [
-      "s2_arrival_rate",
       "s7_departure_rate"
     ],
     [
       "s2_arrival_rate",
       "s8_arrival_rate"
-    ],
-    [
-      "s2_arrival_rate",
-      "s8_avg_latency"
-    ],
-    [
-      "s2_arrival_rate",
-      "s8_avg_queue_size"
     ],
     [
       "s2_arrival_rate",
@@ -2321,64 +1085,8 @@
       "wf0_avg_e2e_latency"
     ],
     [
-      "s2_arrival_rate",
-      "wf2_avg_e2e_latency"
-    ],
-    [
       "s2_avg_latency",
       "s2_avg_throughput"
-    ],
-    [
-      "s2_avg_latency",
-      "s2_departure_rate"
-    ],
-    [
-      "s2_avg_latency",
-      "s3_arrival_rate"
-    ],
-    [
-      "s2_avg_latency",
-      "s3_avg_latency"
-    ],
-    [
-      "s2_avg_latency",
-      "s3_avg_queue_size"
-    ],
-    [
-      "s2_avg_latency",
-      "s4_avg_throughput"
-    ],
-    [
-      "s2_avg_latency",
-      "s5_avg_queue_size"
-    ],
-    [
-      "s2_avg_latency",
-      "s6_departure_rate"
-    ],
-    [
-      "s2_avg_latency",
-      "s7_avg_latency"
-    ],
-    [
-      "s2_avg_latency",
-      "s7_departure_rate"
-    ],
-    [
-      "s2_avg_latency",
-      "s8_arrival_rate"
-    ],
-    [
-      "s2_avg_latency",
-      "s8_departure_rate"
-    ],
-    [
-      "s2_avg_latency",
-      "wf0_violation_rate"
-    ],
-    [
-      "s2_avg_latency",
-      "wf1_violation_rate"
     ],
     [
       "s2_avg_queue_size",
@@ -2389,270 +1097,14 @@
       "s2_departure_rate"
     ],
     [
-      "s2_avg_queue_size",
-      "s3_avg_latency"
-    ],
-    [
-      "s2_avg_queue_size",
-      "s3_avg_throughput"
-    ],
-    [
-      "s2_avg_queue_size",
-      "s3_departure_rate"
-    ],
-    [
-      "s2_avg_queue_size",
-      "s4_arrival_rate"
-    ],
-    [
-      "s2_avg_queue_size",
-      "s4_avg_latency"
-    ],
-    [
-      "s2_avg_queue_size",
-      "s4_avg_queue_size"
-    ],
-    [
-      "s2_avg_queue_size",
-      "s4_departure_rate"
-    ],
-    [
-      "s2_avg_queue_size",
-      "s5_arrival_rate"
-    ],
-    [
-      "s2_avg_queue_size",
-      "s5_avg_queue_size"
-    ],
-    [
-      "s2_avg_queue_size",
-      "s5_departure_rate"
-    ],
-    [
-      "s2_avg_queue_size",
-      "s6_avg_throughput"
-    ],
-    [
-      "s2_avg_queue_size",
-      "s6_departure_rate"
-    ],
-    [
-      "s2_avg_queue_size",
-      "s7_arrival_rate"
-    ],
-    [
-      "s2_avg_queue_size",
-      "s7_avg_queue_size"
-    ],
-    [
-      "s2_avg_queue_size",
-      "s7_departure_rate"
-    ],
-    [
-      "s2_avg_queue_size",
-      "s8_arrival_rate"
-    ],
-    [
-      "s2_avg_queue_size",
-      "s8_avg_queue_size"
-    ],
-    [
-      "s2_avg_queue_size",
-      "s8_avg_throughput"
-    ],
-    [
-      "s2_avg_queue_size",
-      "s8_departure_rate"
-    ],
-    [
-      "s2_avg_queue_size",
-      "wf0_avg_e2e_latency"
-    ],
-    [
-      "s2_avg_queue_size",
-      "wf0_violation_rate"
-    ],
-    [
-      "s2_avg_queue_size",
-      "wf1_avg_e2e_latency"
-    ],
-    [
-      "s2_avg_queue_size",
-      "wf1_violation_rate"
-    ],
-    [
-      "s2_avg_threads",
-      "s0_arrival_rate"
-    ],
-    [
-      "s2_avg_threads",
-      "s0_avg_queue_size"
-    ],
-    [
-      "s2_avg_threads",
-      "s0_departure_rate"
-    ],
-    [
-      "s2_avg_threads",
-      "s1_arrival_rate"
-    ],
-    [
-      "s2_avg_threads",
-      "s1_avg_queue_size"
-    ],
-    [
-      "s2_avg_threads",
-      "s1_departure_rate"
-    ],
-    [
-      "s2_avg_threads",
-      "s2_arrival_rate"
-    ],
-    [
-      "s2_avg_threads",
-      "s2_avg_latency"
-    ],
-    [
-      "s2_avg_threads",
-      "s2_departure_rate"
-    ],
-    [
-      "s2_avg_threads",
-      "s3_departure_rate"
-    ],
-    [
-      "s2_avg_threads",
-      "s4_arrival_rate"
-    ],
-    [
-      "s2_avg_threads",
-      "s4_avg_latency"
-    ],
-    [
-      "s2_avg_threads",
-      "s4_avg_queue_size"
-    ],
-    [
       "s2_avg_threads",
       "s4_avg_throughput"
-    ],
-    [
-      "s2_avg_threads",
-      "s4_departure_rate"
-    ],
-    [
-      "s2_avg_threads",
-      "s5_arrival_rate"
-    ],
-    [
-      "s2_avg_threads",
-      "s5_avg_threads"
-    ],
-    [
-      "s2_avg_threads",
-      "s5_departure_rate"
-    ],
-    [
-      "s2_avg_threads",
-      "s6_avg_latency"
-    ],
-    [
-      "s2_avg_threads",
-      "s6_avg_queue_size"
     ],
     [
       "s2_avg_threads",
       "s6_avg_threads"
     ],
     [
-      "s2_avg_threads",
-      "s6_avg_throughput"
-    ],
-    [
-      "s2_avg_threads",
-      "s6_departure_rate"
-    ],
-    [
-      "s2_avg_threads",
-      "s7_arrival_rate"
-    ],
-    [
-      "s2_avg_threads",
-      "s7_avg_queue_size"
-    ],
-    [
-      "s2_avg_threads",
-      "s7_avg_threads"
-    ],
-    [
-      "s2_avg_threads",
-      "s7_departure_rate"
-    ],
-    [
-      "s2_avg_threads",
-      "s8_arrival_rate"
-    ],
-    [
-      "s2_avg_threads",
-      "s8_departure_rate"
-    ],
-    [
-      "s2_avg_threads",
-      "wf2_avg_e2e_latency"
-    ],
-    [
-      "s2_avg_threads",
-      "wf2_violation_rate"
-    ],
-    [
-      "s2_avg_throughput",
-      "node2_cpu_usage_pct"
-    ],
-    [
-      "s2_avg_throughput",
-      "s3_avg_latency"
-    ],
-    [
-      "s2_avg_throughput",
-      "s3_avg_throughput"
-    ],
-    [
-      "s2_avg_throughput",
-      "s4_avg_latency"
-    ],
-    [
-      "s2_avg_throughput",
-      "s4_avg_throughput"
-    ],
-    [
-      "s2_avg_throughput",
-      "s7_avg_latency"
-    ],
-    [
-      "s2_avg_throughput",
-      "s7_avg_queue_size"
-    ],
-    [
-      "s2_avg_throughput",
-      "s8_avg_latency"
-    ],
-    [
-      "s2_avg_throughput",
-      "wf2_violation_rate"
-    ],
-    [
-      "s2_departure_rate",
-      "node2_cpu_usage_pct"
-    ],
-    [
-      "s2_departure_rate",
-      "s3_arrival_rate"
-    ],
-    [
-      "s2_departure_rate",
-      "s3_avg_throughput"
-    ],
-    [
       "s2_departure_rate",
       "s3_departure_rate"
     ],
@@ -2662,15 +1114,7 @@
     ],
     [
       "s2_departure_rate",
-      "s4_avg_latency"
-    ],
-    [
-      "s2_departure_rate",
       "s4_avg_queue_size"
-    ],
-    [
-      "s2_departure_rate",
-      "s4_avg_throughput"
     ],
     [
       "s2_departure_rate",
@@ -2682,31 +1126,11 @@
     ],
     [
       "s2_departure_rate",
-      "s5_avg_latency"
-    ],
-    [
-      "s2_departure_rate",
       "s5_avg_queue_size"
     ],
     [
       "s2_departure_rate",
-      "s5_avg_throughput"
-    ],
-    [
-      "s2_departure_rate",
       "s5_departure_rate"
-    ],
-    [
-      "s2_departure_rate",
-      "s6_avg_latency"
-    ],
-    [
-      "s2_departure_rate",
-      "s6_avg_queue_size"
-    ],
-    [
-      "s2_departure_rate",
-      "s6_avg_throughput"
     ],
     [
       "s2_departure_rate",
@@ -2718,23 +1142,11 @@
     ],
     [
       "s2_departure_rate",
-      "s7_avg_queue_size"
-    ],
-    [
-      "s2_departure_rate",
       "s7_departure_rate"
     ],
     [
       "s2_departure_rate",
       "s8_arrival_rate"
-    ],
-    [
-      "s2_departure_rate",
-      "s8_avg_latency"
-    ],
-    [
-      "s2_departure_rate",
-      "s8_avg_queue_size"
     ],
     [
       "s2_departure_rate",
@@ -2745,18 +1157,6 @@
       "wf0_avg_e2e_latency"
     ],
     [
-      "s2_departure_rate",
-      "wf2_avg_e2e_latency"
-    ],
-    [
-      "s3_arrival_rate",
-      "node0_cpu_usage_pct"
-    ],
-    [
-      "s3_arrival_rate",
-      "node1_cpu_usage_pct"
-    ],
-    [
       "s3_arrival_rate",
       "s3_avg_latency"
     ],
@@ -2770,67 +1170,7 @@
     ],
     [
       "s3_arrival_rate",
-      "s3_departure_rate"
-    ],
-    [
-      "s3_arrival_rate",
       "s4_arrival_rate"
-    ],
-    [
-      "s3_arrival_rate",
-      "s4_avg_queue_size"
-    ],
-    [
-      "s3_arrival_rate",
-      "s4_departure_rate"
-    ],
-    [
-      "s3_arrival_rate",
-      "s5_arrival_rate"
-    ],
-    [
-      "s3_arrival_rate",
-      "s5_avg_latency"
-    ],
-    [
-      "s3_arrival_rate",
-      "s5_avg_queue_size"
-    ],
-    [
-      "s3_arrival_rate",
-      "s5_avg_throughput"
-    ],
-    [
-      "s3_arrival_rate",
-      "s5_departure_rate"
-    ],
-    [
-      "s3_arrival_rate",
-      "s6_arrival_rate"
-    ],
-    [
-      "s3_arrival_rate",
-      "s6_avg_queue_size"
-    ],
-    [
-      "s3_arrival_rate",
-      "s6_avg_throughput"
-    ],
-    [
-      "s3_arrival_rate",
-      "s7_avg_queue_size"
-    ],
-    [
-      "s3_arrival_rate",
-      "s7_avg_throughput"
-    ],
-    [
-      "s3_arrival_rate",
-      "s8_avg_latency"
-    ],
-    [
-      "s3_arrival_rate",
-      "s8_avg_throughput"
     ],
     [
       "s3_arrival_rate",
@@ -2839,14 +1179,6 @@
     [
       "s3_arrival_rate",
       "wf1_violation_rate"
-    ],
-    [
-      "s3_avg_latency",
-      "node1_cpu_usage_pct"
-    ],
-    [
-      "s3_avg_latency",
-      "node2_cpu_usage_pct"
     ],
     [
       "s3_avg_latency",
@@ -2858,75 +1190,11 @@
     ],
     [
       "s3_avg_latency",
-      "s3_departure_rate"
-    ],
-    [
-      "s3_avg_latency",
-      "s4_arrival_rate"
-    ],
-    [
-      "s3_avg_latency",
-      "s4_departure_rate"
-    ],
-    [
-      "s3_avg_latency",
-      "s5_arrival_rate"
-    ],
-    [
-      "s3_avg_latency",
-      "s5_avg_queue_size"
-    ],
-    [
-      "s3_avg_latency",
-      "s5_avg_throughput"
-    ],
-    [
-      "s3_avg_latency",
-      "s5_departure_rate"
-    ],
-    [
-      "s3_avg_latency",
-      "s6_arrival_rate"
-    ],
-    [
-      "s3_avg_latency",
-      "s6_avg_latency"
-    ],
-    [
-      "s3_avg_latency",
-      "s6_avg_queue_size"
-    ],
-    [
-      "s3_avg_latency",
-      "s6_avg_throughput"
-    ],
-    [
-      "s3_avg_latency",
-      "s7_avg_throughput"
-    ],
-    [
-      "s3_avg_latency",
-      "s8_avg_queue_size"
-    ],
-    [
-      "s3_avg_latency",
       "wf1_avg_e2e_latency"
     ],
     [
       "s3_avg_latency",
       "wf1_violation_rate"
-    ],
-    [
-      "s3_avg_latency",
-      "wf2_avg_e2e_latency"
-    ],
-    [
-      "s3_avg_queue_size",
-      "node1_cpu_usage_pct"
-    ],
-    [
-      "s3_avg_queue_size",
-      "node2_cpu_usage_pct"
     ],
     [
       "s3_avg_queue_size",
@@ -2934,127 +1202,11 @@
     ],
     [
       "s3_avg_queue_size",
-      "s3_departure_rate"
-    ],
-    [
-      "s3_avg_queue_size",
-      "s4_arrival_rate"
-    ],
-    [
-      "s3_avg_queue_size",
-      "s4_departure_rate"
-    ],
-    [
-      "s3_avg_queue_size",
-      "s5_arrival_rate"
-    ],
-    [
-      "s3_avg_queue_size",
-      "s5_avg_queue_size"
-    ],
-    [
-      "s3_avg_queue_size",
-      "s5_avg_throughput"
-    ],
-    [
-      "s3_avg_queue_size",
-      "s5_departure_rate"
-    ],
-    [
-      "s3_avg_queue_size",
-      "s6_arrival_rate"
-    ],
-    [
-      "s3_avg_queue_size",
-      "s6_avg_latency"
-    ],
-    [
-      "s3_avg_queue_size",
-      "s6_avg_queue_size"
-    ],
-    [
-      "s3_avg_queue_size",
-      "s6_avg_throughput"
-    ],
-    [
-      "s3_avg_queue_size",
-      "s7_avg_queue_size"
-    ],
-    [
-      "s3_avg_queue_size",
-      "s7_avg_throughput"
-    ],
-    [
-      "s3_avg_queue_size",
-      "s8_avg_latency"
-    ],
-    [
-      "s3_avg_queue_size",
-      "s8_avg_throughput"
-    ],
-    [
-      "s3_avg_queue_size",
       "wf1_avg_e2e_latency"
     ],
     [
       "s3_avg_queue_size",
       "wf1_violation_rate"
-    ],
-    [
-      "s3_avg_queue_size",
-      "wf2_avg_e2e_latency"
-    ],
-    [
-      "s3_avg_threads",
-      "node0_avg_cpu_threads"
-    ],
-    [
-      "s3_avg_threads",
-      "node0_cpu_usage_pct"
-    ],
-    [
-      "s3_avg_threads",
-      "node1_avg_cpu_threads"
-    ],
-    [
-      "s3_avg_threads",
-      "node1_cpu_usage_pct"
-    ],
-    [
-      "s3_avg_threads",
-      "node2_avg_cpu_threads"
-    ],
-    [
-      "s3_avg_threads",
-      "node2_cpu_usage_pct"
-    ],
-    [
-      "s3_avg_threads",
-      "s0_avg_latency"
-    ],
-    [
-      "s3_avg_threads",
-      "s0_avg_throughput"
-    ],
-    [
-      "s3_avg_threads",
-      "s0_departure_rate"
-    ],
-    [
-      "s3_avg_threads",
-      "s1_arrival_rate"
-    ],
-    [
-      "s3_avg_threads",
-      "s1_avg_queue_size"
-    ],
-    [
-      "s3_avg_threads",
-      "s1_departure_rate"
-    ],
-    [
-      "s3_avg_threads",
-      "s2_arrival_rate"
     ],
     [
       "s3_avg_threads",
@@ -3062,18 +1214,6 @@
     ],
     [
       "s3_avg_threads",
-      "s2_avg_throughput"
-    ],
-    [
-      "s3_avg_threads",
-      "s2_departure_rate"
-    ],
-    [
-      "s3_avg_threads",
-      "s3_arrival_rate"
-    ],
-    [
-      "s3_avg_threads",
       "s3_avg_latency"
     ],
     [
@@ -3102,10 +1242,6 @@
     ],
     [
       "s3_avg_threads",
-      "s4_avg_throughput"
-    ],
-    [
-      "s3_avg_threads",
       "s4_departure_rate"
     ],
     [
@@ -3114,47 +1250,7 @@
     ],
     [
       "s3_avg_threads",
-      "s5_avg_latency"
-    ],
-    [
-      "s3_avg_threads",
-      "s5_avg_queue_size"
-    ],
-    [
-      "s3_avg_threads",
-      "s5_avg_threads"
-    ],
-    [
-      "s3_avg_threads",
       "s5_departure_rate"
-    ],
-    [
-      "s3_avg_threads",
-      "s6_avg_threads"
-    ],
-    [
-      "s3_avg_threads",
-      "s6_avg_throughput"
-    ],
-    [
-      "s3_avg_threads",
-      "s7_avg_queue_size"
-    ],
-    [
-      "s3_avg_threads",
-      "s8_avg_latency"
-    ],
-    [
-      "s3_avg_threads",
-      "s8_avg_queue_size"
-    ],
-    [
-      "s3_avg_threads",
-      "wf0_avg_e2e_latency"
-    ],
-    [
-      "s3_avg_threads",
-      "wf0_violation_rate"
     ],
     [
       "s3_avg_threads",
@@ -3163,14 +1259,6 @@
     [
       "s3_avg_threads",
       "wf1_violation_rate"
-    ],
-    [
-      "s3_avg_throughput",
-      "node1_cpu_usage_pct"
-    ],
-    [
-      "s3_avg_throughput",
-      "node2_cpu_usage_pct"
     ],
     [
       "s3_avg_throughput",
@@ -3182,14 +1270,6 @@
     ],
     [
       "s3_avg_throughput",
-      "s4_avg_queue_size"
-    ],
-    [
-      "s3_avg_throughput",
-      "s4_avg_throughput"
-    ],
-    [
-      "s3_avg_throughput",
       "s4_departure_rate"
     ],
     [
@@ -3198,47 +1278,7 @@
     ],
     [
       "s3_avg_throughput",
-      "s5_avg_latency"
-    ],
-    [
-      "s3_avg_throughput",
-      "s5_avg_queue_size"
-    ],
-    [
-      "s3_avg_throughput",
-      "s5_avg_throughput"
-    ],
-    [
-      "s3_avg_throughput",
       "s5_departure_rate"
-    ],
-    [
-      "s3_avg_throughput",
-      "s6_avg_latency"
-    ],
-    [
-      "s3_avg_throughput",
-      "s6_avg_queue_size"
-    ],
-    [
-      "s3_avg_throughput",
-      "s6_avg_throughput"
-    ],
-    [
-      "s3_avg_throughput",
-      "s7_avg_throughput"
-    ],
-    [
-      "s3_avg_throughput",
-      "s7_departure_rate"
-    ],
-    [
-      "s3_avg_throughput",
-      "s8_avg_latency"
-    ],
-    [
-      "s3_avg_throughput",
-      "s8_avg_throughput"
     ],
     [
       "s3_avg_throughput",
@@ -3247,14 +1287,6 @@
     [
       "s3_avg_throughput",
       "wf1_violation_rate"
-    ],
-    [
-      "s3_avg_throughput",
-      "wf2_avg_e2e_latency"
-    ],
-    [
-      "s3_departure_rate",
-      "node0_cpu_usage_pct"
     ],
     [
       "s3_departure_rate",
@@ -3274,10 +1306,6 @@
     ],
     [
       "s3_departure_rate",
-      "s4_avg_throughput"
-    ],
-    [
-      "s3_departure_rate",
       "s4_departure_rate"
     ],
     [
@@ -3286,35 +1314,11 @@
     ],
     [
       "s3_departure_rate",
-      "s5_avg_latency"
-    ],
-    [
-      "s3_departure_rate",
       "s5_avg_queue_size"
     ],
     [
       "s3_departure_rate",
       "s5_departure_rate"
-    ],
-    [
-      "s3_departure_rate",
-      "s6_arrival_rate"
-    ],
-    [
-      "s3_departure_rate",
-      "s7_avg_latency"
-    ],
-    [
-      "s3_departure_rate",
-      "wf0_avg_e2e_latency"
-    ],
-    [
-      "s3_departure_rate",
-      "wf1_avg_e2e_latency"
-    ],
-    [
-      "s4_arrival_rate",
-      "node0_cpu_usage_pct"
     ],
     [
       "s4_arrival_rate",
@@ -3326,15 +1330,7 @@
     ],
     [
       "s4_arrival_rate",
-      "s4_avg_latency"
-    ],
-    [
-      "s4_arrival_rate",
       "s4_avg_queue_size"
-    ],
-    [
-      "s4_arrival_rate",
-      "s4_avg_throughput"
     ],
     [
       "s4_arrival_rate",
@@ -3354,27 +1350,7 @@
     ],
     [
       "s4_arrival_rate",
-      "s5_avg_throughput"
-    ],
-    [
-      "s4_arrival_rate",
       "s5_departure_rate"
-    ],
-    [
-      "s4_arrival_rate",
-      "s7_avg_latency"
-    ],
-    [
-      "s4_arrival_rate",
-      "wf0_avg_e2e_latency"
-    ],
-    [
-      "s4_arrival_rate",
-      "wf1_avg_e2e_latency"
-    ],
-    [
-      "s4_avg_latency",
-      "node0_cpu_usage_pct"
     ],
     [
       "s4_avg_latency",
@@ -3385,70 +1361,6 @@
       "s4_avg_throughput"
     ],
     [
-      "s4_avg_latency",
-      "s5_avg_latency"
-    ],
-    [
-      "s4_avg_latency",
-      "s5_avg_throughput"
-    ],
-    [
-      "s4_avg_latency",
-      "s6_avg_latency"
-    ],
-    [
-      "s4_avg_latency",
-      "s6_avg_queue_size"
-    ],
-    [
-      "s4_avg_latency",
-      "s6_avg_throughput"
-    ],
-    [
-      "s4_avg_latency",
-      "s6_departure_rate"
-    ],
-    [
-      "s4_avg_latency",
-      "s7_arrival_rate"
-    ],
-    [
-      "s4_avg_latency",
-      "s7_departure_rate"
-    ],
-    [
-      "s4_avg_latency",
-      "s8_arrival_rate"
-    ],
-    [
-      "s4_avg_latency",
-      "s8_avg_queue_size"
-    ],
-    [
-      "s4_avg_latency",
-      "wf1_violation_rate"
-    ],
-    [
-      "s4_avg_latency",
-      "wf2_avg_e2e_latency"
-    ],
-    [
-      "s4_avg_latency",
-      "wf2_violation_rate"
-    ],
-    [
-      "s4_avg_queue_size",
-      "node0_cpu_usage_pct"
-    ],
-    [
-      "s4_avg_queue_size",
-      "node1_cpu_usage_pct"
-    ],
-    [
-      "s4_avg_queue_size",
-      "node2_cpu_usage_pct"
-    ],
-    [
       "s4_avg_queue_size",
       "s4_avg_throughput"
     ],
@@ -3462,87 +1374,11 @@
     ],
     [
       "s4_avg_queue_size",
-      "s5_avg_latency"
-    ],
-    [
-      "s4_avg_queue_size",
       "s5_avg_queue_size"
     ],
     [
       "s4_avg_queue_size",
-      "s5_avg_throughput"
-    ],
-    [
-      "s4_avg_queue_size",
       "s5_departure_rate"
-    ],
-    [
-      "s4_avg_queue_size",
-      "s6_avg_latency"
-    ],
-    [
-      "s4_avg_queue_size",
-      "s6_avg_queue_size"
-    ],
-    [
-      "s4_avg_queue_size",
-      "wf1_violation_rate"
-    ],
-    [
-      "s4_avg_queue_size",
-      "wf2_avg_e2e_latency"
-    ],
-    [
-      "s4_avg_queue_size",
-      "wf2_violation_rate"
-    ],
-    [
-      "s4_avg_threads",
-      "node1_avg_cpu_threads"
-    ],
-    [
-      "s4_avg_threads",
-      "node1_cpu_usage_pct"
-    ],
-    [
-      "s4_avg_threads",
-      "node2_avg_cpu_threads"
-    ],
-    [
-      "s4_avg_threads",
-      "node2_cpu_usage_pct"
-    ],
-    [
-      "s4_avg_threads",
-      "s0_arrival_rate"
-    ],
-    [
-      "s4_avg_threads",
-      "s0_avg_queue_size"
-    ],
-    [
-      "s4_avg_threads",
-      "s1_avg_latency"
-    ],
-    [
-      "s4_avg_threads",
-      "s1_avg_queue_size"
-    ],
-    [
-      "s4_avg_threads",
-      "s1_avg_throughput"
-    ],
-    [
-      "s4_avg_threads",
-      "s3_avg_latency"
-    ],
-    [
-      "s4_avg_threads",
-      "s3_avg_queue_size"
-    ],
-    [
-      "s4_avg_threads",
-      "s3_avg_throughput"
     ],
     [
       "s4_avg_threads",
@@ -3550,10 +1386,6 @@
     ],
     [
       "s4_avg_threads",
-      "s4_arrival_rate"
-    ],
-    [
-      "s4_avg_threads",
       "s4_avg_latency"
     ],
     [
@@ -3561,144 +1393,12 @@
       "s4_avg_queue_size"
     ],
     [
-      "s4_avg_threads",
-      "s4_avg_throughput"
-    ],
-    [
-      "s4_avg_threads",
-      "s4_departure_rate"
-    ],
-    [
-      "s4_avg_threads",
-      "s5_arrival_rate"
-    ],
-    [
-      "s4_avg_threads",
-      "s5_avg_latency"
-    ],
-    [
-      "s4_avg_threads",
-      "s5_avg_queue_size"
-    ],
-    [
-      "s4_avg_threads",
-      "s5_departure_rate"
-    ],
-    [
-      "s4_avg_threads",
-      "s6_avg_latency"
-    ],
-    [
-      "s4_avg_threads",
-      "s7_arrival_rate"
-    ],
-    [
-      "s4_avg_threads",
-      "s8_avg_latency"
-    ],
-    [
-      "s4_avg_threads",
-      "s8_avg_throughput"
-    ],
-    [
-      "s4_avg_threads",
-      "wf0_violation_rate"
-    ],
-    [
-      "s4_avg_threads",
-      "wf1_avg_e2e_latency"
-    ],
-    [
-      "s4_avg_threads",
-      "wf1_violation_rate"
-    ],
-    [
-      "s4_avg_threads",
-      "wf2_avg_e2e_latency"
-    ],
-    [
-      "s4_avg_throughput",
-      "node0_cpu_usage_pct"
-    ],
-    [
-      "s4_avg_throughput",
-      "node1_cpu_usage_pct"
-    ],
-    [
-      "s4_avg_throughput",
-      "s4_departure_rate"
-    ],
-    [
-      "s4_avg_throughput",
-      "s5_arrival_rate"
-    ],
-    [
       "s4_avg_throughput",
       "s5_avg_latency"
     ],
     [
       "s4_avg_throughput",
       "s5_avg_throughput"
-    ],
-    [
-      "s4_avg_throughput",
-      "s5_departure_rate"
-    ],
-    [
-      "s4_avg_throughput",
-      "s6_arrival_rate"
-    ],
-    [
-      "s4_avg_throughput",
-      "s6_avg_latency"
-    ],
-    [
-      "s4_avg_throughput",
-      "s6_departure_rate"
-    ],
-    [
-      "s4_avg_throughput",
-      "s7_arrival_rate"
-    ],
-    [
-      "s4_avg_throughput",
-      "s7_avg_queue_size"
-    ],
-    [
-      "s4_avg_throughput",
-      "s7_departure_rate"
-    ],
-    [
-      "s4_avg_throughput",
-      "s8_arrival_rate"
-    ],
-    [
-      "s4_avg_throughput",
-      "s8_avg_latency"
-    ],
-    [
-      "s4_avg_throughput",
-      "s8_avg_queue_size"
-    ],
-    [
-      "s4_avg_throughput",
-      "s8_departure_rate"
-    ],
-    [
-      "s4_avg_throughput",
-      "wf0_violation_rate"
-    ],
-    [
-      "s4_avg_throughput",
-      "wf1_avg_e2e_latency"
-    ],
-    [
-      "s4_avg_throughput",
-      "wf2_avg_e2e_latency"
-    ],
-    [
-      "s4_departure_rate",
-      "node0_cpu_usage_pct"
     ],
     [
       "s4_departure_rate",
@@ -3722,27 +1422,7 @@
     ],
     [
       "s4_departure_rate",
-      "s5_avg_throughput"
-    ],
-    [
-      "s4_departure_rate",
       "s5_departure_rate"
-    ],
-    [
-      "s4_departure_rate",
-      "s7_avg_latency"
-    ],
-    [
-      "s4_departure_rate",
-      "wf0_avg_e2e_latency"
-    ],
-    [
-      "s4_departure_rate",
-      "wf1_avg_e2e_latency"
-    ],
-    [
-      "s5_arrival_rate",
-      "node0_cpu_usage_pct"
     ],
     [
       "s5_arrival_rate",
@@ -3762,23 +1442,7 @@
     ],
     [
       "s5_arrival_rate",
-      "s5_avg_throughput"
-    ],
-    [
-      "s5_arrival_rate",
       "s5_departure_rate"
-    ],
-    [
-      "s5_arrival_rate",
-      "s7_avg_latency"
-    ],
-    [
-      "s5_arrival_rate",
-      "wf0_avg_e2e_latency"
-    ],
-    [
-      "s5_arrival_rate",
-      "wf1_avg_e2e_latency"
     ],
     [
       "s5_avg_latency",
@@ -3787,50 +1451,6 @@
     [
       "s5_avg_latency",
       "s5_departure_rate"
-    ],
-    [
-      "s5_avg_latency",
-      "s6_avg_latency"
-    ],
-    [
-      "s5_avg_latency",
-      "s6_departure_rate"
-    ],
-    [
-      "s5_avg_latency",
-      "s7_arrival_rate"
-    ],
-    [
-      "s5_avg_latency",
-      "s7_avg_queue_size"
-    ],
-    [
-      "s5_avg_latency",
-      "s7_departure_rate"
-    ],
-    [
-      "s5_avg_latency",
-      "s8_arrival_rate"
-    ],
-    [
-      "s5_avg_latency",
-      "s8_avg_throughput"
-    ],
-    [
-      "s5_avg_latency",
-      "s8_departure_rate"
-    ],
-    [
-      "s5_avg_latency",
-      "wf0_avg_e2e_latency"
-    ],
-    [
-      "s5_avg_latency",
-      "wf2_avg_e2e_latency"
-    ],
-    [
-      "s5_avg_queue_size",
-      "node1_cpu_usage_pct"
     ],
     [
       "s5_avg_queue_size",
@@ -3838,171 +1458,7 @@
     ],
     [
       "s5_avg_queue_size",
-      "s5_avg_throughput"
-    ],
-    [
-      "s5_avg_queue_size",
       "s5_departure_rate"
-    ],
-    [
-      "s5_avg_queue_size",
-      "s6_departure_rate"
-    ],
-    [
-      "s5_avg_queue_size",
-      "s7_arrival_rate"
-    ],
-    [
-      "s5_avg_queue_size",
-      "s7_avg_queue_size"
-    ],
-    [
-      "s5_avg_queue_size",
-      "s7_avg_throughput"
-    ],
-    [
-      "s5_avg_queue_size",
-      "s7_departure_rate"
-    ],
-    [
-      "s5_avg_queue_size",
-      "s8_arrival_rate"
-    ],
-    [
-      "s5_avg_queue_size",
-      "s8_departure_rate"
-    ],
-    [
-      "s5_avg_queue_size",
-      "wf0_avg_e2e_latency"
-    ],
-    [
-      "s5_avg_queue_size",
-      "wf1_avg_e2e_latency"
-    ],
-    [
-      "s5_avg_threads",
-      "node2_avg_cpu_threads"
-    ],
-    [
-      "s5_avg_threads",
-      "node2_cpu_usage_pct"
-    ],
-    [
-      "s5_avg_threads",
-      "s0_avg_latency"
-    ],
-    [
-      "s5_avg_threads",
-      "s2_avg_latency"
-    ],
-    [
-      "s5_avg_threads",
-      "s2_avg_queue_size"
-    ],
-    [
-      "s5_avg_threads",
-      "s2_avg_throughput"
-    ],
-    [
-      "s5_avg_threads",
-      "s3_avg_latency"
-    ],
-    [
-      "s5_avg_threads",
-      "s3_avg_queue_size"
-    ],
-    [
-      "s5_avg_threads",
-      "s3_avg_throughput"
-    ],
-    [
-      "s5_avg_threads",
-      "s4_avg_throughput"
-    ],
-    [
-      "s5_avg_threads",
-      "s4_departure_rate"
-    ],
-    [
-      "s5_avg_threads",
-      "s5_avg_latency"
-    ],
-    [
-      "s5_avg_threads",
-      "s5_avg_throughput"
-    ],
-    [
-      "s5_avg_threads",
-      "s5_departure_rate"
-    ],
-    [
-      "s5_avg_threads",
-      "s7_arrival_rate"
-    ],
-    [
-      "s5_avg_threads",
-      "s7_avg_latency"
-    ],
-    [
-      "s5_avg_threads",
-      "s7_avg_queue_size"
-    ],
-    [
-      "s5_avg_threads",
-      "s7_avg_threads"
-    ],
-    [
-      "s5_avg_threads",
-      "s8_avg_latency"
-    ],
-    [
-      "s5_avg_threads",
-      "s8_avg_threads"
-    ],
-    [
-      "s5_avg_threads",
-      "wf0_avg_e2e_latency"
-    ],
-    [
-      "s5_avg_threads",
-      "wf0_violation_rate"
-    ],
-    [
-      "s5_avg_threads",
-      "wf1_avg_e2e_latency"
-    ],
-    [
-      "s5_avg_threads",
-      "wf1_violation_rate"
-    ],
-    [
-      "s5_avg_throughput",
-      "node2_cpu_usage_pct"
-    ],
-    [
-      "s5_avg_throughput",
-      "s7_avg_throughput"
-    ],
-    [
-      "s5_avg_throughput",
-      "wf0_avg_e2e_latency"
-    ],
-    [
-      "s5_avg_throughput",
-      "wf0_violation_rate"
-    ],
-    [
-      "s5_avg_throughput",
-      "wf1_avg_e2e_latency"
-    ],
-    [
-      "s5_avg_throughput",
-      "wf1_violation_rate"
-    ],
-    [
-      "s5_departure_rate",
-      "node0_cpu_usage_pct"
     ],
     [
       "s5_departure_rate",
@@ -4013,32 +1469,8 @@
       "node2_cpu_usage_pct"
     ],
     [
-      "s5_departure_rate",
-      "s7_avg_latency"
-    ],
-    [
-      "s5_departure_rate",
-      "wf0_avg_e2e_latency"
-    ],
-    [
-      "s5_departure_rate",
-      "wf1_avg_e2e_latency"
-    ],
-    [
-      "s6_arrival_rate",
-      "node0_cpu_usage_pct"
-    ],
-    [
       "s6_arrival_rate",
       "node1_cpu_usage_pct"
-    ],
-    [
-      "s6_arrival_rate",
-      "node2_cpu_usage_pct"
-    ],
-    [
-      "s6_arrival_rate",
-      "s6_avg_latency"
     ],
     [
       "s6_arrival_rate",
@@ -4058,10 +1490,6 @@
     ],
     [
       "s6_arrival_rate",
-      "s7_avg_latency"
-    ],
-    [
-      "s6_arrival_rate",
       "s7_avg_queue_size"
     ],
     [
@@ -4074,43 +1502,11 @@
     ],
     [
       "s6_arrival_rate",
-      "s8_avg_latency"
-    ],
-    [
-      "s6_arrival_rate",
       "s8_departure_rate"
     ],
     [
       "s6_arrival_rate",
-      "wf0_avg_e2e_latency"
-    ],
-    [
-      "s6_arrival_rate",
-      "wf0_violation_rate"
-    ],
-    [
-      "s6_arrival_rate",
-      "wf1_avg_e2e_latency"
-    ],
-    [
-      "s6_arrival_rate",
-      "wf1_violation_rate"
-    ],
-    [
-      "s6_arrival_rate",
-      "wf2_avg_e2e_latency"
-    ],
-    [
-      "s6_arrival_rate",
       "wf2_violation_rate"
-    ],
-    [
-      "s6_avg_latency",
-      "node1_cpu_usage_pct"
-    ],
-    [
-      "s6_avg_latency",
-      "node2_cpu_usage_pct"
     ],
     [
       "s6_avg_latency",
@@ -4126,38 +1522,6 @@
     ],
     [
       "s6_avg_latency",
-      "s7_arrival_rate"
-    ],
-    [
-      "s6_avg_latency",
-      "s7_avg_queue_size"
-    ],
-    [
-      "s6_avg_latency",
-      "s7_departure_rate"
-    ],
-    [
-      "s6_avg_latency",
-      "s8_arrival_rate"
-    ],
-    [
-      "s6_avg_latency",
-      "s8_avg_queue_size"
-    ],
-    [
-      "s6_avg_latency",
-      "s8_departure_rate"
-    ],
-    [
-      "s6_avg_latency",
-      "wf1_avg_e2e_latency"
-    ],
-    [
-      "s6_avg_latency",
-      "wf1_violation_rate"
-    ],
-    [
-      "s6_avg_latency",
       "wf2_avg_e2e_latency"
     ],
     [
@@ -4167,38 +1531,6 @@
     [
       "s6_avg_queue_size",
       "s6_avg_throughput"
-    ],
-    [
-      "s6_avg_queue_size",
-      "s6_departure_rate"
-    ],
-    [
-      "s6_avg_queue_size",
-      "s7_departure_rate"
-    ],
-    [
-      "s6_avg_queue_size",
-      "s8_arrival_rate"
-    ],
-    [
-      "s6_avg_queue_size",
-      "s8_avg_queue_size"
-    ],
-    [
-      "s6_avg_queue_size",
-      "s8_departure_rate"
-    ],
-    [
-      "s6_avg_queue_size",
-      "wf0_violation_rate"
-    ],
-    [
-      "s6_avg_queue_size",
-      "wf1_avg_e2e_latency"
-    ],
-    [
-      "s6_avg_queue_size",
-      "wf1_violation_rate"
     ],
     [
       "s6_avg_queue_size",
@@ -4226,62 +1558,6 @@
     ],
     [
       "s6_avg_threads",
-      "node2_avg_cpu_threads"
-    ],
-    [
-      "s6_avg_threads",
-      "node2_cpu_usage_pct"
-    ],
-    [
-      "s6_avg_threads",
-      "s0_avg_latency"
-    ],
-    [
-      "s6_avg_threads",
-      "s0_avg_queue_size"
-    ],
-    [
-      "s6_avg_threads",
-      "s0_avg_throughput"
-    ],
-    [
-      "s6_avg_threads",
-      "s0_departure_rate"
-    ],
-    [
-      "s6_avg_threads",
-      "s1_arrival_rate"
-    ],
-    [
-      "s6_avg_threads",
-      "s1_departure_rate"
-    ],
-    [
-      "s6_avg_threads",
-      "s2_arrival_rate"
-    ],
-    [
-      "s6_avg_threads",
-      "s2_avg_queue_size"
-    ],
-    [
-      "s6_avg_threads",
-      "s2_avg_throughput"
-    ],
-    [
-      "s6_avg_threads",
-      "s2_departure_rate"
-    ],
-    [
-      "s6_avg_threads",
-      "s4_avg_queue_size"
-    ],
-    [
-      "s6_avg_threads",
-      "s4_avg_throughput"
-    ],
-    [
-      "s6_avg_threads",
       "s6_avg_latency"
     ],
     [
@@ -4310,10 +1586,6 @@
     ],
     [
       "s6_avg_threads",
-      "s7_avg_throughput"
-    ],
-    [
-      "s6_avg_threads",
       "s7_departure_rate"
     ],
     [
@@ -4322,23 +1594,7 @@
     ],
     [
       "s6_avg_threads",
-      "s8_avg_queue_size"
-    ],
-    [
-      "s6_avg_threads",
-      "s8_avg_throughput"
-    ],
-    [
-      "s6_avg_threads",
       "s8_departure_rate"
-    ],
-    [
-      "s6_avg_threads",
-      "wf0_avg_e2e_latency"
-    ],
-    [
-      "s6_avg_threads",
-      "wf0_violation_rate"
     ],
     [
       "s6_avg_threads",
@@ -4347,14 +1603,6 @@
     [
       "s6_avg_threads",
       "wf2_violation_rate"
-    ],
-    [
-      "s6_avg_throughput",
-      "node1_cpu_usage_pct"
-    ],
-    [
-      "s6_avg_throughput",
-      "node2_cpu_usage_pct"
     ],
     [
       "s6_avg_throughput",
@@ -4366,10 +1614,6 @@
     ],
     [
       "s6_avg_throughput",
-      "s7_avg_queue_size"
-    ],
-    [
-      "s6_avg_throughput",
       "s7_avg_throughput"
     ],
     [
@@ -4386,19 +1630,7 @@
     ],
     [
       "s6_avg_throughput",
-      "s8_avg_throughput"
-    ],
-    [
-      "s6_avg_throughput",
       "s8_departure_rate"
-    ],
-    [
-      "s6_avg_throughput",
-      "wf1_avg_e2e_latency"
-    ],
-    [
-      "s6_avg_throughput",
-      "wf1_violation_rate"
     ],
     [
       "s6_avg_throughput",
@@ -4426,10 +1658,6 @@
     ],
     [
       "s6_departure_rate",
-      "s7_avg_latency"
-    ],
-    [
-      "s6_departure_rate",
       "s7_avg_queue_size"
     ],
     [
@@ -4442,10 +1670,6 @@
     ],
     [
       "s6_departure_rate",
-      "s8_avg_latency"
-    ],
-    [
-      "s6_departure_rate",
       "s8_avg_queue_size"
     ],
     [
@@ -4455,10 +1679,6 @@
     [
       "s6_departure_rate",
       "wf0_avg_e2e_latency"
-    ],
-    [
-      "s6_departure_rate",
-      "wf0_violation_rate"
     ],
     [
       "s6_departure_rate",
@@ -4486,19 +1706,11 @@
     ],
     [
       "s7_arrival_rate",
-      "s7_avg_throughput"
-    ],
-    [
-      "s7_arrival_rate",
       "s7_departure_rate"
     ],
     [
       "s7_arrival_rate",
       "s8_arrival_rate"
-    ],
-    [
-      "s7_arrival_rate",
-      "s8_avg_latency"
     ],
     [
       "s7_arrival_rate",
@@ -4511,26 +1723,6 @@
     [
       "s7_arrival_rate",
       "wf0_avg_e2e_latency"
-    ],
-    [
-      "s7_arrival_rate",
-      "wf0_violation_rate"
-    ],
-    [
-      "s7_arrival_rate",
-      "wf2_avg_e2e_latency"
-    ],
-    [
-      "s7_avg_latency",
-      "node0_cpu_usage_pct"
-    ],
-    [
-      "s7_avg_latency",
-      "node1_cpu_usage_pct"
-    ],
-    [
-      "s7_avg_latency",
-      "node2_cpu_usage_pct"
     ],
     [
       "s7_avg_latency",
@@ -4541,40 +1733,8 @@
       "s7_avg_throughput"
     ],
     [
-      "s7_avg_latency",
-      "s7_departure_rate"
-    ],
-    [
-      "s7_avg_latency",
-      "s8_arrival_rate"
-    ],
-    [
-      "s7_avg_latency",
-      "s8_avg_queue_size"
-    ],
-    [
-      "s7_avg_latency",
-      "s8_departure_rate"
-    ],
-    [
-      "s7_avg_latency",
-      "wf0_avg_e2e_latency"
-    ],
-    [
-      "s7_avg_latency",
-      "wf0_violation_rate"
-    ],
-    [
-      "s7_avg_queue_size",
-      "node0_cpu_usage_pct"
-    ],
-    [
       "s7_avg_queue_size",
       "node1_cpu_usage_pct"
-    ],
-    [
-      "s7_avg_queue_size",
-      "node2_cpu_usage_pct"
     ],
     [
       "s7_avg_queue_size",
@@ -4590,111 +1750,11 @@
     ],
     [
       "s7_avg_queue_size",
-      "s8_avg_latency"
-    ],
-    [
-      "s7_avg_queue_size",
       "s8_avg_queue_size"
     ],
     [
       "s7_avg_queue_size",
-      "s8_avg_throughput"
-    ],
-    [
-      "s7_avg_queue_size",
       "s8_departure_rate"
-    ],
-    [
-      "s7_avg_queue_size",
-      "wf0_avg_e2e_latency"
-    ],
-    [
-      "s7_avg_queue_size",
-      "wf0_violation_rate"
-    ],
-    [
-      "s7_avg_queue_size",
-      "wf2_avg_e2e_latency"
-    ],
-    [
-      "s7_avg_threads",
-      "node1_avg_cpu_threads"
-    ],
-    [
-      "s7_avg_threads",
-      "node1_cpu_usage_pct"
-    ],
-    [
-      "s7_avg_threads",
-      "node2_avg_cpu_threads"
-    ],
-    [
-      "s7_avg_threads",
-      "node2_cpu_usage_pct"
-    ],
-    [
-      "s7_avg_threads",
-      "s0_avg_throughput"
-    ],
-    [
-      "s7_avg_threads",
-      "s0_departure_rate"
-    ],
-    [
-      "s7_avg_threads",
-      "s1_arrival_rate"
-    ],
-    [
-      "s7_avg_threads",
-      "s1_avg_throughput"
-    ],
-    [
-      "s7_avg_threads",
-      "s1_departure_rate"
-    ],
-    [
-      "s7_avg_threads",
-      "s2_arrival_rate"
-    ],
-    [
-      "s7_avg_threads",
-      "s2_avg_throughput"
-    ],
-    [
-      "s7_avg_threads",
-      "s2_departure_rate"
-    ],
-    [
-      "s7_avg_threads",
-      "s3_arrival_rate"
-    ],
-    [
-      "s7_avg_threads",
-      "s3_avg_latency"
-    ],
-    [
-      "s7_avg_threads",
-      "s3_avg_queue_size"
-    ],
-    [
-      "s7_avg_threads",
-      "s3_avg_throughput"
-    ],
-    [
-      "s7_avg_threads",
-      "s3_departure_rate"
-    ],
-    [
-      "s7_avg_threads",
-      "s4_arrival_rate"
-    ],
-    [
-      "s7_avg_threads",
-      "s4_avg_latency"
-    ],
-    [
-      "s7_avg_threads",
-      "s4_avg_queue_size"
     ],
     [
       "s7_avg_threads",
@@ -4702,79 +1762,7 @@
     ],
     [
       "s7_avg_threads",
-      "s4_departure_rate"
-    ],
-    [
-      "s7_avg_threads",
-      "s5_arrival_rate"
-    ],
-    [
-      "s7_avg_threads",
-      "s5_avg_queue_size"
-    ],
-    [
-      "s7_avg_threads",
-      "s5_avg_throughput"
-    ],
-    [
-      "s7_avg_threads",
-      "s5_departure_rate"
-    ],
-    [
-      "s7_avg_threads",
-      "s6_avg_latency"
-    ],
-    [
-      "s7_avg_threads",
-      "s6_avg_queue_size"
-    ],
-    [
-      "s7_avg_threads",
-      "s6_avg_throughput"
-    ],
-    [
-      "s7_avg_threads",
-      "s6_departure_rate"
-    ],
-    [
-      "s7_avg_threads",
-      "s7_arrival_rate"
-    ],
-    [
-      "s7_avg_threads",
       "s7_avg_latency"
-    ],
-    [
-      "s7_avg_threads",
-      "s7_avg_queue_size"
-    ],
-    [
-      "s7_avg_threads",
-      "s7_departure_rate"
-    ],
-    [
-      "s7_avg_threads",
-      "s8_arrival_rate"
-    ],
-    [
-      "s7_avg_threads",
-      "s8_avg_latency"
-    ],
-    [
-      "s7_avg_threads",
-      "s8_departure_rate"
-    ],
-    [
-      "s7_avg_threads",
-      "wf0_violation_rate"
-    ],
-    [
-      "s7_avg_threads",
-      "wf1_avg_e2e_latency"
-    ],
-    [
-      "s7_avg_threads",
-      "wf1_violation_rate"
     ],
     [
       "s7_avg_threads",
@@ -4786,31 +1774,11 @@
     ],
     [
       "s7_avg_throughput",
-      "node1_cpu_usage_pct"
-    ],
-    [
-      "s7_avg_throughput",
-      "node2_cpu_usage_pct"
-    ],
-    [
-      "s7_avg_throughput",
       "s8_avg_latency"
     ],
     [
       "s7_avg_throughput",
       "s8_avg_throughput"
-    ],
-    [
-      "s7_avg_throughput",
-      "wf0_violation_rate"
-    ],
-    [
-      "s7_avg_throughput",
-      "wf1_avg_e2e_latency"
-    ],
-    [
-      "s7_avg_throughput",
-      "wf1_violation_rate"
     ],
     [
       "s7_departure_rate",
@@ -4830,10 +1798,6 @@
     ],
     [
       "s7_departure_rate",
-      "s8_avg_latency"
-    ],
-    [
-      "s7_departure_rate",
       "s8_avg_queue_size"
     ],
     [
@@ -4843,10 +1807,6 @@
     [
       "s7_departure_rate",
       "wf0_avg_e2e_latency"
-    ],
-    [
-      "s7_departure_rate",
-      "wf0_violation_rate"
     ],
     [
       "s7_departure_rate",
@@ -4863,10 +1823,6 @@
     [
       "s8_arrival_rate",
       "node2_cpu_usage_pct"
-    ],
-    [
-      "s8_arrival_rate",
-      "s8_avg_latency"
     ],
     [
       "s8_arrival_rate",
@@ -4882,51 +1838,11 @@
     ],
     [
       "s8_arrival_rate",
-      "wf0_violation_rate"
-    ],
-    [
-      "s8_arrival_rate",
       "wf2_avg_e2e_latency"
-    ],
-    [
-      "s8_avg_latency",
-      "node0_cpu_usage_pct"
-    ],
-    [
-      "s8_avg_latency",
-      "node1_cpu_usage_pct"
-    ],
-    [
-      "s8_avg_latency",
-      "node2_cpu_usage_pct"
     ],
     [
       "s8_avg_latency",
       "s8_avg_throughput"
-    ],
-    [
-      "s8_avg_latency",
-      "s8_departure_rate"
-    ],
-    [
-      "s8_avg_latency",
-      "wf1_violation_rate"
-    ],
-    [
-      "s8_avg_latency",
-      "wf2_avg_e2e_latency"
-    ],
-    [
-      "s8_avg_queue_size",
-      "node0_cpu_usage_pct"
-    ],
-    [
-      "s8_avg_queue_size",
-      "node1_cpu_usage_pct"
-    ],
-    [
-      "s8_avg_queue_size",
-      "node2_cpu_usage_pct"
     ],
     [
       "s8_avg_queue_size",
@@ -4935,46 +1851,6 @@
     [
       "s8_avg_queue_size",
       "s8_departure_rate"
-    ],
-    [
-      "s8_avg_queue_size",
-      "wf0_avg_e2e_latency"
-    ],
-    [
-      "s8_avg_queue_size",
-      "wf0_violation_rate"
-    ],
-    [
-      "s8_avg_queue_size",
-      "wf2_avg_e2e_latency"
-    ],
-    [
-      "s8_avg_threads",
-      "s5_avg_queue_size"
-    ],
-    [
-      "s8_avg_threads",
-      "s6_arrival_rate"
-    ],
-    [
-      "s8_avg_threads",
-      "s6_avg_latency"
-    ],
-    [
-      "s8_avg_threads",
-      "s6_avg_queue_size"
-    ],
-    [
-      "s8_avg_threads",
-      "s6_avg_throughput"
-    ],
-    [
-      "s8_avg_threads",
-      "s8_avg_latency"
-    ],
-    [
-      "s8_avg_threads",
-      "wf2_avg_e2e_latency"
     ],
     [
       "s8_departure_rate",
@@ -4991,10 +1867,6 @@
     [
       "s8_departure_rate",
       "wf0_avg_e2e_latency"
-    ],
-    [
-      "s8_departure_rate",
-      "wf0_violation_rate"
     ],
     [
       "s8_departure_rate",
@@ -5005,24 +1877,8 @@
       "wf0_violation_rate"
     ],
     [
-      "wf0_avg_e2e_latency",
-      "wf2_violation_rate"
-    ],
-    [
-      "wf0_violation_rate",
-      "wf2_violation_rate"
-    ],
-    [
       "wf1_avg_e2e_latency",
       "wf1_violation_rate"
-    ],
-    [
-      "wf1_avg_e2e_latency",
-      "wf2_avg_e2e_latency"
-    ],
-    [
-      "wf1_violation_rate",
-      "wf2_avg_e2e_latency"
     ],
     [
       "wf2_avg_e2e_latency",

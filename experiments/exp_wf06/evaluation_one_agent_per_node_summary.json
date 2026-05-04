@@ -1,0 +1,41 @@
+{
+  "scenario": "one_agent_per_node",
+  "sim_config": "experiments/exp_wf06/evaluation_one_agent_per_node_config.yaml",
+  "train_episodes": 100,
+  "train_iterations": 500,
+  "training_csv": "experiments/exp_wf06/training_one_agent_per_node_episodes.csv",
+  "iterations": 500,
+  "eval_interval": 10.0,
+  "n_steps": 4,
+  "total_violations_across_steps": 32,
+  "mean_step_total_violations": 8.0,
+  "training_mean_episode_total_violations": 41.95,
+  "agents": [
+    "agent0",
+    "agent1",
+    "agent2"
+  ],
+  "service_agent_mapping": {
+    "s0": "agent0",
+    "s1": "agent1",
+    "s2": "agent2",
+    "s3": "agent0",
+    "s4": "agent1",
+    "s5": "agent2",
+    "s6": "agent0",
+    "s7": "agent1",
+    "s8": "agent2",
+    "s9": "agent0",
+    "s10": "agent1",
+    "s11": "agent2",
+    "s12": "agent0",
+    "s13": "agent1",
+    "s14": "agent2",
+    "s15": "agent0",
+    "s16": "agent1",
+    "s17": "agent2"
+  },
+  "node0_avg_cpu_usage_pct_mean": 93.75,
+  "node1_avg_cpu_usage_pct_mean": 86.76136363636363,
+  "node2_avg_cpu_usage_pct_mean": 53.57954545454545
+}

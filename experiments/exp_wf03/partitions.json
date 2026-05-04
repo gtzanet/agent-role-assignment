@@ -1,0 +1,17 @@
+{
+  "0": [
+    "s0_avg_threads",
+    "s1_avg_threads",
+    "s2_avg_threads",
+    "s3_avg_threads",
+    "s4_avg_threads",
+    "s6_avg_threads",
+    "s7_avg_threads"
+  ],
+  "1": [
+    "s5_avg_threads"
+  ],
+  "2": [
+    "s8_avg_threads"
+  ]
+}

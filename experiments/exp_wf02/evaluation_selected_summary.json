@@ -7,23 +7,24 @@
   "iterations": 500,
   "eval_interval": 10.0,
   "n_steps": 9,
-  "total_violations_across_steps": 34,
-  "mean_step_total_violations": 3.7777777777777777,
-  "training_mean_episode_total_violations": 40.32,
+  "total_violations_across_steps": 22,
+  "mean_step_total_violations": 2.4444444444444446,
+  "training_mean_episode_total_violations": 32.19,
   "agents": [
     "agent0",
     "agent1",
-    "agent2"
+    "agent2",
+    "agent3"
   ],
   "service_agent_mapping": {
     "s0": "agent0",
-    "s1": "agent2",
-    "s2": "agent0",
+    "s1": "agent0",
+    "s2": "agent2",
     "s3": "agent1",
     "s4": "agent1",
-    "s5": "agent2"
+    "s5": "agent3"
   },
-  "node0_avg_cpu_usage_pct_mean": 90.05050505050505,
-  "node1_avg_cpu_usage_pct_mean": 59.14141414141414,
-  "node2_avg_cpu_usage_pct_mean": 29.52020202020202
+  "node0_avg_cpu_usage_pct_mean": 88.23232323232324,
+  "node1_avg_cpu_usage_pct_mean": 60.88383838383839,
+  "node2_avg_cpu_usage_pct_mean": 29.5959595959596
 }

@@ -31,11 +31,11 @@
   ],
   "c_max": 100.0,
   "rho": 0.1,
-  "n_tig_edges": 15,
+  "n_tig_edges": 6,
   "timing": {
-    "prepare_s": 0.08141074999999987,
-    "query_s": 951.817706083,
-    "total_s": 951.8999090420001,
+    "prepare_s": 0.014069542000000546,
+    "query_s": 2.68943025,
+    "total_s": 2.70427075,
     "candidate_pairs": 42,
     "reachable_pairs": 42,
     "skipped_unreachable": 0

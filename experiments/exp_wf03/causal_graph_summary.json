@@ -1,8 +1,8 @@
 {
   "dataset": "/Users/gtzanettis/Documents/Projects/agent-task-distribution/data/wf03/dataset.csv",
-  "threshold": 0.1,
+  "threshold": 0.3,
   "n_nodes": 66,
-  "n_edges": 1174,
+  "n_edges": 388,
   "inputs": [
     "s0_avg_threads",
     "s1_avg_threads",

@@ -1,0 +1,56 @@
+{
+  "0": [
+    "s10_avg_threads",
+    "s13_avg_threads",
+    "s15_avg_threads",
+    "s19_avg_threads",
+    "s6_avg_threads",
+    "s9_avg_threads"
+  ],
+  "1": [
+    "s0_avg_threads",
+    "s12_avg_threads",
+    "s16_avg_threads",
+    "s21_avg_threads",
+    "s3_avg_threads"
+  ],
+  "2": [
+    "s1_avg_threads"
+  ],
+  "3": [
+    "s2_avg_threads"
+  ],
+  "4": [
+    "s4_avg_threads"
+  ],
+  "5": [
+    "s5_avg_threads"
+  ],
+  "6": [
+    "s7_avg_threads"
+  ],
+  "7": [
+    "s8_avg_threads"
+  ],
+  "8": [
+    "s11_avg_threads"
+  ],
+  "9": [
+    "s14_avg_threads"
+  ],
+  "10": [
+    "s17_avg_threads"
+  ],
+  "11": [
+    "s18_avg_threads"
+  ],
+  "12": [
+    "s20_avg_threads"
+  ],
+  "13": [
+    "s22_avg_threads"
+  ],
+  "14": [
+    "s23_avg_threads"
+  ]
+}

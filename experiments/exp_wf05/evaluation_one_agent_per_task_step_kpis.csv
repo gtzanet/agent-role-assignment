@@ -1,0 +1,6 @@
+step,elapsed,sim_time,wf0_total_traces,wf0_violation_rate,wf0_violations,wf1_total_traces,wf1_violation_rate,wf1_violations,wf2_total_traces,wf2_violation_rate,wf2_violations,wf3_total_traces,wf3_violation_rate,wf3_violations,wf4_total_traces,wf4_violation_rate,wf4_violations,total_violations,node0_avg_cpu_threads,node0_avg_cpu_usage_pct,node1_avg_cpu_threads,node1_avg_cpu_usage_pct,node2_avg_cpu_threads,node2_avg_cpu_usage_pct
+1,10.0,10.0,2,0.0,0,1,0.0,0,1,0.0,0,1,0.0,0,2,0.5,1,1,3.090909090909091,77.27272727272727,2.1818181818181817,54.54545454545454,0.8181818181818182,20.454545454545457
+2,10.0,20.0,1,1.0,1,0,0.0,0,1,1.0,1,2,1.0,2,1,1.0,1,5,4.0,100.0,3.4,85.0,2.0,50.0
+3,10.0,30.0,1,1.0,1,4,0.75,3,2,1.0,2,4,0.75,3,4,0.75,3,12,4.0,100.0,3.4,85.0,2.2,55.00000000000001
+4,10.0,40.0,3,1.0,3,3,1.0,3,5,1.0,5,3,1.0,3,3,1.0,3,17,4.0,100.0,3.7,92.5,1.9,47.5
+5,10.0,50.0,2,1.0,2,4,1.0,4,4,1.0,4,3,1.0,3,4,1.0,4,17,4.0,100.0,4.0,100.0,2.6,65.0

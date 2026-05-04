@@ -1,0 +1,2636 @@
+{
+  "nodes": [
+    {
+      "name": "node0_avg_cpu_threads",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "node0_cpu_usage_pct",
+      "node_type": "kpi",
+      "decision_space_size": 1
+    },
+    {
+      "name": "node1_avg_cpu_threads",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "node1_cpu_usage_pct",
+      "node_type": "kpi",
+      "decision_space_size": 1
+    },
+    {
+      "name": "node2_avg_cpu_threads",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "node2_cpu_usage_pct",
+      "node_type": "kpi",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s0_arrival_rate",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s0_avg_latency",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s0_avg_queue_size",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s0_avg_threads",
+      "node_type": "input",
+      "decision_space_size": 4
+    },
+    {
+      "name": "s0_avg_throughput",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s0_departure_rate",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s10_arrival_rate",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s10_avg_latency",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s10_avg_queue_size",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s10_avg_threads",
+      "node_type": "input",
+      "decision_space_size": 4
+    },
+    {
+      "name": "s10_avg_throughput",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s10_departure_rate",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s11_arrival_rate",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s11_avg_latency",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s11_avg_queue_size",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s11_avg_threads",
+      "node_type": "input",
+      "decision_space_size": 4
+    },
+    {
+      "name": "s11_avg_throughput",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s11_departure_rate",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s12_arrival_rate",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s12_avg_latency",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s12_avg_queue_size",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s12_avg_threads",
+      "node_type": "input",
+      "decision_space_size": 4
+    },
+    {
+      "name": "s12_avg_throughput",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s12_departure_rate",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s13_arrival_rate",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s13_avg_latency",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s13_avg_queue_size",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s13_avg_threads",
+      "node_type": "input",
+      "decision_space_size": 4
+    },
+    {
+      "name": "s13_avg_throughput",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s13_departure_rate",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s14_arrival_rate",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s14_avg_latency",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s14_avg_queue_size",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s14_avg_threads",
+      "node_type": "input",
+      "decision_space_size": 4
+    },
+    {
+      "name": "s14_avg_throughput",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s14_departure_rate",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s15_arrival_rate",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s15_avg_latency",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s15_avg_queue_size",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s15_avg_threads",
+      "node_type": "input",
+      "decision_space_size": 4
+    },
+    {
+      "name": "s15_avg_throughput",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s15_departure_rate",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s16_arrival_rate",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s16_avg_latency",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s16_avg_queue_size",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s16_avg_threads",
+      "node_type": "input",
+      "decision_space_size": 4
+    },
+    {
+      "name": "s16_avg_throughput",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s16_departure_rate",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s17_arrival_rate",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s17_avg_latency",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s17_avg_queue_size",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s17_avg_threads",
+      "node_type": "input",
+      "decision_space_size": 4
+    },
+    {
+      "name": "s17_avg_throughput",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s17_departure_rate",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s1_arrival_rate",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s1_avg_latency",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s1_avg_queue_size",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s1_avg_threads",
+      "node_type": "input",
+      "decision_space_size": 4
+    },
+    {
+      "name": "s1_avg_throughput",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s1_departure_rate",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s2_arrival_rate",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s2_avg_latency",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s2_avg_queue_size",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s2_avg_threads",
+      "node_type": "input",
+      "decision_space_size": 4
+    },
+    {
+      "name": "s2_avg_throughput",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s2_departure_rate",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s3_arrival_rate",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s3_avg_latency",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s3_avg_queue_size",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s3_avg_threads",
+      "node_type": "input",
+      "decision_space_size": 4
+    },
+    {
+      "name": "s3_avg_throughput",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s3_departure_rate",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s4_arrival_rate",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s4_avg_latency",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s4_avg_queue_size",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s4_avg_threads",
+      "node_type": "input",
+      "decision_space_size": 4
+    },
+    {
+      "name": "s4_avg_throughput",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s4_departure_rate",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s5_arrival_rate",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s5_avg_latency",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s5_avg_queue_size",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s5_avg_threads",
+      "node_type": "input",
+      "decision_space_size": 4
+    },
+    {
+      "name": "s5_avg_throughput",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s5_departure_rate",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s6_arrival_rate",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s6_avg_latency",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s6_avg_queue_size",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s6_avg_threads",
+      "node_type": "input",
+      "decision_space_size": 4
+    },
+    {
+      "name": "s6_avg_throughput",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s6_departure_rate",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s7_arrival_rate",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s7_avg_latency",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s7_avg_queue_size",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s7_avg_threads",
+      "node_type": "input",
+      "decision_space_size": 4
+    },
+    {
+      "name": "s7_avg_throughput",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s7_departure_rate",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s8_arrival_rate",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s8_avg_latency",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s8_avg_queue_size",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s8_avg_threads",
+      "node_type": "input",
+      "decision_space_size": 4
+    },
+    {
+      "name": "s8_avg_throughput",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s8_departure_rate",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s9_arrival_rate",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s9_avg_latency",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s9_avg_queue_size",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s9_avg_threads",
+      "node_type": "input",
+      "decision_space_size": 4
+    },
+    {
+      "name": "s9_avg_throughput",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "s9_departure_rate",
+      "node_type": "intermediary",
+      "decision_space_size": 1
+    },
+    {
+      "name": "wf0_avg_e2e_latency",
+      "node_type": "kpi",
+      "decision_space_size": 1
+    },
+    {
+      "name": "wf0_violation_rate",
+      "node_type": "kpi",
+      "decision_space_size": 1
+    },
+    {
+      "name": "wf1_avg_e2e_latency",
+      "node_type": "kpi",
+      "decision_space_size": 1
+    },
+    {
+      "name": "wf1_violation_rate",
+      "node_type": "kpi",
+      "decision_space_size": 1
+    },
+    {
+      "name": "wf2_avg_e2e_latency",
+      "node_type": "kpi",
+      "decision_space_size": 1
+    },
+    {
+      "name": "wf2_violation_rate",
+      "node_type": "kpi",
+      "decision_space_size": 1
+    },
+    {
+      "name": "wf3_avg_e2e_latency",
+      "node_type": "kpi",
+      "decision_space_size": 1
+    },
+    {
+      "name": "wf3_violation_rate",
+      "node_type": "kpi",
+      "decision_space_size": 1
+    },
+    {
+      "name": "wf4_avg_e2e_latency",
+      "node_type": "kpi",
+      "decision_space_size": 1
+    },
+    {
+      "name": "wf4_violation_rate",
+      "node_type": "kpi",
+      "decision_space_size": 1
+    },
+    {
+      "name": "wf5_avg_e2e_latency",
+      "node_type": "kpi",
+      "decision_space_size": 1
+    },
+    {
+      "name": "wf5_violation_rate",
+      "node_type": "kpi",
+      "decision_space_size": 1
+    }
+  ],
+  "edges": [
+    [
+      "node0_avg_cpu_threads",
+      "node0_cpu_usage_pct"
+    ],
+    [
+      "node0_avg_cpu_threads",
+      "node1_avg_cpu_threads"
+    ],
+    [
+      "node0_avg_cpu_threads",
+      "node1_cpu_usage_pct"
+    ],
+    [
+      "node0_avg_cpu_threads",
+      "s10_departure_rate"
+    ],
+    [
+      "node0_avg_cpu_threads",
+      "s11_departure_rate"
+    ],
+    [
+      "node0_avg_cpu_threads",
+      "s12_avg_latency"
+    ],
+    [
+      "node0_avg_cpu_threads",
+      "s9_departure_rate"
+    ],
+    [
+      "node0_avg_cpu_threads",
+      "wf0_violation_rate"
+    ],
+    [
+      "node0_avg_cpu_threads",
+      "wf1_violation_rate"
+    ],
+    [
+      "node0_avg_cpu_threads",
+      "wf5_violation_rate"
+    ],
+    [
+      "node0_cpu_usage_pct",
+      "node1_cpu_usage_pct"
+    ],
+    [
+      "node0_cpu_usage_pct",
+      "wf0_violation_rate"
+    ],
+    [
+      "node0_cpu_usage_pct",
+      "wf1_violation_rate"
+    ],
+    [
+      "node0_cpu_usage_pct",
+      "wf5_violation_rate"
+    ],
+    [
+      "node1_avg_cpu_threads",
+      "node0_cpu_usage_pct"
+    ],
+    [
+      "node1_avg_cpu_threads",
+      "node1_cpu_usage_pct"
+    ],
+    [
+      "node1_avg_cpu_threads",
+      "node2_avg_cpu_threads"
+    ],
+    [
+      "node1_avg_cpu_threads",
+      "node2_cpu_usage_pct"
+    ],
+    [
+      "node1_avg_cpu_threads",
+      "s0_arrival_rate"
+    ],
+    [
+      "node1_avg_cpu_threads",
+      "s0_avg_latency"
+    ],
+    [
+      "node1_avg_cpu_threads",
+      "wf0_violation_rate"
+    ],
+    [
+      "node1_cpu_usage_pct",
+      "node2_cpu_usage_pct"
+    ],
+    [
+      "node1_cpu_usage_pct",
+      "wf0_violation_rate"
+    ],
+    [
+      "node2_avg_cpu_threads",
+      "node1_cpu_usage_pct"
+    ],
+    [
+      "node2_avg_cpu_threads",
+      "node2_cpu_usage_pct"
+    ],
+    [
+      "node2_avg_cpu_threads",
+      "wf0_violation_rate"
+    ],
+    [
+      "node2_cpu_usage_pct",
+      "wf0_violation_rate"
+    ],
+    [
+      "s0_arrival_rate",
+      "node1_cpu_usage_pct"
+    ],
+    [
+      "s0_arrival_rate",
+      "s0_avg_latency"
+    ],
+    [
+      "s0_arrival_rate",
+      "s0_avg_queue_size"
+    ],
+    [
+      "s0_arrival_rate",
+      "s0_avg_throughput"
+    ],
+    [
+      "s0_arrival_rate",
+      "s0_departure_rate"
+    ],
+    [
+      "s0_arrival_rate",
+      "s1_arrival_rate"
+    ],
+    [
+      "s0_arrival_rate",
+      "s1_departure_rate"
+    ],
+    [
+      "s0_arrival_rate",
+      "s2_arrival_rate"
+    ],
+    [
+      "s0_arrival_rate",
+      "s2_departure_rate"
+    ],
+    [
+      "s0_arrival_rate",
+      "wf0_avg_e2e_latency"
+    ],
+    [
+      "s0_arrival_rate",
+      "wf0_violation_rate"
+    ],
+    [
+      "s0_avg_latency",
+      "node1_cpu_usage_pct"
+    ],
+    [
+      "s0_avg_latency",
+      "s0_avg_queue_size"
+    ],
+    [
+      "s0_avg_latency",
+      "s0_avg_throughput"
+    ],
+    [
+      "s0_avg_latency",
+      "wf0_avg_e2e_latency"
+    ],
+    [
+      "s0_avg_latency",
+      "wf0_violation_rate"
+    ],
+    [
+      "s0_avg_queue_size",
+      "s0_avg_throughput"
+    ],
+    [
+      "s0_avg_queue_size",
+      "wf0_avg_e2e_latency"
+    ],
+    [
+      "s0_avg_queue_size",
+      "wf0_violation_rate"
+    ],
+    [
+      "s0_avg_threads",
+      "s0_avg_throughput"
+    ],
+    [
+      "s0_avg_threads",
+      "s0_departure_rate"
+    ],
+    [
+      "s0_avg_threads",
+      "s1_arrival_rate"
+    ],
+    [
+      "s0_avg_threads",
+      "s1_avg_latency"
+    ],
+    [
+      "s0_avg_threads",
+      "s1_avg_queue_size"
+    ],
+    [
+      "s0_avg_threads",
+      "s1_departure_rate"
+    ],
+    [
+      "s0_avg_threads",
+      "s2_arrival_rate"
+    ],
+    [
+      "s0_avg_threads",
+      "s2_avg_queue_size"
+    ],
+    [
+      "s0_avg_threads",
+      "s2_departure_rate"
+    ],
+    [
+      "s0_avg_threads",
+      "s6_avg_latency"
+    ],
+    [
+      "s0_avg_threads",
+      "wf2_avg_e2e_latency"
+    ],
+    [
+      "s0_avg_throughput",
+      "s0_departure_rate"
+    ],
+    [
+      "s0_avg_throughput",
+      "s1_arrival_rate"
+    ],
+    [
+      "s0_avg_throughput",
+      "s1_avg_queue_size"
+    ],
+    [
+      "s0_avg_throughput",
+      "s1_departure_rate"
+    ],
+    [
+      "s0_avg_throughput",
+      "s2_arrival_rate"
+    ],
+    [
+      "s0_avg_throughput",
+      "s2_departure_rate"
+    ],
+    [
+      "s0_avg_throughput",
+      "wf0_avg_e2e_latency"
+    ],
+    [
+      "s0_avg_throughput",
+      "wf0_violation_rate"
+    ],
+    [
+      "s0_departure_rate",
+      "s1_arrival_rate"
+    ],
+    [
+      "s0_departure_rate",
+      "s1_avg_queue_size"
+    ],
+    [
+      "s0_departure_rate",
+      "s1_departure_rate"
+    ],
+    [
+      "s0_departure_rate",
+      "s2_arrival_rate"
+    ],
+    [
+      "s0_departure_rate",
+      "s2_avg_queue_size"
+    ],
+    [
+      "s0_departure_rate",
+      "s2_departure_rate"
+    ],
+    [
+      "s0_departure_rate",
+      "s3_avg_latency"
+    ],
+    [
+      "s0_departure_rate",
+      "s8_arrival_rate"
+    ],
+    [
+      "s0_departure_rate",
+      "wf1_avg_e2e_latency"
+    ],
+    [
+      "s10_arrival_rate",
+      "s10_avg_latency"
+    ],
+    [
+      "s10_arrival_rate",
+      "s10_avg_queue_size"
+    ],
+    [
+      "s10_arrival_rate",
+      "s10_departure_rate"
+    ],
+    [
+      "s10_arrival_rate",
+      "s11_arrival_rate"
+    ],
+    [
+      "s10_arrival_rate",
+      "s11_avg_queue_size"
+    ],
+    [
+      "s10_arrival_rate",
+      "s11_departure_rate"
+    ],
+    [
+      "s10_arrival_rate",
+      "s17_avg_queue_size"
+    ],
+    [
+      "s10_arrival_rate",
+      "s9_arrival_rate"
+    ],
+    [
+      "s10_arrival_rate",
+      "s9_avg_throughput"
+    ],
+    [
+      "s10_arrival_rate",
+      "s9_departure_rate"
+    ],
+    [
+      "s10_arrival_rate",
+      "wf3_avg_e2e_latency"
+    ],
+    [
+      "s10_avg_latency",
+      "s10_avg_queue_size"
+    ],
+    [
+      "s10_avg_latency",
+      "s10_avg_throughput"
+    ],
+    [
+      "s10_avg_latency",
+      "s10_departure_rate"
+    ],
+    [
+      "s10_avg_latency",
+      "s11_arrival_rate"
+    ],
+    [
+      "s10_avg_latency",
+      "s11_departure_rate"
+    ],
+    [
+      "s10_avg_latency",
+      "s9_departure_rate"
+    ],
+    [
+      "s10_avg_queue_size",
+      "s10_departure_rate"
+    ],
+    [
+      "s10_avg_queue_size",
+      "s11_arrival_rate"
+    ],
+    [
+      "s10_avg_queue_size",
+      "s11_avg_queue_size"
+    ],
+    [
+      "s10_avg_queue_size",
+      "s11_departure_rate"
+    ],
+    [
+      "s10_avg_queue_size",
+      "s17_avg_queue_size"
+    ],
+    [
+      "s10_avg_queue_size",
+      "s9_avg_throughput"
+    ],
+    [
+      "s10_avg_queue_size",
+      "s9_departure_rate"
+    ],
+    [
+      "s10_avg_threads",
+      "s10_avg_latency"
+    ],
+    [
+      "s10_avg_throughput",
+      "s11_avg_latency"
+    ],
+    [
+      "s10_avg_throughput",
+      "s11_avg_throughput"
+    ],
+    [
+      "s10_departure_rate",
+      "node0_cpu_usage_pct"
+    ],
+    [
+      "s10_departure_rate",
+      "s11_arrival_rate"
+    ],
+    [
+      "s10_departure_rate",
+      "s11_avg_queue_size"
+    ],
+    [
+      "s10_departure_rate",
+      "s11_departure_rate"
+    ],
+    [
+      "s10_departure_rate",
+      "s17_avg_queue_size"
+    ],
+    [
+      "s10_departure_rate",
+      "s9_arrival_rate"
+    ],
+    [
+      "s10_departure_rate",
+      "s9_avg_throughput"
+    ],
+    [
+      "s10_departure_rate",
+      "s9_departure_rate"
+    ],
+    [
+      "s10_departure_rate",
+      "wf3_avg_e2e_latency"
+    ],
+    [
+      "s11_arrival_rate",
+      "s11_avg_queue_size"
+    ],
+    [
+      "s11_arrival_rate",
+      "s11_departure_rate"
+    ],
+    [
+      "s11_arrival_rate",
+      "s9_arrival_rate"
+    ],
+    [
+      "s11_arrival_rate",
+      "s9_avg_throughput"
+    ],
+    [
+      "s11_arrival_rate",
+      "s9_departure_rate"
+    ],
+    [
+      "s11_arrival_rate",
+      "wf3_avg_e2e_latency"
+    ],
+    [
+      "s11_avg_latency",
+      "s11_avg_throughput"
+    ],
+    [
+      "s11_avg_queue_size",
+      "s11_departure_rate"
+    ],
+    [
+      "s11_avg_queue_size",
+      "s9_departure_rate"
+    ],
+    [
+      "s11_departure_rate",
+      "node0_cpu_usage_pct"
+    ],
+    [
+      "s11_departure_rate",
+      "s17_avg_queue_size"
+    ],
+    [
+      "s11_departure_rate",
+      "s9_arrival_rate"
+    ],
+    [
+      "s11_departure_rate",
+      "s9_avg_throughput"
+    ],
+    [
+      "s11_departure_rate",
+      "s9_departure_rate"
+    ],
+    [
+      "s11_departure_rate",
+      "wf3_avg_e2e_latency"
+    ],
+    [
+      "s12_arrival_rate",
+      "s12_avg_latency"
+    ],
+    [
+      "s12_arrival_rate",
+      "s12_avg_queue_size"
+    ],
+    [
+      "s12_arrival_rate",
+      "s12_avg_throughput"
+    ],
+    [
+      "s12_arrival_rate",
+      "wf4_avg_e2e_latency"
+    ],
+    [
+      "s12_arrival_rate",
+      "wf4_violation_rate"
+    ],
+    [
+      "s12_avg_latency",
+      "node0_cpu_usage_pct"
+    ],
+    [
+      "s12_avg_latency",
+      "s12_avg_queue_size"
+    ],
+    [
+      "s12_avg_latency",
+      "s12_avg_throughput"
+    ],
+    [
+      "s12_avg_latency",
+      "wf4_avg_e2e_latency"
+    ],
+    [
+      "s12_avg_latency",
+      "wf4_violation_rate"
+    ],
+    [
+      "s12_avg_queue_size",
+      "s12_avg_throughput"
+    ],
+    [
+      "s12_avg_queue_size",
+      "wf4_avg_e2e_latency"
+    ],
+    [
+      "s12_avg_queue_size",
+      "wf4_violation_rate"
+    ],
+    [
+      "s12_avg_threads",
+      "s12_avg_latency"
+    ],
+    [
+      "s12_avg_threads",
+      "s12_avg_queue_size"
+    ],
+    [
+      "s12_avg_threads",
+      "s12_avg_throughput"
+    ],
+    [
+      "s12_avg_threads",
+      "s12_departure_rate"
+    ],
+    [
+      "s12_avg_threads",
+      "s13_arrival_rate"
+    ],
+    [
+      "s12_avg_threads",
+      "s13_avg_latency"
+    ],
+    [
+      "s12_avg_threads",
+      "s13_avg_queue_size"
+    ],
+    [
+      "s12_avg_threads",
+      "s13_departure_rate"
+    ],
+    [
+      "s12_avg_threads",
+      "s14_arrival_rate"
+    ],
+    [
+      "s12_avg_threads",
+      "s14_avg_queue_size"
+    ],
+    [
+      "s12_avg_threads",
+      "s14_departure_rate"
+    ],
+    [
+      "s12_avg_threads",
+      "wf4_avg_e2e_latency"
+    ],
+    [
+      "s12_avg_throughput",
+      "s12_departure_rate"
+    ],
+    [
+      "s12_avg_throughput",
+      "s13_arrival_rate"
+    ],
+    [
+      "s12_avg_throughput",
+      "s13_avg_queue_size"
+    ],
+    [
+      "s12_avg_throughput",
+      "s13_avg_throughput"
+    ],
+    [
+      "s12_avg_throughput",
+      "s13_departure_rate"
+    ],
+    [
+      "s12_avg_throughput",
+      "s14_arrival_rate"
+    ],
+    [
+      "s12_avg_throughput",
+      "s14_avg_throughput"
+    ],
+    [
+      "s12_avg_throughput",
+      "s14_departure_rate"
+    ],
+    [
+      "s12_avg_throughput",
+      "wf4_avg_e2e_latency"
+    ],
+    [
+      "s12_departure_rate",
+      "s13_arrival_rate"
+    ],
+    [
+      "s12_departure_rate",
+      "s13_avg_latency"
+    ],
+    [
+      "s12_departure_rate",
+      "s13_avg_queue_size"
+    ],
+    [
+      "s12_departure_rate",
+      "s13_departure_rate"
+    ],
+    [
+      "s12_departure_rate",
+      "s14_arrival_rate"
+    ],
+    [
+      "s12_departure_rate",
+      "s14_avg_latency"
+    ],
+    [
+      "s12_departure_rate",
+      "s14_avg_queue_size"
+    ],
+    [
+      "s12_departure_rate",
+      "s14_departure_rate"
+    ],
+    [
+      "s13_arrival_rate",
+      "s13_avg_latency"
+    ],
+    [
+      "s13_arrival_rate",
+      "s13_avg_queue_size"
+    ],
+    [
+      "s13_arrival_rate",
+      "s13_departure_rate"
+    ],
+    [
+      "s13_arrival_rate",
+      "s14_arrival_rate"
+    ],
+    [
+      "s13_arrival_rate",
+      "s14_avg_queue_size"
+    ],
+    [
+      "s13_arrival_rate",
+      "s14_departure_rate"
+    ],
+    [
+      "s13_avg_latency",
+      "s13_avg_queue_size"
+    ],
+    [
+      "s13_avg_latency",
+      "s13_departure_rate"
+    ],
+    [
+      "s13_avg_latency",
+      "s14_arrival_rate"
+    ],
+    [
+      "s13_avg_latency",
+      "s14_avg_latency"
+    ],
+    [
+      "s13_avg_latency",
+      "s14_departure_rate"
+    ],
+    [
+      "s13_avg_queue_size",
+      "s13_departure_rate"
+    ],
+    [
+      "s13_avg_queue_size",
+      "s14_arrival_rate"
+    ],
+    [
+      "s13_avg_queue_size",
+      "s14_avg_queue_size"
+    ],
+    [
+      "s13_avg_queue_size",
+      "s14_departure_rate"
+    ],
+    [
+      "s13_avg_threads",
+      "s14_avg_latency"
+    ],
+    [
+      "s13_avg_threads",
+      "s1_avg_throughput"
+    ],
+    [
+      "s13_avg_threads",
+      "wf3_violation_rate"
+    ],
+    [
+      "s13_avg_throughput",
+      "s14_avg_latency"
+    ],
+    [
+      "s13_avg_throughput",
+      "s14_avg_throughput"
+    ],
+    [
+      "s13_departure_rate",
+      "s14_arrival_rate"
+    ],
+    [
+      "s13_departure_rate",
+      "s14_avg_queue_size"
+    ],
+    [
+      "s13_departure_rate",
+      "s14_departure_rate"
+    ],
+    [
+      "s14_arrival_rate",
+      "s14_avg_queue_size"
+    ],
+    [
+      "s14_arrival_rate",
+      "s14_departure_rate"
+    ],
+    [
+      "s14_avg_latency",
+      "s14_avg_throughput"
+    ],
+    [
+      "s14_avg_latency",
+      "s4_avg_latency"
+    ],
+    [
+      "s14_avg_queue_size",
+      "s14_departure_rate"
+    ],
+    [
+      "s15_arrival_rate",
+      "s15_avg_latency"
+    ],
+    [
+      "s15_arrival_rate",
+      "s15_avg_queue_size"
+    ],
+    [
+      "s15_arrival_rate",
+      "s15_avg_throughput"
+    ],
+    [
+      "s15_arrival_rate",
+      "wf5_avg_e2e_latency"
+    ],
+    [
+      "s15_arrival_rate",
+      "wf5_violation_rate"
+    ],
+    [
+      "s15_avg_latency",
+      "s15_avg_queue_size"
+    ],
+    [
+      "s15_avg_latency",
+      "s15_avg_throughput"
+    ],
+    [
+      "s15_avg_latency",
+      "wf5_avg_e2e_latency"
+    ],
+    [
+      "s15_avg_latency",
+      "wf5_violation_rate"
+    ],
+    [
+      "s15_avg_queue_size",
+      "s15_avg_throughput"
+    ],
+    [
+      "s15_avg_queue_size",
+      "wf5_avg_e2e_latency"
+    ],
+    [
+      "s15_avg_queue_size",
+      "wf5_violation_rate"
+    ],
+    [
+      "s15_avg_threads",
+      "s15_avg_latency"
+    ],
+    [
+      "s15_avg_threads",
+      "s15_avg_queue_size"
+    ],
+    [
+      "s15_avg_threads",
+      "s15_avg_throughput"
+    ],
+    [
+      "s15_avg_threads",
+      "s15_departure_rate"
+    ],
+    [
+      "s15_avg_threads",
+      "s16_arrival_rate"
+    ],
+    [
+      "s15_avg_threads",
+      "s16_avg_latency"
+    ],
+    [
+      "s15_avg_threads",
+      "s16_avg_queue_size"
+    ],
+    [
+      "s15_avg_threads",
+      "s16_departure_rate"
+    ],
+    [
+      "s15_avg_threads",
+      "s17_arrival_rate"
+    ],
+    [
+      "s15_avg_threads",
+      "s17_avg_queue_size"
+    ],
+    [
+      "s15_avg_threads",
+      "s17_departure_rate"
+    ],
+    [
+      "s15_avg_threads",
+      "wf5_avg_e2e_latency"
+    ],
+    [
+      "s15_avg_threads",
+      "wf5_violation_rate"
+    ],
+    [
+      "s15_avg_throughput",
+      "s15_departure_rate"
+    ],
+    [
+      "s15_avg_throughput",
+      "s16_arrival_rate"
+    ],
+    [
+      "s15_avg_throughput",
+      "s16_avg_queue_size"
+    ],
+    [
+      "s15_avg_throughput",
+      "s16_departure_rate"
+    ],
+    [
+      "s15_avg_throughput",
+      "s17_arrival_rate"
+    ],
+    [
+      "s15_avg_throughput",
+      "s17_avg_queue_size"
+    ],
+    [
+      "s15_avg_throughput",
+      "s17_departure_rate"
+    ],
+    [
+      "s15_avg_throughput",
+      "wf5_avg_e2e_latency"
+    ],
+    [
+      "s15_avg_throughput",
+      "wf5_violation_rate"
+    ],
+    [
+      "s15_departure_rate",
+      "s16_arrival_rate"
+    ],
+    [
+      "s15_departure_rate",
+      "s16_avg_latency"
+    ],
+    [
+      "s15_departure_rate",
+      "s16_avg_queue_size"
+    ],
+    [
+      "s15_departure_rate",
+      "s16_departure_rate"
+    ],
+    [
+      "s15_departure_rate",
+      "s17_arrival_rate"
+    ],
+    [
+      "s15_departure_rate",
+      "s17_avg_queue_size"
+    ],
+    [
+      "s15_departure_rate",
+      "s17_departure_rate"
+    ],
+    [
+      "s15_departure_rate",
+      "s6_departure_rate"
+    ],
+    [
+      "s15_departure_rate",
+      "s7_departure_rate"
+    ],
+    [
+      "s16_arrival_rate",
+      "s16_avg_latency"
+    ],
+    [
+      "s16_arrival_rate",
+      "s16_avg_queue_size"
+    ],
+    [
+      "s16_arrival_rate",
+      "s16_departure_rate"
+    ],
+    [
+      "s16_arrival_rate",
+      "s17_arrival_rate"
+    ],
+    [
+      "s16_arrival_rate",
+      "s17_avg_queue_size"
+    ],
+    [
+      "s16_arrival_rate",
+      "s17_departure_rate"
+    ],
+    [
+      "s16_arrival_rate",
+      "wf1_violation_rate"
+    ],
+    [
+      "s16_arrival_rate",
+      "wf5_avg_e2e_latency"
+    ],
+    [
+      "s16_avg_latency",
+      "s16_avg_queue_size"
+    ],
+    [
+      "s16_avg_latency",
+      "s16_departure_rate"
+    ],
+    [
+      "s16_avg_latency",
+      "s17_arrival_rate"
+    ],
+    [
+      "s16_avg_latency",
+      "s17_departure_rate"
+    ],
+    [
+      "s16_avg_queue_size",
+      "s16_departure_rate"
+    ],
+    [
+      "s16_avg_queue_size",
+      "s17_arrival_rate"
+    ],
+    [
+      "s16_avg_queue_size",
+      "s17_avg_queue_size"
+    ],
+    [
+      "s16_avg_queue_size",
+      "s17_departure_rate"
+    ],
+    [
+      "s16_avg_threads",
+      "s16_avg_latency"
+    ],
+    [
+      "s16_avg_threads",
+      "wf5_violation_rate"
+    ],
+    [
+      "s16_avg_throughput",
+      "s17_avg_latency"
+    ],
+    [
+      "s16_avg_throughput",
+      "s17_avg_throughput"
+    ],
+    [
+      "s16_departure_rate",
+      "s17_arrival_rate"
+    ],
+    [
+      "s16_departure_rate",
+      "s17_avg_queue_size"
+    ],
+    [
+      "s16_departure_rate",
+      "s17_departure_rate"
+    ],
+    [
+      "s16_departure_rate",
+      "wf1_violation_rate"
+    ],
+    [
+      "s17_arrival_rate",
+      "s17_avg_queue_size"
+    ],
+    [
+      "s17_arrival_rate",
+      "s17_departure_rate"
+    ],
+    [
+      "s17_arrival_rate",
+      "wf1_violation_rate"
+    ],
+    [
+      "s17_avg_latency",
+      "s17_avg_throughput"
+    ],
+    [
+      "s17_avg_queue_size",
+      "s17_departure_rate"
+    ],
+    [
+      "s17_avg_queue_size",
+      "s2_avg_throughput"
+    ],
+    [
+      "s17_avg_queue_size",
+      "wf3_avg_e2e_latency"
+    ],
+    [
+      "s17_departure_rate",
+      "s6_departure_rate"
+    ],
+    [
+      "s17_departure_rate",
+      "s7_departure_rate"
+    ],
+    [
+      "s17_departure_rate",
+      "wf1_violation_rate"
+    ],
+    [
+      "s1_arrival_rate",
+      "s1_avg_queue_size"
+    ],
+    [
+      "s1_arrival_rate",
+      "s1_departure_rate"
+    ],
+    [
+      "s1_arrival_rate",
+      "s2_arrival_rate"
+    ],
+    [
+      "s1_arrival_rate",
+      "s2_avg_queue_size"
+    ],
+    [
+      "s1_arrival_rate",
+      "s2_departure_rate"
+    ],
+    [
+      "s1_arrival_rate",
+      "s3_avg_latency"
+    ],
+    [
+      "s1_arrival_rate",
+      "wf1_avg_e2e_latency"
+    ],
+    [
+      "s1_avg_latency",
+      "s1_avg_queue_size"
+    ],
+    [
+      "s1_avg_latency",
+      "s2_avg_latency"
+    ],
+    [
+      "s1_avg_queue_size",
+      "s1_avg_throughput"
+    ],
+    [
+      "s1_avg_queue_size",
+      "s1_departure_rate"
+    ],
+    [
+      "s1_avg_queue_size",
+      "s2_arrival_rate"
+    ],
+    [
+      "s1_avg_queue_size",
+      "s2_avg_queue_size"
+    ],
+    [
+      "s1_avg_queue_size",
+      "s2_departure_rate"
+    ],
+    [
+      "s1_avg_threads",
+      "s1_avg_latency"
+    ],
+    [
+      "s1_avg_throughput",
+      "s2_avg_latency"
+    ],
+    [
+      "s1_avg_throughput",
+      "s2_avg_throughput"
+    ],
+    [
+      "s1_departure_rate",
+      "s2_arrival_rate"
+    ],
+    [
+      "s1_departure_rate",
+      "s2_avg_queue_size"
+    ],
+    [
+      "s1_departure_rate",
+      "s2_departure_rate"
+    ],
+    [
+      "s1_departure_rate",
+      "s3_avg_latency"
+    ],
+    [
+      "s1_departure_rate",
+      "s7_arrival_rate"
+    ],
+    [
+      "s1_departure_rate",
+      "s7_departure_rate"
+    ],
+    [
+      "s1_departure_rate",
+      "s8_arrival_rate"
+    ],
+    [
+      "s1_departure_rate",
+      "s8_departure_rate"
+    ],
+    [
+      "s1_departure_rate",
+      "wf1_avg_e2e_latency"
+    ],
+    [
+      "s2_arrival_rate",
+      "s2_avg_queue_size"
+    ],
+    [
+      "s2_arrival_rate",
+      "s2_departure_rate"
+    ],
+    [
+      "s2_arrival_rate",
+      "s3_avg_latency"
+    ],
+    [
+      "s2_arrival_rate",
+      "s8_arrival_rate"
+    ],
+    [
+      "s2_arrival_rate",
+      "wf1_avg_e2e_latency"
+    ],
+    [
+      "s2_avg_latency",
+      "s2_avg_throughput"
+    ],
+    [
+      "s2_avg_queue_size",
+      "s2_avg_throughput"
+    ],
+    [
+      "s2_avg_queue_size",
+      "s2_departure_rate"
+    ],
+    [
+      "s2_avg_threads",
+      "s3_arrival_rate"
+    ],
+    [
+      "s2_avg_threads",
+      "s3_avg_queue_size"
+    ],
+    [
+      "s2_avg_threads",
+      "s3_avg_throughput"
+    ],
+    [
+      "s2_departure_rate",
+      "s3_avg_latency"
+    ],
+    [
+      "s2_departure_rate",
+      "s8_arrival_rate"
+    ],
+    [
+      "s2_departure_rate",
+      "wf1_avg_e2e_latency"
+    ],
+    [
+      "s3_arrival_rate",
+      "s3_avg_latency"
+    ],
+    [
+      "s3_arrival_rate",
+      "s3_avg_queue_size"
+    ],
+    [
+      "s3_arrival_rate",
+      "s3_avg_throughput"
+    ],
+    [
+      "s3_arrival_rate",
+      "wf1_avg_e2e_latency"
+    ],
+    [
+      "s3_arrival_rate",
+      "wf1_violation_rate"
+    ],
+    [
+      "s3_avg_latency",
+      "s3_avg_queue_size"
+    ],
+    [
+      "s3_avg_latency",
+      "s3_avg_throughput"
+    ],
+    [
+      "s3_avg_latency",
+      "s3_departure_rate"
+    ],
+    [
+      "s3_avg_latency",
+      "s4_arrival_rate"
+    ],
+    [
+      "s3_avg_latency",
+      "s4_avg_queue_size"
+    ],
+    [
+      "s3_avg_latency",
+      "s4_departure_rate"
+    ],
+    [
+      "s3_avg_latency",
+      "s5_arrival_rate"
+    ],
+    [
+      "s3_avg_latency",
+      "s5_departure_rate"
+    ],
+    [
+      "s3_avg_latency",
+      "wf1_avg_e2e_latency"
+    ],
+    [
+      "s3_avg_latency",
+      "wf1_violation_rate"
+    ],
+    [
+      "s3_avg_queue_size",
+      "s3_avg_throughput"
+    ],
+    [
+      "s3_avg_queue_size",
+      "s8_avg_latency"
+    ],
+    [
+      "s3_avg_queue_size",
+      "wf1_avg_e2e_latency"
+    ],
+    [
+      "s3_avg_queue_size",
+      "wf1_violation_rate"
+    ],
+    [
+      "s3_avg_threads",
+      "s0_departure_rate"
+    ],
+    [
+      "s3_avg_threads",
+      "s3_avg_latency"
+    ],
+    [
+      "s3_avg_threads",
+      "s3_avg_queue_size"
+    ],
+    [
+      "s3_avg_threads",
+      "s3_avg_throughput"
+    ],
+    [
+      "s3_avg_threads",
+      "s3_departure_rate"
+    ],
+    [
+      "s3_avg_threads",
+      "s4_arrival_rate"
+    ],
+    [
+      "s3_avg_threads",
+      "s4_avg_latency"
+    ],
+    [
+      "s3_avg_threads",
+      "s4_avg_queue_size"
+    ],
+    [
+      "s3_avg_threads",
+      "s4_departure_rate"
+    ],
+    [
+      "s3_avg_threads",
+      "s5_arrival_rate"
+    ],
+    [
+      "s3_avg_threads",
+      "s5_avg_queue_size"
+    ],
+    [
+      "s3_avg_threads",
+      "s5_departure_rate"
+    ],
+    [
+      "s3_avg_threads",
+      "wf1_avg_e2e_latency"
+    ],
+    [
+      "s3_avg_threads",
+      "wf1_violation_rate"
+    ],
+    [
+      "s3_avg_throughput",
+      "s3_departure_rate"
+    ],
+    [
+      "s3_avg_throughput",
+      "s4_arrival_rate"
+    ],
+    [
+      "s3_avg_throughput",
+      "s4_avg_queue_size"
+    ],
+    [
+      "s3_avg_throughput",
+      "s4_departure_rate"
+    ],
+    [
+      "s3_avg_throughput",
+      "s5_arrival_rate"
+    ],
+    [
+      "s3_avg_throughput",
+      "s5_avg_latency"
+    ],
+    [
+      "s3_avg_throughput",
+      "s5_avg_throughput"
+    ],
+    [
+      "s3_avg_throughput",
+      "s5_departure_rate"
+    ],
+    [
+      "s3_avg_throughput",
+      "s6_arrival_rate"
+    ],
+    [
+      "s3_avg_throughput",
+      "s8_avg_latency"
+    ],
+    [
+      "s3_avg_throughput",
+      "wf1_avg_e2e_latency"
+    ],
+    [
+      "s3_avg_throughput",
+      "wf1_violation_rate"
+    ],
+    [
+      "s3_departure_rate",
+      "s4_arrival_rate"
+    ],
+    [
+      "s3_departure_rate",
+      "s4_avg_queue_size"
+    ],
+    [
+      "s3_departure_rate",
+      "s4_departure_rate"
+    ],
+    [
+      "s3_departure_rate",
+      "s5_arrival_rate"
+    ],
+    [
+      "s3_departure_rate",
+      "s5_avg_queue_size"
+    ],
+    [
+      "s3_departure_rate",
+      "s5_departure_rate"
+    ],
+    [
+      "s3_departure_rate",
+      "wf1_avg_e2e_latency"
+    ],
+    [
+      "s4_arrival_rate",
+      "s4_avg_latency"
+    ],
+    [
+      "s4_arrival_rate",
+      "s4_avg_queue_size"
+    ],
+    [
+      "s4_arrival_rate",
+      "s4_departure_rate"
+    ],
+    [
+      "s4_arrival_rate",
+      "s5_arrival_rate"
+    ],
+    [
+      "s4_arrival_rate",
+      "s5_avg_queue_size"
+    ],
+    [
+      "s4_arrival_rate",
+      "s5_departure_rate"
+    ],
+    [
+      "s4_arrival_rate",
+      "wf1_avg_e2e_latency"
+    ],
+    [
+      "s4_avg_latency",
+      "s4_avg_queue_size"
+    ],
+    [
+      "s4_avg_queue_size",
+      "s4_departure_rate"
+    ],
+    [
+      "s4_avg_queue_size",
+      "s5_arrival_rate"
+    ],
+    [
+      "s4_avg_queue_size",
+      "s5_avg_latency"
+    ],
+    [
+      "s4_avg_queue_size",
+      "s5_avg_queue_size"
+    ],
+    [
+      "s4_avg_queue_size",
+      "s5_departure_rate"
+    ],
+    [
+      "s4_avg_threads",
+      "s4_avg_latency"
+    ],
+    [
+      "s4_avg_threads",
+      "s4_avg_queue_size"
+    ],
+    [
+      "s4_avg_threads",
+      "s5_avg_latency"
+    ],
+    [
+      "s4_avg_throughput",
+      "s5_avg_latency"
+    ],
+    [
+      "s4_avg_throughput",
+      "s5_avg_throughput"
+    ],
+    [
+      "s4_departure_rate",
+      "s5_arrival_rate"
+    ],
+    [
+      "s4_departure_rate",
+      "s5_avg_queue_size"
+    ],
+    [
+      "s4_departure_rate",
+      "s5_departure_rate"
+    ],
+    [
+      "s4_departure_rate",
+      "wf1_avg_e2e_latency"
+    ],
+    [
+      "s5_arrival_rate",
+      "s5_avg_queue_size"
+    ],
+    [
+      "s5_arrival_rate",
+      "s5_departure_rate"
+    ],
+    [
+      "s5_arrival_rate",
+      "s6_arrival_rate"
+    ],
+    [
+      "s5_arrival_rate",
+      "wf1_avg_e2e_latency"
+    ],
+    [
+      "s5_avg_latency",
+      "s5_avg_throughput"
+    ],
+    [
+      "s5_avg_queue_size",
+      "s5_departure_rate"
+    ],
+    [
+      "s5_departure_rate",
+      "wf1_avg_e2e_latency"
+    ],
+    [
+      "s6_arrival_rate",
+      "s6_avg_latency"
+    ],
+    [
+      "s6_arrival_rate",
+      "s6_avg_queue_size"
+    ],
+    [
+      "s6_arrival_rate",
+      "s6_avg_throughput"
+    ],
+    [
+      "s6_arrival_rate",
+      "s6_departure_rate"
+    ],
+    [
+      "s6_arrival_rate",
+      "s7_arrival_rate"
+    ],
+    [
+      "s6_arrival_rate",
+      "s7_departure_rate"
+    ],
+    [
+      "s6_arrival_rate",
+      "s8_arrival_rate"
+    ],
+    [
+      "s6_arrival_rate",
+      "s8_avg_queue_size"
+    ],
+    [
+      "s6_arrival_rate",
+      "s8_departure_rate"
+    ],
+    [
+      "s6_arrival_rate",
+      "wf2_violation_rate"
+    ],
+    [
+      "s6_avg_latency",
+      "s6_avg_queue_size"
+    ],
+    [
+      "s6_avg_latency",
+      "s6_avg_throughput"
+    ],
+    [
+      "s6_avg_latency",
+      "wf2_avg_e2e_latency"
+    ],
+    [
+      "s6_avg_latency",
+      "wf2_violation_rate"
+    ],
+    [
+      "s6_avg_queue_size",
+      "s6_avg_throughput"
+    ],
+    [
+      "s6_avg_queue_size",
+      "wf2_avg_e2e_latency"
+    ],
+    [
+      "s6_avg_queue_size",
+      "wf2_violation_rate"
+    ],
+    [
+      "s6_avg_threads",
+      "s6_avg_latency"
+    ],
+    [
+      "s6_avg_threads",
+      "s6_avg_throughput"
+    ],
+    [
+      "s6_avg_threads",
+      "s6_departure_rate"
+    ],
+    [
+      "s6_avg_threads",
+      "s7_arrival_rate"
+    ],
+    [
+      "s6_avg_threads",
+      "s7_avg_latency"
+    ],
+    [
+      "s6_avg_threads",
+      "s7_avg_queue_size"
+    ],
+    [
+      "s6_avg_threads",
+      "s7_departure_rate"
+    ],
+    [
+      "s6_avg_threads",
+      "s8_arrival_rate"
+    ],
+    [
+      "s6_avg_threads",
+      "s8_avg_queue_size"
+    ],
+    [
+      "s6_avg_threads",
+      "s8_departure_rate"
+    ],
+    [
+      "s6_avg_threads",
+      "wf2_avg_e2e_latency"
+    ],
+    [
+      "s6_avg_throughput",
+      "s6_departure_rate"
+    ],
+    [
+      "s6_avg_throughput",
+      "s7_arrival_rate"
+    ],
+    [
+      "s6_avg_throughput",
+      "s7_departure_rate"
+    ],
+    [
+      "s6_avg_throughput",
+      "s8_arrival_rate"
+    ],
+    [
+      "s6_avg_throughput",
+      "s8_departure_rate"
+    ],
+    [
+      "s6_avg_throughput",
+      "wf2_avg_e2e_latency"
+    ],
+    [
+      "s6_avg_throughput",
+      "wf2_violation_rate"
+    ],
+    [
+      "s6_departure_rate",
+      "s7_arrival_rate"
+    ],
+    [
+      "s6_departure_rate",
+      "s7_avg_latency"
+    ],
+    [
+      "s6_departure_rate",
+      "s7_avg_queue_size"
+    ],
+    [
+      "s6_departure_rate",
+      "s7_departure_rate"
+    ],
+    [
+      "s6_departure_rate",
+      "s8_arrival_rate"
+    ],
+    [
+      "s6_departure_rate",
+      "s8_avg_queue_size"
+    ],
+    [
+      "s6_departure_rate",
+      "s8_departure_rate"
+    ],
+    [
+      "s7_arrival_rate",
+      "s7_avg_latency"
+    ],
+    [
+      "s7_arrival_rate",
+      "s7_avg_queue_size"
+    ],
+    [
+      "s7_arrival_rate",
+      "s7_departure_rate"
+    ],
+    [
+      "s7_arrival_rate",
+      "s8_arrival_rate"
+    ],
+    [
+      "s7_arrival_rate",
+      "s8_avg_queue_size"
+    ],
+    [
+      "s7_arrival_rate",
+      "s8_departure_rate"
+    ],
+    [
+      "s7_avg_latency",
+      "s7_avg_queue_size"
+    ],
+    [
+      "s7_avg_latency",
+      "s7_avg_throughput"
+    ],
+    [
+      "s7_avg_latency",
+      "s7_departure_rate"
+    ],
+    [
+      "s7_avg_latency",
+      "s8_arrival_rate"
+    ],
+    [
+      "s7_avg_latency",
+      "s8_departure_rate"
+    ],
+    [
+      "s7_avg_queue_size",
+      "s7_avg_throughput"
+    ],
+    [
+      "s7_avg_queue_size",
+      "s7_departure_rate"
+    ],
+    [
+      "s7_avg_queue_size",
+      "s8_arrival_rate"
+    ],
+    [
+      "s7_avg_queue_size",
+      "s8_avg_queue_size"
+    ],
+    [
+      "s7_avg_queue_size",
+      "s8_departure_rate"
+    ],
+    [
+      "s7_avg_threads",
+      "s10_avg_throughput"
+    ],
+    [
+      "s7_avg_threads",
+      "s7_avg_latency"
+    ],
+    [
+      "s7_avg_threads",
+      "s7_avg_queue_size"
+    ],
+    [
+      "s7_departure_rate",
+      "s8_arrival_rate"
+    ],
+    [
+      "s7_departure_rate",
+      "s8_avg_queue_size"
+    ],
+    [
+      "s7_departure_rate",
+      "s8_departure_rate"
+    ],
+    [
+      "s7_departure_rate",
+      "wf2_avg_e2e_latency"
+    ],
+    [
+      "s8_arrival_rate",
+      "s8_avg_queue_size"
+    ],
+    [
+      "s8_arrival_rate",
+      "s8_departure_rate"
+    ],
+    [
+      "s8_arrival_rate",
+      "wf2_avg_e2e_latency"
+    ],
+    [
+      "s8_avg_queue_size",
+      "s8_avg_throughput"
+    ],
+    [
+      "s8_avg_queue_size",
+      "s8_departure_rate"
+    ],
+    [
+      "s8_departure_rate",
+      "wf2_avg_e2e_latency"
+    ],
+    [
+      "s9_arrival_rate",
+      "s9_avg_latency"
+    ],
+    [
+      "s9_arrival_rate",
+      "s9_avg_queue_size"
+    ],
+    [
+      "s9_arrival_rate",
+      "s9_avg_throughput"
+    ],
+    [
+      "s9_arrival_rate",
+      "s9_departure_rate"
+    ],
+    [
+      "s9_arrival_rate",
+      "wf3_avg_e2e_latency"
+    ],
+    [
+      "s9_arrival_rate",
+      "wf3_violation_rate"
+    ],
+    [
+      "s9_avg_latency",
+      "s9_avg_queue_size"
+    ],
+    [
+      "s9_avg_latency",
+      "s9_avg_throughput"
+    ],
+    [
+      "s9_avg_latency",
+      "wf3_avg_e2e_latency"
+    ],
+    [
+      "s9_avg_latency",
+      "wf3_violation_rate"
+    ],
+    [
+      "s9_avg_queue_size",
+      "s9_avg_throughput"
+    ],
+    [
+      "s9_avg_queue_size",
+      "wf3_avg_e2e_latency"
+    ],
+    [
+      "s9_avg_queue_size",
+      "wf3_violation_rate"
+    ],
+    [
+      "s9_avg_threads",
+      "s10_arrival_rate"
+    ],
+    [
+      "s9_avg_threads",
+      "s10_avg_latency"
+    ],
+    [
+      "s9_avg_threads",
+      "s10_avg_queue_size"
+    ],
+    [
+      "s9_avg_threads",
+      "s10_departure_rate"
+    ],
+    [
+      "s9_avg_threads",
+      "s11_arrival_rate"
+    ],
+    [
+      "s9_avg_threads",
+      "s11_departure_rate"
+    ],
+    [
+      "s9_avg_threads",
+      "s17_avg_queue_size"
+    ],
+    [
+      "s9_avg_threads",
+      "s9_avg_latency"
+    ],
+    [
+      "s9_avg_threads",
+      "s9_avg_queue_size"
+    ],
+    [
+      "s9_avg_threads",
+      "s9_avg_throughput"
+    ],
+    [
+      "s9_avg_threads",
+      "s9_departure_rate"
+    ],
+    [
+      "s9_avg_threads",
+      "wf3_avg_e2e_latency"
+    ],
+    [
+      "s9_avg_throughput",
+      "s9_departure_rate"
+    ],
+    [
+      "s9_avg_throughput",
+      "wf3_avg_e2e_latency"
+    ],
+    [
+      "s9_avg_throughput",
+      "wf3_violation_rate"
+    ],
+    [
+      "s9_departure_rate",
+      "node0_cpu_usage_pct"
+    ],
+    [
+      "s9_departure_rate",
+      "wf3_avg_e2e_latency"
+    ],
+    [
+      "wf0_avg_e2e_latency",
+      "wf0_violation_rate"
+    ],
+    [
+      "wf1_avg_e2e_latency",
+      "wf1_violation_rate"
+    ],
+    [
+      "wf2_avg_e2e_latency",
+      "wf2_violation_rate"
+    ],
+    [
+      "wf3_avg_e2e_latency",
+      "wf3_violation_rate"
+    ],
+    [
+      "wf4_avg_e2e_latency",
+      "wf4_violation_rate"
+    ],
+    [
+      "wf5_avg_e2e_latency",
+      "wf5_violation_rate"
+    ]
+  ]
+}

@@ -2,13 +2,13 @@ experiments_dir: experiments
 experiment_id: exp_wf03
 step: 5
 dataset_dir: /Users/gtzanettis/Documents/Projects/agent-task-distribution/data/wf03
-workflow_config: experiments/wf02_profile_workflow_superset.yaml
+workflow_config: experiments/variables_metadata.yaml
 iterations: 500
 seed: 42
-causal_threshold: 0.1
+causal_threshold: 0.3
 causal_algorithm: correlation
 delta_mode: interventional
-delta_bins: 5
+delta_bins: 3
 delta_max_parents: 3
 delta_max_workers: 6
 replica_action_space: 10
@@ -20,6 +20,7 @@ n_agents: 2
 omega: null
 step5_train_episodes: 100
 step5_train_iterations: 500
+causal_analyzer_url: http://localhost:5050
 exp_config_source: /Users/gtzanettis/Documents/Projects/agent-task-distribution/exp_config_wf03_workers6.yaml
 dataset_csv: /Users/gtzanettis/Documents/Projects/agent-task-distribution/data/wf03/dataset.csv
 sim_config: /Users/gtzanettis/Documents/Projects/agent-task-distribution/data/wf03/sim_config.yaml

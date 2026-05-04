@@ -1,0 +1,51 @@
+{
+  "assignment_file": "experiments/exp_wf08/agent_assignments.yaml",
+  "sim_config": "/Users/gtzanettis/Documents/Projects/agent-task-distribution/data/wf08/sim_config.yaml",
+  "scenarios": [
+    {
+      "scenario": "selected",
+      "training_csv": "experiments/exp_wf08/training_selected_episodes.csv",
+      "detail_csv": "experiments/exp_wf08/evaluation_selected_step_kpis.csv",
+      "summary_json": "experiments/exp_wf08/evaluation_selected_summary.json",
+      "train_episodes": 100,
+      "n_steps": 4,
+      "total_violations": 43
+    },
+    {
+      "scenario": "one_agent_all_tasks",
+      "training_csv": "experiments/exp_wf08/training_one_agent_all_tasks_episodes.csv",
+      "detail_csv": "experiments/exp_wf08/evaluation_one_agent_all_tasks_step_kpis.csv",
+      "summary_json": "experiments/exp_wf08/evaluation_one_agent_all_tasks_summary.json",
+      "train_episodes": 100,
+      "n_steps": 4,
+      "total_violations": 35
+    },
+    {
+      "scenario": "one_agent_per_task",
+      "training_csv": "experiments/exp_wf08/training_one_agent_per_task_episodes.csv",
+      "detail_csv": "experiments/exp_wf08/evaluation_one_agent_per_task_step_kpis.csv",
+      "summary_json": "experiments/exp_wf08/evaluation_one_agent_per_task_summary.json",
+      "train_episodes": 100,
+      "n_steps": 4,
+      "total_violations": 42
+    },
+    {
+      "scenario": "one_agent_per_workflow",
+      "training_csv": "experiments/exp_wf08/training_one_agent_per_workflow_episodes.csv",
+      "detail_csv": "experiments/exp_wf08/evaluation_one_agent_per_workflow_step_kpis.csv",
+      "summary_json": "experiments/exp_wf08/evaluation_one_agent_per_workflow_summary.json",
+      "train_episodes": 100,
+      "n_steps": 4,
+      "total_violations": 29
+    },
+    {
+      "scenario": "one_agent_per_node",
+      "training_csv": "experiments/exp_wf08/training_one_agent_per_node_episodes.csv",
+      "detail_csv": "experiments/exp_wf08/evaluation_one_agent_per_node_step_kpis.csv",
+      "summary_json": "experiments/exp_wf08/evaluation_one_agent_per_node_summary.json",
+      "train_episodes": 100,
+      "n_steps": 4,
+      "total_violations": 40
+    }
+  ]
+}

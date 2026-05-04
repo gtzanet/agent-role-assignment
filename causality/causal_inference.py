@@ -201,52 +201,54 @@ class CausalAnalyzer:
         working_graph = self.cg.graph.subgraph(columns).copy()
         if working_graph.number_of_nodes() == 0:
             return {}
-        
-        components = list(nx.connected_components(working_graph.to_undirected()))
+
+        available = [c for c in columns if c in self.data_df.columns]
         self.component_models = {}
         self.node_to_component = {}
-        
-        for component_idx, component in enumerate(components):
-            component_nodes = [c for c in columns if c in component]
-            if len(component_nodes) < 2:
-                continue
-            
-            component_df = self.data_df[component_nodes]
-            sm = StructureModel()
-            sm.add_nodes_from(component_nodes)
-            
-            # Build edges respecting parent limit
-            parents_by_child: dict[str, list[str]] = {}
-            for u, v in working_graph.edges():
-                if u in component_nodes and v in component_nodes:
-                    parents_by_child.setdefault(v, []).append(u)
-            
-            for child, parents in parents_by_child.items():
-                if len(parents) <= max_parents:
-                    for p in parents:
-                        sm.add_edge(p, child)
-                    continue
-                
-                # Select top-K parents by correlation
+
+        # Build the full parent-limited StructureModel first, then detect components
+        # on the trimmed graph — parent-limiting can disconnect the original graph,
+        # so detecting components before limiting leads to BayesianNetwork errors.
+        sm_full = StructureModel()
+        sm_full.add_nodes_from(available)
+
+        parents_by_child: dict[str, list[str]] = {}
+        for u, v in working_graph.edges():
+            if u in available and v in available:
+                parents_by_child.setdefault(v, []).append(u)
+
+        for child, parents in parents_by_child.items():
+            if len(parents) <= max_parents:
+                for p in parents:
+                    sm_full.add_edge(p, child)
+            else:
+                component_df_tmp = self.data_df[available]
                 scored = []
                 for p in parents:
-                    corr = component_df[p].corr(component_df[child])
+                    corr = component_df_tmp[p].corr(component_df_tmp[child])
                     score = abs(float(corr)) if pd.notna(corr) else 0.0
                     scored.append((score, p))
                 scored.sort(reverse=True)
                 for _, p in scored[:max_parents]:
-                    sm.add_edge(p, child)
-            
-            # Fit Bayesian network
-            bn = BayesianNetwork(sm)
+                    sm_full.add_edge(p, child)
+
+        for component_idx, component_nodes_set in enumerate(nx.weakly_connected_components(sm_full)):
+            component_nodes = [c for c in available if c in component_nodes_set]
+            if len(component_nodes) < 2:
+                continue
+
+            sub_sm = sm_full.subgraph(component_nodes).copy()
+            component_df = self.data_df[component_nodes]
+
+            bn = BayesianNetwork(sub_sm)
             bn = bn.fit_node_states(component_df)
             bn = bn.fit_cpds(component_df, method="BayesianEstimator", bayes_prior="K2")
             ie = InferenceEngine(bn)
-            
+
             self.component_models[component_idx] = (component_nodes, bn, ie)
             for node in component_nodes:
                 self.node_to_component[node] = component_idx
-        
+
         return self.component_models
 
     def fresh_inference_engine(self, component_idx: int) -> InferenceEngine | None:
@@ -390,20 +392,25 @@ class CausalAnalyzer:
         for idx, x in enumerate(task_vals_int):
             intervention = dict(base_intervention)
             intervention[x] = 1.0
-            ie.do_intervention(task_node, intervention)
-
-            q = ie.query({})
-            for kpi in valid_kpis:
-                dist = q[kpi]
-                kpi_reps = kpi_reps_map[kpi]
-                e_k = 0.0
-                for state, prob in dist.items():
-                    state_int = int(state)
-                    rep = kpi_reps.get(state_int, float(state_int))
-                    e_k += float(prob) * rep
-                effects_by_kpi[kpi][idx] = e_k
-
-            ie.reset_do(task_node)
+            try:
+                ie.do_intervention(task_node, intervention)
+                q = ie.query({})
+                for kpi in valid_kpis:
+                    dist = q[kpi]
+                    kpi_reps = kpi_reps_map[kpi]
+                    e_k = 0.0
+                    for state, prob in dist.items():
+                        state_int = int(state)
+                        rep = kpi_reps.get(state_int, float(state_int))
+                        e_k += float(prob) * rep
+                    effects_by_kpi[kpi][idx] = e_k
+            except ValueError:
+                pass
+            finally:
+                try:
+                    ie.reset_do(task_node)
+                except Exception:
+                    pass
 
         out: dict[str, float] = {kpi: 0.0 for kpi in kpi_nodes}
         for kpi in valid_kpis:
@@ -543,13 +550,16 @@ class CausalAnalyzerWrapper:
         component_idx: int | None = None,
         _inference_engine=None,  # ignored — kept for interface compatibility
     ) -> dict[str, float]:
-        result = self._post("interventional_effects_for_task", {
-            "task_node": task_node,
-            "kpi_nodes": kpi_nodes,
-            "raw_ranges": {k: list(v) for k, v in raw_ranges.items()},
-            "component_idx": component_idx,
-        })
-        return result["effects"]
+        try:
+            result = self._post("interventional_effects_for_task", {
+                "task_node": task_node,
+                "kpi_nodes": kpi_nodes,
+                "raw_ranges": {k: list(v) for k, v in raw_ranges.items()},
+                "component_idx": component_idx,
+            })
+            return result["effects"]
+        except Exception:
+            return {kpi: 0.0 for kpi in kpi_nodes}
 
     def interventional_effect(
         self,

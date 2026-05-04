@@ -1,0 +1,16 @@
+task_i,task_j,weight
+s0_avg_threads,s1_avg_threads,0.6876932289778104
+s0_avg_threads,s3_avg_threads,0.0007856271146918346
+s0_avg_threads,s4_avg_threads,0.06957494841007619
+s0_avg_threads,s6_avg_threads,0.06993392317370409
+s0_avg_threads,s9_avg_threads,0.567249456385443
+s1_avg_threads,s9_avg_threads,2.6794978766012593e-15
+s3_avg_threads,s4_avg_threads,0.011070233496915197
+s3_avg_threads,s6_avg_threads,0.011228782817334282
+s3_avg_threads,s7_avg_threads,0.6361192258533822
+s3_avg_threads,s9_avg_threads,9.211151876111482e-05
+s4_avg_threads,s6_avg_threads,0.9948826341395248
+s4_avg_threads,s9_avg_threads,0.008133999770875483
+s6_avg_threads,s9_avg_threads,0.008188078654420172
+s7_avg_threads,s9_avg_threads,3.1545372230862494e-15
+s9_avg_threads,s10_avg_threads,0.31604369303154206

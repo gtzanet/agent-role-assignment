@@ -9,7 +9,7 @@
       "summary_json": "experiments/exp_wf02/evaluation_selected_summary.json",
       "train_episodes": 100,
       "n_steps": 9,
-      "total_violations": 34
+      "total_violations": 22
     },
     {
       "scenario": "one_agent_all_tasks",
