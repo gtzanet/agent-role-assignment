@@ -1,0 +1,6 @@
+{
+  "env": {
+    "VIRTUAL_ENV": "/Users/gtzanettis/Documents/Projects/agent-task-distribution/.venv",
+    "PATH": "/Users/gtzanettis/Documents/Projects/agent-task-distribution/.venv/bin:$PATH"
+  }
+}

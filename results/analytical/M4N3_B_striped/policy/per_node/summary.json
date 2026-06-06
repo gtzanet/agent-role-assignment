@@ -1,0 +1,38 @@
+{
+  "scenario": "M4N3_B_striped",
+  "partition": "per_node",
+  "max_iter": 100,
+  "noise_amp": 0.0,
+  "seed": null,
+  "converged": true,
+  "iterations": 2,
+  "ergodic": true,
+  "J_initial": 51.7003,
+  "J_final": 48.5729,
+  "final_assignment": {
+    "s0": 1,
+    "s1": 3,
+    "s2": 1,
+    "s3": 3,
+    "s4": 1,
+    "s5": 1,
+    "s6": 1,
+    "s7": 1
+  },
+  "rho_wf": {
+    "wf0": 0.9722,
+    "wf1": 0.9722,
+    "wf2": 0.7071,
+    "wf3": 0.7071
+  },
+  "rho_s": {
+    "s0": 0.7071,
+    "s1": 0.9722,
+    "s2": 0.7071,
+    "s3": 0.9722,
+    "s4": 2.9167,
+    "s5": 0.2424,
+    "s6": 2.9167,
+    "s7": 0.2424
+  }
+}

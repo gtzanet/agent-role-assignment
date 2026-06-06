@@ -1,0 +1,16 @@
+{
+  "partition": "spectral_sii_marginalised",
+  "overall_drop_pct": 36.429,
+  "mean_node_util_pct": 61.194,
+  "per_workflow_drop": {
+    "wf0": 0.0,
+    "wf1": 0.0,
+    "wf2": 72.857,
+    "wf3": 72.857
+  },
+  "per_node_util": {
+    "n0": 70.707,
+    "n1": 93.684,
+    "n2": 19.192
+  }
+}

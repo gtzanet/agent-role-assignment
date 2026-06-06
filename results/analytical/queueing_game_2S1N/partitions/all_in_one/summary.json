@@ -1,0 +1,33 @@
+{
+  "scenario": "queueing_game_2S1N",
+  "algorithm": "all_in_one",
+  "method": null,
+  "n_agents_requested": 2,
+  "n_agents_found": 1,
+  "C_max": 100,
+  "agents": [
+    {
+      "agent_id": 0,
+      "service_ids": [
+        0,
+        1
+      ],
+      "nodes": [
+        0,
+        0
+      ],
+      "workflows": [
+        0,
+        1
+      ],
+      "action_sizes": [
+        5,
+        5
+      ],
+      "joint_space": 25,
+      "within_C_max": true
+    }
+  ],
+  "cut_stats": {},
+  "all_within_C_max": true
+}

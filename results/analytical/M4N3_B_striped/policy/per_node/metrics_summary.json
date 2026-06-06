@@ -1,0 +1,16 @@
+{
+  "partition": "per_node",
+  "overall_drop_pct": 32.857,
+  "mean_node_util_pct": 64.289,
+  "per_workflow_drop": {
+    "wf0": 0.0,
+    "wf1": 0.0,
+    "wf2": 65.714,
+    "wf3": 65.714
+  },
+  "per_node_util": {
+    "n0": 70.707,
+    "n1": 97.917,
+    "n2": 24.242
+  }
+}

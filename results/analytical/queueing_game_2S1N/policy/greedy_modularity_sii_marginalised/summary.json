@@ -1,0 +1,22 @@
+{
+  "scenario": "queueing_game_2S1N",
+  "partition": "greedy_modularity_sii_marginalised",
+  "max_iter": 100,
+  "converged": true,
+  "iterations": 1,
+  "ergodic": true,
+  "J_initial": 45.8333,
+  "J_final": 45.8333,
+  "final_assignment": {
+    "s0": 1,
+    "s1": 1
+  },
+  "rho_wf": {
+    "wf0": 0.9167,
+    "wf1": 0.9167
+  },
+  "rho_s": {
+    "s0": 0.9167,
+    "s1": 0.9167
+  }
+}

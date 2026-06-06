@@ -1,0 +1,51 @@
+# Analytical GPS config — matches queueing_game_simulator.ipynb
+# Two independent 1-service workflows on a single shared node.
+#
+# Simulator parameters (from notebook):
+#   TASK_LOAD = 1400 ops/req   → L
+#   FREQ      = 1 400 000 op/s → f[0]
+#   OVERHEAD  = 28 000 op/s    → delta  (2% of FREQ per active replica)
+#   λ         = 440 req/s each (TOTAL_LAMBDA=880 split equally)
+#
+# At baseline r=1 per service: R_n=2, eff_f=1 344 000, C_s = 480 req/s, ρ = 0.917
+
+name: queueing_game_2S1N
+
+system:
+  N: 1        # single shared node
+  M: 2        # two workflows
+  L: 1400     # ops required per request (= TASK_LOAD)
+
+nodes:
+  - id: 0
+    f: 1400000   # FREQ (op/s)
+
+delta: 28000     # per-replica frequency overhead (op/s) = OVERHEAD
+
+workflows:
+  - id: 0
+    lambda: 440.0
+    services:
+      - id: 0
+        node: 0
+        replicas_baseline: 1
+        action_space: [1, 2, 3, 4, 5]
+  - id: 1
+    lambda: 440.0
+    services:
+      - id: 1
+        node: 0
+        replicas_baseline: 1
+        action_space: [1, 2, 3, 4, 5]
+
+tig:
+  C_max: 100
+  rho: 0.1
+  kpi_weights:
+    drop_rate:   0.5
+    utilization: 0.5
+  delta_method: "sii_marginalised"
+
+partitioning:
+  algorithm: "greedy_modularity"
+  n_agents: 2

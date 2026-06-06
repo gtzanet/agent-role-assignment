@@ -186,3 +186,102 @@ Metrics collected: per-workflow SLA violation count and rate, per-node CPU usage
 ## Research Hypothesis
 
 A task partition derived from causal footprint alignment and complexity constraints produces a multi-agent system that matches or exceeds centralized control on SLA satisfaction while remaining tractable at scale — and outperforms arbitrary (per-task, per-node, per-workflow) decompositions on coordination-sensitive workloads.
+
+---
+
+## Experimentation Plan
+
+### Fixed system model
+
+Each workflow has **2 services** (a chain s_root → s_leaf). Each service has one controllable input (`avg_threads`), action space size 4. With `C_max = 100`, at most 3 tasks fit in one agent (4³=64 ≤ 100; 4⁴=256 > 100). All runs use the same seed, RL hyperparameters, train episodes, and pipeline settings — one factor changes at a time.
+
+---
+
+### Design rationale: why mapping is the critical variable
+
+Two KPI types exist in the system:
+- **Workflow KPIs** (`wfX_violation_rate`): driven only by the 2 services of that workflow.
+- **Node KPIs** (`nodeY_cpu_usage_pct`): driven by all services co-located on that node.
+
+The service→node **mapping** determines whether tasks from *different* workflows share a node-level KPI. When they do, their causal footprints overlap and TIG should group them together — even though per-workflow and per-task baselines will not.
+
+| Mapping type | Cross-workflow KPI coupling | Which baseline is near-optimal | What TIG must discover |
+|---|---|---|---|
+| Isolated | None (each workflow owns its node) | `per_workflow` ≈ `per_node` | Per-workflow structure |
+| Striped | Strong (cross-workflow node sharing) | Neither — both fail | Node-aligned grouping |
+| Overloaded | Maximal (few nodes, many services) | Centralized (if C_max permits) | Minimal viable grouping |
+
+The **striped mapping is the critical condition** where all rigid baselines fail and TIG's causal analysis provides a genuine advantage.
+
+---
+
+### Dimension 1 — Scale (M workflows, N nodes)
+
+| Label | M | N | Total tasks | C_max pressure | Purpose |
+|---|---|---|---|---|---|
+| S | 2 | 2 | 4 | Low | Minimal verifiable demo |
+| M | 4 | 3 | 8 | Moderate | Primary configuration |
+| L | 8 | 4 | 16 | High | Scalability |
+
+M=4, N=3 is the **primary configuration**: C_max constraint is binding, the causal graph is interpretable, and the number of agents the algorithm produces is non-trivial.
+
+---
+
+### Dimension 2 — Mapping type (defined for M=4, N=3)
+
+**Mapping A — Isolated** (control; per-workflow aligns with per-node)
+```
+wf0: s0, s1  →  node0
+wf1: s2, s3  →  node1
+wf2: s4, s5  →  node2
+wf3: s6, s7  →  node2   ← wf2 and wf3 share node2
+```
+TIG should discover that wf2 and wf3 are coupled via node2 and group their tasks together. `per_workflow` fails on this pair; TIG should recover the correct structure.
+
+**Mapping B — Striped** (adversarial; showcase configuration)
+```
+wf0: s0 → node0,  s1 → node1
+wf1: s2 → node0,  s3 → node1
+wf2: s4 → node1,  s5 → node2
+wf3: s6 → node1,  s7 → node2
+```
+Node1 hosts services from all four workflows. `per_workflow` and `per_task` both impose the wrong grouping. TIG must group by node-coupling to minimise coordination loss.
+
+**Mapping C — Overloaded** (C_max boundary test)
+```
+s0–s3  →  node0
+s4–s7  →  node1
+```
+Centralised would be theoretically optimal but 4⁸ >> C_max. Tests whether TIG degrades gracefully rather than catastrophically when full centralisation is forbidden.
+
+---
+
+### Run matrix (priority order)
+
+| Priority | M | N | Mapping | Purpose |
+|---|---|---|---|---|
+| 1 | 4 | 3 | B — Striped | Main result: TIG vs. per_workflow failure |
+| 2 | 4 | 3 | A — Isolated | Control: TIG recovers natural structure |
+| 3 | 2 | 2 | B — Striped | Minimal reproducible demo, verifiable by hand |
+| 4 | 8 | 4 | B — Striped | Scalability |
+| 5 | 4 | 3 | C — Overloaded | C_max boundary behaviour |
+
+Start with Priority 1 and 3 in parallel. The small case lets you verify the causal graph is discovered correctly before trusting the larger-scale result.
+
+---
+
+### Metrics per run
+
+For each (scale × mapping) configuration, compare the 5 scenarios (`selected`, `one_agent_all_tasks`, `one_agent_per_task`, `one_agent_per_workflow`, `one_agent_per_node`) on:
+
+1. **Total SLA violations** — primary metric
+2. **Per-workflow violation rate** — shows which workflows suffer
+3. **Average node CPU usage** — resource efficiency
+4. **Agent count and task compositions** — validates TIG discovered the intended structure
+
+### Claims to support numerically
+
+- TIG ≤ `one_agent_per_task` violations in all configurations
+- TIG ≤ `one_agent_per_workflow` violations on striped mapping (main result)
+- TIG ≤ `one_agent_per_node` violations because edge weights encode causal strength, not just topology
+- TIG ≈ `one_agent_all_tasks` at small scale where C_max is non-binding

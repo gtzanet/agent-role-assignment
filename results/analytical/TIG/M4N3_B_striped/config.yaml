@@ -1,0 +1,97 @@
+# Analytical GPS Model Configuration
+# Mapping M — Medium/Striped: M=4 workflows, N=3 nodes  (Priority 1 run)
+
+name: M4N3_B_striped
+#
+# node0 hosts: s0 (wf0 root), s2 (wf1 root)
+# node1 hosts: s1 (wf0 leaf), s3 (wf1 leaf), s4 (wf2 root), s6 (wf3 root)  ← hub node
+# node2 hosts: s5 (wf2 leaf), s7 (wf3 leaf)
+#
+# Workflow chains: wf0: s0→s1,  wf1: s2→s3,  wf2: s4→s5,  wf3: s6→s7
+# Node1 hosts services from all 4 workflows — the critical striped condition
+# where per-workflow and per-task baselines both fail.
+
+system:
+  N: 3        # number of compute nodes
+  M: 4        # number of workflows
+  L: 10       # task load: CPU ops required per request
+
+nodes:
+  - id: 0
+    f: 1000   # CPU frequency (ops/sec)
+  - id: 1
+    f: 1000
+  - id: 2
+    f: 1000
+
+delta: 5      # context-switching overhead per active replica (ops/sec)
+
+workflows:
+  - id: 0
+    lambda: 35.0   # external arrival rate (req/sec)
+    services:
+      - id: 0      # wf0 root — node0
+        node: 0
+        replicas_baseline: 2
+        action_space: [1, 2, 3, 4]
+      - id: 1      # wf0 leaf — node1
+        node: 1
+        replicas_baseline: 2
+        action_space: [1, 2, 3, 4]
+  - id: 1
+    lambda: 35.0
+    services:
+      - id: 2      # wf1 root — node0 (shares with s0)
+        node: 0
+        replicas_baseline: 2
+        action_space: [1, 2, 3, 4]
+      - id: 3      # wf1 leaf — node1 (shares with s1)
+        node: 1
+        replicas_baseline: 2
+        action_space: [1, 2, 3, 4]
+  - id: 2
+    lambda: 35.0
+    services:
+      - id: 4      # wf2 root — node1 (shares with s1, s3)
+        node: 1
+        replicas_baseline: 2
+        action_space: [1, 2, 3, 4]
+      - id: 5      # wf2 leaf — node2
+        node: 2
+        replicas_baseline: 2
+        action_space: [1, 2, 3, 4]
+  - id: 3
+    lambda: 35.0
+    services:
+      - id: 6      # wf3 root — node1 (shares with s1, s3, s4)
+        node: 1
+        replicas_baseline: 2
+        action_space: [1, 2, 3, 4]
+      - id: 7      # wf3 leaf — node2 (shares with s5)
+        node: 2
+        replicas_baseline: 2
+        action_space: [1, 2, 3, 4]
+
+tig:
+  C_max: 100    # max joint decision-space cardinality an agent can handle
+  rho: 0.1      # logistic steepness of the complexity penalty
+  kpi_weights:
+    drop_rate:   0.5   # total weight shared across all D_w/λ_w KPIs
+    utilization: 0.5   # total weight shared across all u_n KPIs
+
+  # delta_method controls how task sensitivity and pairwise interaction are measured.
+  # All four are always computed; this flag selects the active one for F_pull / W.
+  #
+  #   cosine         — current: marginalised Δ(i→k) per task, F_pull = cosine similarity
+  #   sii_marginalised — SII: v(S) = avg range over uniform r_{-S}; I = v({i,j})-v({i})-v({j})
+  #   sii_null       — SII: v(S) = range with r_{-S}=r_min; full Shapley interaction weighting
+  #   sobol          — variance: v(S) = Var[E[KPI|r_S]]/Var[KPI]; I = closed 2nd-order Sobol index
+  delta_method: "sii_marginalised"
+
+partitioning:
+  # algorithm: greedy_modularity | spectral | kernighan_lin
+  #   greedy_modularity — maximises within-community W; n_agents inferred
+  #   spectral          — eigen-decomposition of W; n_agents required
+  #   kernighan_lin     — heuristic bisection; n_agents must be 2
+  algorithm: "spectral"
+  n_agents: 3     # used by spectral and kernighan_lin; ignored by greedy_modularity

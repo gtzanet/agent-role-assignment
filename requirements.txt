@@ -6,3 +6,4 @@ matplotlib
 lingam
 flask
 requests
+PyYAML

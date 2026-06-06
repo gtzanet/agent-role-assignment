@@ -1,0 +1,51 @@
+{
+  "scenario": "queueing_game_2S1N",
+  "algorithm": "greedy_modularity",
+  "method": "sii_marginalised",
+  "n_agents_requested": 2,
+  "n_agents_found": 2,
+  "C_max": 100,
+  "agents": [
+    {
+      "agent_id": 0,
+      "service_ids": [
+        0
+      ],
+      "nodes": [
+        0
+      ],
+      "workflows": [
+        0
+      ],
+      "action_sizes": [
+        5
+      ],
+      "joint_space": 5,
+      "within_C_max": true
+    },
+    {
+      "agent_id": 1,
+      "service_ids": [
+        1
+      ],
+      "nodes": [
+        0
+      ],
+      "workflows": [
+        1
+      ],
+      "action_sizes": [
+        5
+      ],
+      "joint_space": 5,
+      "within_C_max": true
+    }
+  ],
+  "cut_stats": {
+    "within_mean": null,
+    "within_min": null,
+    "cut_mean": 0.0,
+    "cut_max": 0.0
+  },
+  "all_within_C_max": true
+}

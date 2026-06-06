@@ -1,0 +1,38 @@
+{
+  "scenario": "M4N3_B_striped",
+  "config": "/Users/gtzanettis/Documents/Projects/agent-task-distribution/analytical_config.yaml",
+  "N": 3,
+  "M": 4,
+  "L": 10,
+  "delta": 5,
+  "C_max": 100,
+  "rho": 0.1,
+  "tasks": [
+    "t0(s0)",
+    "t1(s1)",
+    "t2(s2)",
+    "t3(s3)",
+    "t4(s4)",
+    "t5(s5)",
+    "t6(s6)",
+    "t7(s7)"
+  ],
+  "kpis": [
+    "D_wf0/\u03bb",
+    "D_wf1/\u03bb",
+    "D_wf2/\u03bb",
+    "D_wf3/\u03bb",
+    "u_node0",
+    "u_node1",
+    "u_node2"
+  ],
+  "kpi_weights": [
+    0.125,
+    0.125,
+    0.125,
+    0.125,
+    0.16666666666666666,
+    0.16666666666666666,
+    0.16666666666666666
+  ]
+}

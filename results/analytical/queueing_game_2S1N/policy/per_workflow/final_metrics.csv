@@ -1,0 +1,5 @@
+type,id,node,workflow,replicas,C,lam_eff,rho
+service,s0,0,0,5,400.0,440.0,1.1
+service,s1,0,1,5,400.0,440.0,1.1
+workflow,wf0,,0,,400.0,440.0,1.1
+workflow,wf1,,1,,400.0,440.0,1.1

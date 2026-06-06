@@ -1,0 +1,96 @@
+{
+  "scenario": "M4N3_B_striped",
+  "algorithm": "per_workflow",
+  "method": null,
+  "n_agents_requested": 3,
+  "n_agents_found": 4,
+  "C_max": 100,
+  "agents": [
+    {
+      "agent_id": 0,
+      "service_ids": [
+        0,
+        1
+      ],
+      "nodes": [
+        0,
+        1
+      ],
+      "workflows": [
+        0,
+        0
+      ],
+      "action_sizes": [
+        4,
+        4
+      ],
+      "joint_space": 16,
+      "within_C_max": true
+    },
+    {
+      "agent_id": 1,
+      "service_ids": [
+        2,
+        3
+      ],
+      "nodes": [
+        0,
+        1
+      ],
+      "workflows": [
+        1,
+        1
+      ],
+      "action_sizes": [
+        4,
+        4
+      ],
+      "joint_space": 16,
+      "within_C_max": true
+    },
+    {
+      "agent_id": 2,
+      "service_ids": [
+        4,
+        5
+      ],
+      "nodes": [
+        1,
+        2
+      ],
+      "workflows": [
+        2,
+        2
+      ],
+      "action_sizes": [
+        4,
+        4
+      ],
+      "joint_space": 16,
+      "within_C_max": true
+    },
+    {
+      "agent_id": 3,
+      "service_ids": [
+        6,
+        7
+      ],
+      "nodes": [
+        1,
+        2
+      ],
+      "workflows": [
+        3,
+        3
+      ],
+      "action_sizes": [
+        4,
+        4
+      ],
+      "joint_space": 16,
+      "within_C_max": true
+    }
+  ],
+  "cut_stats": {},
+  "all_within_C_max": true
+}

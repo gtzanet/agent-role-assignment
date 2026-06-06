@@ -1,0 +1,38 @@
+{
+  "scenario": "queueing_game_2S1N",
+  "algorithm": "greedy_modularity",
+  "method": "cosine",
+  "n_agents_requested": 2,
+  "n_agents_found": 1,
+  "C_max": 100,
+  "agents": [
+    {
+      "agent_id": 0,
+      "service_ids": [
+        0,
+        1
+      ],
+      "nodes": [
+        0,
+        0
+      ],
+      "workflows": [
+        0,
+        1
+      ],
+      "action_sizes": [
+        5,
+        5
+      ],
+      "joint_space": 25,
+      "within_C_max": true
+    }
+  ],
+  "cut_stats": {
+    "within_mean": 0.9938,
+    "within_min": 0.9938,
+    "cut_mean": null,
+    "cut_max": null
+  },
+  "all_within_C_max": true
+}

@@ -1,0 +1,34 @@
+{
+  "created_at": "20260522_211152_677578",
+  "num_services": 2,
+  "service_names": [
+    "Service 0",
+    "Service 1"
+  ],
+  "service_lambdas": [
+    440.0,
+    440.0
+  ],
+  "service_replicas": [
+    1,
+    1
+  ],
+  "freq": 1400000,
+  "task_load": 1400,
+  "overhead": 28000,
+  "node_cpu": 1,
+  "iterations": 50000,
+  "eval_interval": 0.2,
+  "timeout": 1000000.0,
+  "seed": 42,
+  "p_stay": 1.0,
+  "artifacts": {
+    "controlled_eval_records": "controlled_eval_records.csv",
+    "comparison_table": "comparison_table.csv",
+    "controlled_trace_details": "controlled_trace_details.csv",
+    "passive_window_metrics": "passive_window_metrics.csv",
+    "analytics_vs_simulation": "analytics_vs_simulation.csv",
+    "plot_pdf": "controlled_latency_and_replicas.pdf",
+    "replot_script": "replot_controlled_run.py"
+  }
+}

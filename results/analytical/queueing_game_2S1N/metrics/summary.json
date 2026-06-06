@@ -1,0 +1,56 @@
+{
+  "scenario": "queueing_game_2S1N",
+  "N": 1,
+  "M": 2,
+  "L": 1400,
+  "delta": 28000,
+  "kpi_names": [
+    "D_wf0/\u03bb",
+    "D_wf1/\u03bb",
+    "u_node0"
+  ],
+  "kpi_weights": [
+    0.25,
+    0.25,
+    0.5
+  ],
+  "operating_points": {
+    "baseline": {
+      "assignment": {
+        "s0": 1,
+        "s1": 1
+      },
+      "kpis": {
+        "D_wf0/\u03bb": 0.0,
+        "D_wf1/\u03bb": 0.0,
+        "u_node0": 91.6667
+      },
+      "J": 45.8333
+    },
+    "optimal": {
+      "assignment": {
+        "s0": 1,
+        "s1": 1
+      },
+      "kpis": {
+        "D_wf0/\u03bb": 0.0,
+        "D_wf1/\u03bb": 0.0,
+        "u_node0": 91.6667
+      },
+      "J": 45.8333
+    },
+    "worst": {
+      "assignment": {
+        "s0": 5,
+        "s1": 5
+      },
+      "kpis": {
+        "D_wf0/\u03bb": 9.0909,
+        "D_wf1/\u03bb": 9.0909,
+        "u_node0": 100.0
+      },
+      "J": 54.5455
+    }
+  },
+  "sweep_rows": 25
+}

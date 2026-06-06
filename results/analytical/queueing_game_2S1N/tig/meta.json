@@ -1,0 +1,24 @@
+{
+  "scenario": "queueing_game_2S1N",
+  "config": "/Users/gtzanettis/Documents/Projects/agent-task-distribution/queueing_game_2S1N.yaml",
+  "N": 1,
+  "M": 2,
+  "L": 1400,
+  "delta": 28000,
+  "C_max": 100,
+  "rho": 0.1,
+  "tasks": [
+    "t0(s0)",
+    "t1(s1)"
+  ],
+  "kpis": [
+    "D_wf0/\u03bb",
+    "D_wf1/\u03bb",
+    "u_node0"
+  ],
+  "kpi_weights": [
+    0.25,
+    0.25,
+    0.5
+  ]
+}

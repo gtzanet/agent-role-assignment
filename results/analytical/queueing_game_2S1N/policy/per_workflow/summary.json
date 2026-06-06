@@ -1,0 +1,24 @@
+{
+  "scenario": "queueing_game_2S1N",
+  "partition": "per_workflow",
+  "max_iter": 100,
+  "noise_amp": 0.101,
+  "seed": 42,
+  "converged": true,
+  "iterations": 2,
+  "ergodic": false,
+  "J_initial": 45.8333,
+  "J_final": 54.5455,
+  "final_assignment": {
+    "s0": 5,
+    "s1": 5
+  },
+  "rho_wf": {
+    "wf0": 1.1,
+    "wf1": 1.1
+  },
+  "rho_s": {
+    "s0": 1.1,
+    "s1": 1.1
+  }
+}
