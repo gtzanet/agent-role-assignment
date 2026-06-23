@@ -1,0 +1,33 @@
+# GPS system parameters
+node_freq:     1400000
+delta:         28000
+task_load:     1400
+lambda_per_wf: 350.0
+replicas_base: 1
+services_per_wf: 2
+
+# Action space per M bracket (keeps exhaustive enumeration tractable)
+action_space:
+  m_le_2: [1, 2, 3, 4, 5]
+  m_eq_3: [1, 2, 3]
+  m_ge_4: [1, 2]
+
+# TIG settings
+tig_algo:  greedy_modularity
+tig_max_m: 5          # skip TIG for M > this value
+tig_cfg:
+  C_max: 100
+  rho: 0.1
+  kpi_weights:
+    drop_rate:   0.5
+    utilization: 0.5
+  delta_method: sii_marginalised
+
+# Partition strategies to evaluate
+assignment_algos:
+  - per_node
+  - all_in_one
+  - all_separate
+  - per_workflow
+  - tig_greedy_modularity
+
