@@ -1,0 +1,75 @@
+{
+  "scenario": "M4N3_B_striped",
+  "algorithm": "greedy_modularity",
+  "method": "cosine",
+  "n_agents_requested": 3,
+  "n_agents_found": 2,
+  "C_max": 100,
+  "agents": [
+    {
+      "agent_id": 0,
+      "service_ids": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "nodes": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "workflows": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "action_sizes": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "joint_space": 256,
+      "within_C_max": false
+    },
+    {
+      "agent_id": 1,
+      "service_ids": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "nodes": [
+        1,
+        2,
+        1,
+        2
+      ],
+      "workflows": [
+        2,
+        2,
+        3,
+        3
+      ],
+      "action_sizes": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "joint_space": 256,
+      "within_C_max": false
+    }
+  ],
+  "cut_stats": {
+    "within_mean": 0.6568,
+    "within_min": 0.342,
+    "cut_mean": 0.318,
+    "cut_max": 0.649
+  },
+  "all_within_C_max": false
+}

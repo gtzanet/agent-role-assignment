@@ -1,0 +1,45 @@
+# Experiment 4 — Asymmetric Load Stress Test
+# Two services on a single shared node with heavily skewed arrival rates.
+# λ0=700 (~73% of total) vs λ1=250 (~27%).
+# Tests whether TIG detects asymmetric contention.
+
+name: exp4_2S1N_asymmetric
+
+system:
+  N: 1
+  M: 2
+  L: 1400
+
+nodes:
+  - id: 0
+    f: 1400000
+
+delta: 28000
+
+workflows:
+  - id: 0
+    lambda: 700.0            # high-load workflow (~73% of total)
+    services:
+      - id: 0
+        node: 0
+        replicas_baseline: 1
+        action_space: [1, 2, 3, 4, 5]
+  - id: 1
+    lambda: 250.0            # low-load workflow (~27% of total)
+    services:
+      - id: 1
+        node: 0
+        replicas_baseline: 1
+        action_space: [1, 2, 3, 4, 5]
+
+tig:
+  C_max: 100
+  rho: 0.1
+  kpi_weights:
+    drop_rate:   0.5
+    utilization: 0.5
+  delta_method: "sii_marginalised"
+
+partitioning:
+  algorithm: "greedy_modularity"
+  n_agents: 1

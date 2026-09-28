@@ -1,0 +1,51 @@
+# GPS system parameters
+node_freq:     1400000
+delta:         28000
+task_load:     1400
+drop_on_overload: false  # true: reliability mechanism drops requests when lambda > capacity,
+                         # capping propagation downstream (rho_s, utilization bounded).
+                         # false: no admission control -- lam_eff = lambda at every stage,
+                         # rho_s/utilization can exceed 1.0/100% to signal instability.
+                         # Independent of u_metric below -- D_wf and both u_node metrics
+                         # are always computed regardless of this flag.
+latency_threshold_pct: 1500  # SLA for the u_metric=latency_success KPI: % of L/eff_f
+                             # (zero-contention baseline) a request's latency may reach.
+equilibrium_metric: latency_success  # how the reported global utility U (worst/avg-NE utility, PoA)
+                           # is computed in evaluate_topology_equilibriums.py: "drop"
+                           # (avg over workflows of min(1, C_bottleneck/lambda_w), i.e.
+                           # avg(1 - D_w/lambda_w)) or "latency_success" (avg over
+                           # workflows of the binary latency-SLA indicator sigma_w).
+                           # Does not change which profiles are NE -- that's driven by
+                           # each agent's own utility (mean lam_eff, governed by
+                           # drop_on_overload), only how equilibrium quality is scored.
+lambda_per_wf:  # single value, a list e.g. [200.0, 350.0, 500.0], or capacity_fractions below
+  capacity_fractions: [0.3, 0.4, 0.5]  # low/medium/high: lambda solved per-topology from
+                                        # fraction * (N * node_freq) / (M * services_per_wf * task_load)
+replicas_base: 1
+services_per_wf:  3
+
+# Action space per M bracket (keeps exhaustive enumeration tractable)
+action_space:
+  m_le_2: [1, 2]
+  m_eq_3: [1, 2]
+  m_ge_4: [1, 2]
+
+# TIG settings
+tig_algo:  greedy_modularity
+tig_max_m: 10          # skip TIG for M > this value
+tig_cfg:
+  C_max: 100
+  rho: 0.1
+  kpi_weights:
+    drop_rate:   0.5
+    utilization: 0.5
+  delta_method: sii_marginalised
+
+# Partition strategies to evaluate
+assignment_algos:
+  - per_node
+  - all_in_one
+  - all_separate
+  - per_workflow
+  - tig_greedy_modularity
+

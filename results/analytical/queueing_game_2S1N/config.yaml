@@ -48,4 +48,4 @@ tig:
 
 partitioning:
   algorithm: "greedy_modularity"
-  n_agents: 2
+  n_agents: 1

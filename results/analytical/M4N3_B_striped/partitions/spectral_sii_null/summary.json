@@ -1,0 +1,88 @@
+{
+  "scenario": "M4N3_B_striped",
+  "algorithm": "spectral",
+  "method": "sii_null",
+  "n_agents_requested": 3,
+  "n_agents_found": 3,
+  "C_max": 100,
+  "agents": [
+    {
+      "agent_id": 0,
+      "service_ids": [
+        0,
+        3
+      ],
+      "nodes": [
+        0,
+        1
+      ],
+      "workflows": [
+        0,
+        1
+      ],
+      "action_sizes": [
+        4,
+        4
+      ],
+      "joint_space": 16,
+      "within_C_max": true
+    },
+    {
+      "agent_id": 1,
+      "service_ids": [
+        1,
+        2
+      ],
+      "nodes": [
+        1,
+        0
+      ],
+      "workflows": [
+        0,
+        1
+      ],
+      "action_sizes": [
+        4,
+        4
+      ],
+      "joint_space": 16,
+      "within_C_max": true
+    },
+    {
+      "agent_id": 2,
+      "service_ids": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "nodes": [
+        1,
+        2,
+        1,
+        2
+      ],
+      "workflows": [
+        2,
+        2,
+        3,
+        3
+      ],
+      "action_sizes": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "joint_space": 256,
+      "within_C_max": false
+    }
+  ],
+  "cut_stats": {
+    "within_mean": 0.4611,
+    "within_min": 0.0,
+    "cut_mean": 0.0,
+    "cut_max": 0.0
+  },
+  "all_within_C_max": false
+}

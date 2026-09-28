@@ -1,0 +1,13 @@
+causal_graph:
+  node_types:
+    frame_rate: intermediary
+    frame_resolution: intermediary
+    connection: intermediary
+    arrival_rate_resizer: intermediary
+    arrival_rate_detector: intermediary
+    cpu_usage_resizer: intermediary
+    cpu_usage_detector: intermediary
+    completion_rate_resizer: intermediary
+    completion_rate_detector: intermediary
+    latency_resizer: intermediary
+    latency_detector: kpi

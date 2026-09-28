@@ -3,14 +3,26 @@ Evaluate Nash equilibria for all topologies in a dataset.
 
 All system parameters are loaded from a YAML config file.
 
+lambda_per_wf may be a single number, a list of numbers, or
+{"capacity_fractions": [...]} to derive lambda dynamically per topology
+(M, N) as a target fraction of total system capacity (see _lambda_values).
+Every topology is evaluated once per resulting lambda value (cross product),
+and each result entry records which lambda it was evaluated under.
+
 Usage:
     python3 equilibrium_analysis/evaluate_topology_equilibriums.py --topologies equilibrium_analysis/topologies/topologies_M1-5_N1-5_cap100_seed42.json
     python3 equilibrium_analysis/evaluate_topology_equilibriums.py --topologies <path> --config <path>
 
-Output: equilibrium_analysis/results/<YYYYMMDD_HHMMSS>/
-    equilibriums.json  — per-topology, per-algo NE metrics
+Output: equilibrium_analysis/results/<config-name>/
+    equilibriums.json  — per-topology, per-lambda, per-algo NE metrics
     config.yaml        — copy of the config used
     topologies.json    — copy of the topologies dataset used
+
+<config-name> is derived from the run's configuration (topology dataset,
+lambda, equilibrium metric, latency threshold, admission-control mode) --
+see _exp_name() -- so re-running the same configuration overwrites its own
+directory instead of piling up timestamped ones, mirroring how
+generate_topology_dataset.py names its topology files.
 """
 
 from __future__ import annotations
@@ -18,9 +30,10 @@ from __future__ import annotations
 import argparse
 import itertools
 import json
+import os
 import shutil
 import sys
-from datetime import datetime
+from concurrent.futures import ProcessPoolExecutor
 from pathlib import Path
 
 import yaml
@@ -71,7 +84,12 @@ def _build_cfg(M: int, N: int, mapping: dict, params: dict) -> dict:
 
     return {
         "name": f"topo_M{M}_N{N}",
-        "system": {"N": N, "M": M, "L": params["task_load"]},
+        "system": {
+            "N": N, "M": M, "L": params["task_load"],
+            "drop_on_overload": params.get("drop_on_overload", True),
+            "latency_threshold_pct": params.get("latency_threshold_pct", 200),
+            "u_metric": params.get("u_metric", "utilization"),
+        },
         "nodes": [{"id": n, "f": params["node_freq"]} for n in range(N)],
         "delta": params["delta"],
         "workflows": workflows,
@@ -82,8 +100,26 @@ def _build_cfg(M: int, N: int, mapping: dict, params: dict) -> dict:
 
 # ── Equilibrium enumeration ───────────────────────────────────────────────────
 
-def _enumerate_equilibria(model: GPSModel, assignment: dict[int, list[int]]):
-    """Return (profile_list, equilibria). O(n) fast path for single-agent games."""
+def _enumerate_equilibria(model: GPSModel, assignment: dict[int, list[int]],
+                           equilibrium_metric: str = "drop"):
+    """Return (profile_list, equilibria). O(n) fast path for single-agent games.
+
+    equilibrium_metric selects how the reported global utility U (used for
+    worst/avg-NE utility and PoA) is computed -- it does not affect which
+    profiles are Nash equilibria, since that's driven purely by each agent's
+    own utility (mean effective capacity C_s over its services -- always
+    replica-dependent, regardless of model.drop_on_overload):
+      "drop"            -- avg over workflows of min(1, C_bottleneck/lambda_w),
+                            i.e. avg(1 - D_w/lambda_w). Mode-independent
+                            (structural, same regardless of drop_on_overload).
+      "latency_success" -- avg over workflows of the binary latency-SLA
+                            success indicator sigma_w (see
+                            GPSModel.workflow_latency_success).
+    """
+    if equilibrium_metric not in ("drop", "latency_success"):
+        raise ValueError(
+            f"equilibrium_metric must be 'drop' or 'latency_success', got {equilibrium_metric!r}"
+        )
     agent_ids = sorted(assignment.keys())
 
     agent_actions: dict[int, list[dict]] = {}
@@ -107,36 +143,35 @@ def _enumerate_equilibria(model: GPSModel, assignment: dict[int, list[int]]):
         agent_utils: dict[int, dict] = {}
         for aid in agent_ids:
             sids = assignment[aid]
-            u1 = sum(1 for s in sids if stats["rho_s"][s] < 1.0) / len(sids) if sids else 0.0
-            u2 = sum(max(0.0, stats["lam_eff"][s] - stats["C"][s]) for s in sids)
-            agent_utils[aid] = {"U1": u1, "U2": u2}
+            u = (sum(stats["C"][s] for s in sids) / len(sids)) if sids else 0.0
+            agent_utils[aid] = {"U": u}
 
         wids = list(model.workflows.keys())
-        g_u1 = sum(
-            1 for wid in wids
-            if model.workflows[wid]["lambda"] < min(
-                stats["C"][s] for s in model.workflows[wid]["services"]
-            )
-        ) / len(wids)
-        g_u2 = sum(max(0.0, stats["lam_eff"][s] - stats["C"][s]) for s in model.task_ids)
-        throughput = sum(min(stats["lam_eff"][s], stats["C"][s]) for s in model.task_ids)
+        if equilibrium_metric == "latency_success":
+            sigma_w = model.workflow_latency_success(r)
+            g_u = sum(sigma_w[wid] for wid in wids) / len(wids)
+        else:
+            g_u = sum(
+                min(1.0, min(stats["C"][s] for s in model.workflows[wid]["services"])
+                    / model.workflows[wid]["lambda"])
+                if model.workflows[wid]["lambda"] > 0 else 1.0
+                for wid in wids
+            ) / len(wids)
 
         profile = {
             "indices":     idx_tuple,
             "replicas":    dict(r),
             "agent_utils": agent_utils,
-            "global":      {"U1": g_u1, "U2": g_u2, "throughput": throughput},
+            "global":      {"U": g_u},
         }
         matrix[idx_tuple] = profile
         profile_list.append(profile)
 
-    # Single-agent fast path: NE = lexicographic global optimum
+    # Single-agent fast path: NE = profile(s) with maximum agent U
     if len(agent_ids) == 1:
-        aid    = agent_ids[0]
-        max_u1 = max(p["agent_utils"][aid]["U1"] for p in profile_list)
-        cands  = [p for p in profile_list if p["agent_utils"][aid]["U1"] == max_u1]
-        min_u2 = min(p["agent_utils"][aid]["U2"] for p in cands)
-        return profile_list, [p for p in cands if p["agent_utils"][aid]["U2"] == min_u2]
+        aid   = agent_ids[0]
+        max_u = max(p["agent_utils"][aid]["U"] for p in profile_list)
+        return profile_list, [p for p in profile_list if p["agent_utils"][aid]["U"] == max_u]
 
     equilibria: list[dict] = []
     for idx_tuple, profile in matrix.items():
@@ -149,7 +184,7 @@ def _enumerate_equilibria(model: GPSModel, assignment: dict[int, list[int]]):
                 dev_idx = list(idx_tuple)
                 dev_idx[aid_i] = dev_i
                 dev = matrix[tuple(dev_idx)]["agent_utils"][aid]
-                if dev["U1"] > cur["U1"] or (dev["U1"] == cur["U1"] and dev["U2"] < cur["U2"]):
+                if dev["U"] > cur["U"]:
                     is_ne = False
                     break
             if not is_ne:
@@ -163,15 +198,15 @@ def _enumerate_equilibria(model: GPSModel, assignment: dict[int, list[int]]):
 def _poa(profile_list: list[dict], equilibria: list[dict]) -> float | None:
     if not equilibria or not profile_list:
         return None
-    w_opt   = max(p["global"]["throughput"] for p in profile_list)
-    w_worst = min(e["global"]["throughput"] for e in equilibria)
+    w_opt   = max(p["global"]["U"] for p in profile_list)
+    w_worst = min(e["global"]["U"] for e in equilibria)
     if w_worst <= 0:
         return float("inf")
     return w_opt / w_worst
 
 
-def _metrics_for_assign(model: GPSModel, assign: dict) -> dict:
-    profile_list, equilibria = _enumerate_equilibria(model, assign)
+def _metrics_for_assign(model: GPSModel, assign: dict, equilibrium_metric: str = "drop") -> dict:
+    profile_list, equilibria = _enumerate_equilibria(model, assign, equilibrium_metric)
     poa = _poa(profile_list, equilibria)
 
     metrics: dict = {
@@ -182,13 +217,11 @@ def _metrics_for_assign(model: GPSModel, assign: dict) -> dict:
         "PoA":          round(poa, 6) if poa is not None else None,
     }
     if equilibria:
-        worst = min(equilibria, key=lambda e: (e["global"]["U1"], -e["global"]["U2"]))
-        metrics["worst_U1"] = round(worst["global"]["U1"], 6)
-        metrics["worst_U2"] = round(worst["global"]["U2"], 6)
-        metrics["avg_U1"]   = round(sum(e["global"]["U1"] for e in equilibria) / len(equilibria), 6)
-        metrics["avg_U2"]   = round(sum(e["global"]["U2"] for e in equilibria) / len(equilibria), 6)
+        worst = min(equilibria, key=lambda e: e["global"]["U"])
+        metrics["worst_U"] = round(worst["global"]["U"], 6)
+        metrics["avg_U"]   = round(sum(e["global"]["U"] for e in equilibria) / len(equilibria), 6)
     else:
-        metrics.update(worst_U1=None, worst_U2=None, avg_U1=None, avg_U2=None)
+        metrics.update(worst_U=None, avg_U=None)
     return metrics
 
 
@@ -200,19 +233,105 @@ def _get_assign(model: GPSModel, algo: str, gps_cfg: dict, N: int,
     return partition_task_ids(model, algorithm=algo, n_agents=N)
 
 
+def _evaluate_one(task: tuple) -> dict:
+    """Picklable worker entry point for one topology (ProcessPoolExecutor)."""
+    M, N, mapping, idx, params = task
+    return evaluate_topology(M, N, mapping, idx, params)
+
+
+def _resolve_workers(cli_workers: int | None, params: dict) -> int:
+    """Bounded worker count. Caps peak RAM at ~workers × one topology's matrix."""
+    if cli_workers is not None and cli_workers > 0:
+        return cli_workers
+    cfg = params.get("max_workers")
+    if cfg and cfg > 0:
+        return int(cfg)
+    return max(1, (os.cpu_count() or 2) - 1)
+
+
+def _lambda_desc(lam) -> str:
+    if isinstance(lam, dict):
+        return "capfrac" + "-".join(f"{f:g}" for f in lam["capacity_fractions"])
+    values = lam if isinstance(lam, list) else [lam]
+    return "lam" + "-".join(f"{v:g}" for v in values)
+
+
+def _exp_name(params: dict, topo_path: Path) -> str:
+    """Configuration-derived name for the results directory, mirroring how
+    generate_topology_dataset.py names topology files. Two runs with the same
+    topology dataset, lambda, equilibrium metric, latency threshold, and
+    admission-control mode share a directory (the later run overwrites it) --
+    those are the parameters observed to actually change results across runs.
+    """
+    topo_stem = topo_path.stem
+    if topo_stem.startswith("topologies_"):
+        topo_stem = topo_stem[len("topologies_"):]
+    return "_".join([
+        topo_stem,
+        _lambda_desc(params["lambda_per_wf"]),
+        f"eq-{params.get('equilibrium_metric', 'drop')}",
+        f"lat{params.get('latency_threshold_pct', 0)}",
+        f"adm{int(bool(params.get('drop_on_overload', False)))}",
+    ])
+
+
+def _lambda_values(params: dict, M: int, N: int) -> list[tuple[float, float | None]]:
+    """lambda_per_wf may be:
+      - a single number
+      - a list of numbers
+      - {"capacity_fractions": [...]} to derive lambda values (e.g. low/medium/
+        high) from a target fraction of total system capacity, per topology
+        (M, N differ per dataset entry):
+            total workload = lambda * M * services_per_wf * task_load
+            total capacity = N * node_freq
+        Solving workload = fraction * capacity for lambda:
+            lambda = fraction * (N * node_freq) / (M * services_per_wf * task_load)
+
+    Returns a list of (lambda_value, capacity_fraction) pairs. capacity_fraction
+    is None unless lambda_per_wf uses the capacity_fractions form -- it's the
+    only thing that stays comparable across topologies with different M/N,
+    since the resolved lambda value itself differs per topology even for the
+    "same" scenario.
+    """
+    lam = params["lambda_per_wf"]
+    if isinstance(lam, dict):
+        fractions = lam["capacity_fractions"]
+        denom = M * params["services_per_wf"] * params["task_load"]
+        return [(frac * (N * params["node_freq"]) / denom, frac) for frac in fractions]
+    values = list(lam) if isinstance(lam, list) else [lam]
+    return [(v, None) for v in values]
+
+
+def _print_progress(result: dict, idx: int, params: dict) -> None:
+    algos   = [a for a in params["assignment_algos"] if a in result]
+    summary = "  ".join(
+        f"{a.split('_')[0]}:NE={result[a]['n_equilibria']},PoA={result[a]['PoA']}"
+        for a in algos
+    )
+    frac    = result.get("lambda_capacity_fraction")
+    lam_str = f" λ={result['lambda']:g}" + (f"({frac:g}x)" if frac is not None else "")
+    print(f"  [{idx:>3}]{lam_str} {summary}")
+
+
 def evaluate_topology(M: int, N: int, mapping: dict, idx: int, params: dict) -> dict:
     tig_label = f"tig_{params['tig_algo']}"
     gps_cfg   = _build_cfg(M, N, mapping, params)
     model     = GPSModel(gps_cfg)
 
-    result: dict = {"topology_idx": idx, "mapping": mapping}
+    result: dict = {
+        "topology_idx": idx,
+        "lambda": params["lambda_per_wf"],
+        "lambda_capacity_fraction": params.get("lambda_capacity_fraction"),
+        "mapping": mapping,
+    }
     algos = [
         a for a in params["assignment_algos"]
         if not (a == tig_label and M > params["tig_max_m"])
     ]
+    equilibrium_metric = params.get("equilibrium_metric", "drop")
     for algo in algos:
         assign       = _get_assign(model, algo, gps_cfg, N, tig_label, params["tig_algo"])
-        result[algo] = _metrics_for_assign(model, assign)
+        result[algo] = _metrics_for_assign(model, assign, equilibrium_metric)
     return result
 
 
@@ -234,6 +353,13 @@ def main() -> None:
         required=True,
         help="Path to topologies JSON file (e.g. equilibrium_analysis/topologies/...json)",
     )
+    parser.add_argument(
+        "--workers",
+        type=int,
+        default=None,
+        help="Parallel worker processes. Default: config max_workers, else cpu_count-1. "
+             "Use 1 to run serially. Lower this if you hit memory limits.",
+    )
     args = parser.parse_args()
 
     config_path = args.config.resolve()
@@ -245,42 +371,70 @@ def main() -> None:
         dataset = json.load(f)
 
     # ── Create experiment directory ───────────────────────────────────────────
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    exp_dir   = _SCRIPT_DIR / "results" / timestamp
+    exp_dir = _SCRIPT_DIR / "results" / _exp_name(params, topo_path)
     exp_dir.mkdir(parents=True, exist_ok=True)
 
     shutil.copy(config_path, exp_dir / "config.yaml")
     shutil.copy(topo_path,   exp_dir / "topologies.json")
 
     # ── Evaluate ──────────────────────────────────────────────────────────────
+    max_workers = _resolve_workers(args.workers, params)
+
+    # Recycle workers periodically so the large transient profile matrices are
+    # returned to the OS instead of accumulating (Python 3.11+ only).
+    pool_kwargs: dict = {"max_workers": max_workers}
+    if sys.version_info >= (3, 11):
+        pool_kwargs["max_tasks_per_child"] = int(params.get("max_tasks_per_child", 50))
+
+    print(f"Parallelism: {max_workers} worker process(es)"
+          + (" (serial)" if max_workers == 1 else ""))
+
     all_results: dict = {}
+    out_path = exp_dir / "equilibriums.json"
 
     for key, entry in dataset.items():
         M, N = entry["M"], entry["N"]
-        entry_params = {**params, "services_per_wf": entry.get("services_per_wf", params["services_per_wf"])}
-        results: list[dict] = []
+        services_per_wf = entry.get("services_per_wf")
+        if services_per_wf is None:
+            services_per_wf = params["services_per_wf"]
+        entry_params  = {**params, "services_per_wf": services_per_wf}
+        lambda_values = _lambda_values(entry_params, M, N)
 
         tag = (f" [sampled {entry['num_mappings']}/{entry['total_topologies']:,}]"
                if entry.get("sampled") else "")
+        lam_summary = ", ".join(
+            f"{lam:g}" + (f"({frac:g}x)" if frac is not None else "")
+            for lam, frac in lambda_values
+        )
         print(f"\n{'='*60}")
         print(f"{key}  M={M}  N={N}  "
               f"A={_action_space(M, params['action_space'])}  "
-              f"({entry['num_mappings']} topologies{tag})")
+              f"({entry['num_mappings']} topologies{tag})  "
+              f"λ=[{lam_summary}]")
 
-        for idx, mapping in enumerate(entry["mappings"]):
-            result = evaluate_topology(M, N, mapping, idx, entry_params)
-            results.append(result)
-            algos   = [a for a in params["assignment_algos"] if a in result]
-            summary = "  ".join(
-                f"{a.split('_')[0]}:NE={result[a]['n_equilibria']},PoA={result[a]['PoA']}"
-                for a in algos
-            )
-            print(f"  [{idx:>3}] {summary}")
+        tasks = [
+            (M, N, mapping, idx, {**entry_params, "lambda_per_wf": lam, "lambda_capacity_fraction": frac})
+            for idx, mapping in enumerate(entry["mappings"])
+            for lam, frac in lambda_values
+        ]
+
+        if max_workers == 1:
+            results = []
+            for task in tasks:
+                result = _evaluate_one(task)
+                results.append(result)
+                _print_progress(result, result["topology_idx"], params)
+        else:
+            # chunksize=1: a worker never holds more than one topology's matrix
+            # at a time; map() yields in submission order so output stays ordered.
+            with ProcessPoolExecutor(**pool_kwargs) as ex:
+                results = []
+                for result in ex.map(_evaluate_one, tasks, chunksize=1):
+                    results.append(result)
+                    _print_progress(result, result["topology_idx"], params)
 
         all_results[key] = results
-
-    out_path = exp_dir / "equilibriums.json"
-    out_path.write_text(json.dumps(all_results, indent=2))
+        out_path.write_text(json.dumps(all_results, indent=2))
 
     print(f"\nExperiment saved → {exp_dir}/")
     print(f"  equilibriums.json  ({out_path.stat().st_size:,} bytes)")

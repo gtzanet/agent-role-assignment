@@ -1,0 +1,44 @@
+{
+  "total_profiles_evaluated": 25,
+  "num_equilibria": 2,
+  "equilibria": [
+    {
+      "replicas": {
+        "0": 1,
+        "1": 1
+      },
+      "utilities": {
+        "0": {
+          "U1": 1.0,
+          "U2": 0
+        }
+      },
+      "global_utilities": {
+        "U1": 1.0,
+        "U2": 0,
+        "throughput": 880.0
+      }
+    },
+    {
+      "replicas": {
+        "0": 2,
+        "1": 2
+      },
+      "utilities": {
+        "0": {
+          "U1": 1.0,
+          "U2": 0
+        }
+      },
+      "global_utilities": {
+        "U1": 1.0,
+        "U2": 0,
+        "throughput": 880.0
+      }
+    }
+  ],
+  "avg_global_utilities": {
+    "U1": 1.0,
+    "U2": 0.0
+  }
+}

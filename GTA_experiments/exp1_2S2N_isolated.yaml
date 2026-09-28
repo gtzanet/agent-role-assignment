@@ -1,0 +1,46 @@
+# Experiment 1 — Minimal Contention Baseline
+# Two independent 1-service workflows on separate nodes.
+# No resource contention: partitioning should have no effect.
+
+name: exp1_2S2N_isolated
+
+system:
+  N: 2
+  M: 2
+  L: 1400
+
+nodes:
+  - id: 0
+    f: 1400000
+  - id: 1
+    f: 1400000
+
+delta: 28000
+
+workflows:
+  - id: 0
+    lambda: 440.0
+    services:
+      - id: 0
+        node: 0              # s0 alone on node0
+        replicas_baseline: 1
+        action_space: [1, 2, 3, 4, 5]
+  - id: 1
+    lambda: 440.0
+    services:
+      - id: 1
+        node: 1              # s1 alone on node1
+        replicas_baseline: 1
+        action_space: [1, 2, 3, 4, 5]
+
+tig:
+  C_max: 100
+  rho: 0.1
+  kpi_weights:
+    drop_rate:   0.5
+    utilization: 0.5
+  delta_method: "sii_marginalised"
+
+partitioning:
+  algorithm: "greedy_modularity"
+  n_agents: 2

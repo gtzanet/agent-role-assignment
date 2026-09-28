@@ -2,23 +2,23 @@
   "scenario": "queueing_game_2S1N",
   "partition": "per_workflow",
   "max_iter": 100,
-  "noise_amp": 0.101,
-  "seed": 42,
+  "noise_amp": 0.0,
+  "seed": null,
   "converged": true,
-  "iterations": 2,
-  "ergodic": false,
+  "iterations": 10,
+  "ergodic": true,
   "J_initial": 45.8333,
-  "J_final": 54.5455,
+  "J_final": 45.8333,
   "final_assignment": {
-    "s0": 5,
-    "s1": 5
+    "s0": 1,
+    "s1": 1
   },
   "rho_wf": {
-    "wf0": 1.1,
-    "wf1": 1.1
+    "wf0": 0.9167,
+    "wf1": 0.9167
   },
   "rho_s": {
-    "s0": 1.1,
-    "s1": 1.1
+    "s0": 0.9167,
+    "s1": 0.9167
   }
 }

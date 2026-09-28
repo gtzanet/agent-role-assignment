@@ -1,0 +1,62 @@
+/Users/gtzanettis/Documents/Projects/agent-task-distribution/.venv/lib/python3.12/site-packages/sklearn/manifold/_spectral_embedding.py:324: UserWarning: Graph is not fully connected, spectral embedding may not work as expected.
+  warnings.warn(
+/Users/gtzanettis/Documents/Projects/agent-task-distribution/.venv/lib/python3.12/site-packages/sklearn/manifold/_spectral_embedding.py:324: UserWarning: Graph is not fully connected, spectral embedding may not work as expected.
+  warnings.warn(
+Computing TIG matrix inside TaskInteractionGraph...
+Scenario: exp6b_M4N3_striped_2agents
+Partition: spectral (2 agents)
+Calculating equilibriums...
+
+Baseline Utilities:
+  System Utils: U1=0.000, U2=44.000
+  Agent 0 Utils: U1=1.000, U2=0.000
+  Agent 1 Utils: U1=0.000, U2=44.000
+
+Baseline Partitioning Assignments and Equilibria:
+
+  all_in_one Partition: {0: [0, 1, 2, 3, 4, 5, 6, 7]}
+  Found 576 pure-strategy equilibria:
+    Worst Equilibrium:
+      Replicas: {0: 1, 1: 1, 2: 1, 3: 1, 4: 3, 5: 1, 6: 3, 7: 1}
+      System Utils: U1=0.500, U2=46.000
+    Avg Equilibrium:
+      System Utils: U1=0.500, U2=46.000
+
+  all_separate Partition: {0: [0], 1: [1], 2: [2], 3: [3], 4: [4], 5: [5], 6: [6], 7: [7]}
+  Found 112 pure-strategy equilibria:
+    Worst Equilibrium:
+      Replicas: {0: 1, 1: 4, 2: 1, 3: 4, 4: 4, 5: 1, 6: 4, 7: 1}
+      System Utils: U1=0.000, U2=48.000
+    Avg Equilibrium:
+      System Utils: U1=0.000, U2=48.000
+
+  per_node Partition: {0: [0, 2], 1: [1, 3, 4, 6], 2: [5, 7]}
+  Found 576 pure-strategy equilibria:
+    Worst Equilibrium:
+      Replicas: {0: 1, 1: 1, 2: 1, 3: 1, 4: 3, 5: 1, 6: 3, 7: 1}
+      System Utils: U1=0.500, U2=46.000
+    Avg Equilibrium:
+      System Utils: U1=0.500, U2=46.000
+
+  per_workflow Partition: {0: [0, 1], 1: [2, 3], 2: [4, 5], 3: [6, 7]}
+  Found 112 pure-strategy equilibria:
+    Worst Equilibrium:
+      Replicas: {0: 1, 1: 4, 2: 1, 3: 4, 4: 4, 5: 1, 6: 4, 7: 1}
+      System Utils: U1=0.000, U2=48.000
+    Avg Equilibrium:
+      System Utils: U1=0.000, U2=48.000
+Computing TIG matrix inside TaskInteractionGraph...
+
+Action space sizes per agent:
+  Agent 0: 256 actions
+  Agent 1: 256 actions
+
+Assignment: {0: [0, 2, 5, 7], 1: [1, 3, 4, 6]}
+
+Evaluated 65536 joint profiles.
+Found 576 pure-strategy equilibria:
+  Worst Equilibrium:
+    Replicas: {0: 1, 1: 1, 2: 1, 3: 1, 4: 3, 5: 1, 6: 3, 7: 1}
+    System Utils: U1=0.500, U2=46.000
+  Avg Equilibrium:
+    System Utils: U1=0.500, U2=46.000

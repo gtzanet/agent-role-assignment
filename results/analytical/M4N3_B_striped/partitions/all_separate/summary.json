@@ -1,0 +1,148 @@
+{
+  "scenario": "M4N3_B_striped",
+  "algorithm": "all_separate",
+  "method": null,
+  "n_agents_requested": 3,
+  "n_agents_found": 8,
+  "C_max": 100,
+  "agents": [
+    {
+      "agent_id": 0,
+      "service_ids": [
+        0
+      ],
+      "nodes": [
+        0
+      ],
+      "workflows": [
+        0
+      ],
+      "action_sizes": [
+        4
+      ],
+      "joint_space": 4,
+      "within_C_max": true
+    },
+    {
+      "agent_id": 1,
+      "service_ids": [
+        1
+      ],
+      "nodes": [
+        1
+      ],
+      "workflows": [
+        0
+      ],
+      "action_sizes": [
+        4
+      ],
+      "joint_space": 4,
+      "within_C_max": true
+    },
+    {
+      "agent_id": 2,
+      "service_ids": [
+        2
+      ],
+      "nodes": [
+        0
+      ],
+      "workflows": [
+        1
+      ],
+      "action_sizes": [
+        4
+      ],
+      "joint_space": 4,
+      "within_C_max": true
+    },
+    {
+      "agent_id": 3,
+      "service_ids": [
+        3
+      ],
+      "nodes": [
+        1
+      ],
+      "workflows": [
+        1
+      ],
+      "action_sizes": [
+        4
+      ],
+      "joint_space": 4,
+      "within_C_max": true
+    },
+    {
+      "agent_id": 4,
+      "service_ids": [
+        4
+      ],
+      "nodes": [
+        1
+      ],
+      "workflows": [
+        2
+      ],
+      "action_sizes": [
+        4
+      ],
+      "joint_space": 4,
+      "within_C_max": true
+    },
+    {
+      "agent_id": 5,
+      "service_ids": [
+        5
+      ],
+      "nodes": [
+        2
+      ],
+      "workflows": [
+        2
+      ],
+      "action_sizes": [
+        4
+      ],
+      "joint_space": 4,
+      "within_C_max": true
+    },
+    {
+      "agent_id": 6,
+      "service_ids": [
+        6
+      ],
+      "nodes": [
+        1
+      ],
+      "workflows": [
+        3
+      ],
+      "action_sizes": [
+        4
+      ],
+      "joint_space": 4,
+      "within_C_max": true
+    },
+    {
+      "agent_id": 7,
+      "service_ids": [
+        7
+      ],
+      "nodes": [
+        2
+      ],
+      "workflows": [
+        3
+      ],
+      "action_sizes": [
+        4
+      ],
+      "joint_space": 4,
+      "within_C_max": true
+    }
+  ],
+  "cut_stats": {},
+  "all_within_C_max": true
+}

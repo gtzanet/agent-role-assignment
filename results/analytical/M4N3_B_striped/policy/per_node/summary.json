@@ -5,7 +5,7 @@
   "noise_amp": 0.0,
   "seed": null,
   "converged": true,
-  "iterations": 2,
+  "iterations": 11,
   "ergodic": true,
   "J_initial": 51.7003,
   "J_final": 48.5729,

@@ -24,21 +24,12 @@ import argparse
 import json
 from pathlib import Path
 
-import networkx as nx
-import numpy as np
 import pandas as pd
 import yaml
 from typing import Optional
-from networkx.algorithms.community import (
-    greedy_modularity_communities,
-    kernighan_lin_bisection,
-)
-from sklearn.cluster import SpectralClustering
 
-
-TIG_ALGOS  = ["greedy_modularity", "spectral", "kernighan_lin"]
-TOPO_ALGOS = ["all_in_one", "all_separate", "per_node", "per_workflow"]
-ALL_ALGOS  = TIG_ALGOS + TOPO_ALGOS
+from gps_model import GPSModel
+from partitioning import ALL_ALGOS, TIG_ALGOS, partition_task_ids
 
 # ── CLI ───────────────────────────────────────────────────────────────────────
 parser = argparse.ArgumentParser()
@@ -121,47 +112,9 @@ if algorithm in TIG_ALGOS:
     print(f"Loaded W from: {w_path}  shape={W.shape}")
 
 
-# ── Partition algorithms ──────────────────────────────────────────────────────
-def run_partition(algo: str, W_mat: Optional[np.ndarray], n_ag: int) -> list[list[int]]:
-    if algo == "greedy_modularity":
-        G     = nx.from_numpy_array(W_mat)
-        comms = list(greedy_modularity_communities(G, weight="weight"))
-        return [sorted(c) for c in sorted(comms, key=lambda c: min(c))]
-
-    if algo == "spectral":
-        sc  = SpectralClustering(n_clusters=n_ag, affinity="precomputed",
-                                 assign_labels="kmeans", random_state=0)
-        lbl = sc.fit_predict(W_mat)
-        comms = [[i for i, l in enumerate(lbl) if l == a] for a in range(n_ag)]
-        return [sorted(c) for c in sorted(comms, key=lambda c: min(c))]
-
-    if algo == "kernighan_lin":
-        G    = nx.from_numpy_array(W_mat)
-        a, b = kernighan_lin_bisection(G, weight="weight")
-        return [sorted(a), sorted(b)]
-
-    if algo == "all_in_one":
-        return [list(range(n_tasks))]
-
-    if algo == "all_separate":
-        return [[i] for i in range(n_tasks)]
-
-    if algo == "per_node":
-        groups: dict = {}
-        for idx, sid in enumerate(task_ids):
-            groups.setdefault(services[sid]["node"], []).append(idx)
-        return [sorted(v) for v in sorted(groups.values(), key=lambda g: min(g))]
-
-    if algo == "per_workflow":
-        groups = {}
-        for idx, sid in enumerate(task_ids):
-            groups.setdefault(services[sid]["workflow"], []).append(idx)
-        return [sorted(v) for v in sorted(groups.values(), key=lambda g: min(g))]
-
-    raise ValueError(f"Unknown algorithm: {algo}")
-
-
-communities   = run_partition(algorithm, W, n_agents)
+model = GPSModel(cfg)
+assignment_map = partition_task_ids(model, algorithm=algorithm, n_agents=n_agents, w=W, seed=args.seed if hasattr(args, "seed") else None)
+communities = [[task_ids.index(sid) for sid in sids] for _, sids in sorted(assignment_map.items())]
 task_to_agent = {t: a for a, grp in enumerate(communities) for t in grp}
 
 # ── Report ────────────────────────────────────────────────────────────────────

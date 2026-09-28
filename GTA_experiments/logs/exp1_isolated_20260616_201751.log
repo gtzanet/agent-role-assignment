@@ -1,0 +1,63 @@
+Computing TIG matrix inside TaskInteractionGraph...
+Scenario: exp1_2S2N_isolated
+Partition: greedy_modularity (2 agents)
+Calculating equilibriums...
+
+Baseline Utilities:
+  System Utils: U1=1.000, U2=0.000
+  Agent 0 Utils: U1=1.000, U2=0.000
+  Agent 1 Utils: U1=1.000, U2=0.000
+
+Baseline Partitioning Assignments and Equilibria:
+
+  all_in_one Partition: {0: [0, 1]}
+  Found 25 pure-strategy equilibria:
+    Worst Equilibrium:
+      Replicas: {0: 1, 1: 1}
+      System Utils: U1=1.000, U2=0.000
+    Avg Equilibrium:
+      System Utils: U1=1.000, U2=0.000
+    PoA: 1.0000
+
+  all_separate Partition: {0: [0], 1: [1]}
+  Found 25 pure-strategy equilibria:
+    Worst Equilibrium:
+      Replicas: {0: 1, 1: 1}
+      System Utils: U1=1.000, U2=0.000
+    Avg Equilibrium:
+      System Utils: U1=1.000, U2=0.000
+    PoA: 1.0000
+
+  per_node Partition: {0: [0], 1: [1]}
+  Found 25 pure-strategy equilibria:
+    Worst Equilibrium:
+      Replicas: {0: 1, 1: 1}
+      System Utils: U1=1.000, U2=0.000
+    Avg Equilibrium:
+      System Utils: U1=1.000, U2=0.000
+    PoA: 1.0000
+
+  per_workflow Partition: {0: [0], 1: [1]}
+  Found 25 pure-strategy equilibria:
+    Worst Equilibrium:
+      Replicas: {0: 1, 1: 1}
+      System Utils: U1=1.000, U2=0.000
+    Avg Equilibrium:
+      System Utils: U1=1.000, U2=0.000
+    PoA: 1.0000
+Computing TIG matrix inside TaskInteractionGraph...
+
+Action space sizes per agent:
+  Agent 0: 5 actions
+  Agent 1: 5 actions
+
+Assignment: {0: [0], 1: [1]}
+
+Evaluated 25 joint profiles.
+Found 25 pure-strategy equilibria:
+  Worst Equilibrium:
+    Replicas: {0: 1, 1: 1}
+    System Utils: U1=1.000, U2=0.000
+  Avg Equilibrium:
+    System Utils: U1=1.000, U2=0.000
+  PoA: 1.0000

@@ -1,0 +1,298 @@
+{
+  "M1_N1": {
+    "M": 1,
+    "N": 1,
+    "services_per_wf": 2,
+    "num_services": 2,
+    "num_nodes": 1,
+    "services": [
+      "w0_s0",
+      "w0_s1"
+    ],
+    "nodes": [
+      "n0"
+    ],
+    "total_topologies": 1,
+    "num_mappings": 1,
+    "sampled": false,
+    "mappings": [
+      {
+        "w0_s0": "n0",
+        "w0_s1": "n0"
+      }
+    ]
+  },
+  "M2_N1": {
+    "M": 2,
+    "N": 1,
+    "services_per_wf": 2,
+    "num_services": 4,
+    "num_nodes": 1,
+    "services": [
+      "w0_s0",
+      "w0_s1",
+      "w1_s0",
+      "w1_s1"
+    ],
+    "nodes": [
+      "n0"
+    ],
+    "total_topologies": 1,
+    "num_mappings": 1,
+    "sampled": false,
+    "mappings": [
+      {
+        "w0_s0": "n0",
+        "w0_s1": "n0",
+        "w1_s0": "n0",
+        "w1_s1": "n0"
+      }
+    ]
+  },
+  "M3_N1": {
+    "M": 3,
+    "N": 1,
+    "services_per_wf": 2,
+    "num_services": 6,
+    "num_nodes": 1,
+    "services": [
+      "w0_s0",
+      "w0_s1",
+      "w1_s0",
+      "w1_s1",
+      "w2_s0",
+      "w2_s1"
+    ],
+    "nodes": [
+      "n0"
+    ],
+    "total_topologies": 1,
+    "num_mappings": 1,
+    "sampled": false,
+    "mappings": [
+      {
+        "w0_s0": "n0",
+        "w0_s1": "n0",
+        "w1_s0": "n0",
+        "w1_s1": "n0",
+        "w2_s0": "n0",
+        "w2_s1": "n0"
+      }
+    ]
+  },
+  "M4_N1": {
+    "M": 4,
+    "N": 1,
+    "services_per_wf": 2,
+    "num_services": 8,
+    "num_nodes": 1,
+    "services": [
+      "w0_s0",
+      "w0_s1",
+      "w1_s0",
+      "w1_s1",
+      "w2_s0",
+      "w2_s1",
+      "w3_s0",
+      "w3_s1"
+    ],
+    "nodes": [
+      "n0"
+    ],
+    "total_topologies": 1,
+    "num_mappings": 1,
+    "sampled": false,
+    "mappings": [
+      {
+        "w0_s0": "n0",
+        "w0_s1": "n0",
+        "w1_s0": "n0",
+        "w1_s1": "n0",
+        "w2_s0": "n0",
+        "w2_s1": "n0",
+        "w3_s0": "n0",
+        "w3_s1": "n0"
+      }
+    ]
+  },
+  "M5_N1": {
+    "M": 5,
+    "N": 1,
+    "services_per_wf": 2,
+    "num_services": 10,
+    "num_nodes": 1,
+    "services": [
+      "w0_s0",
+      "w0_s1",
+      "w1_s0",
+      "w1_s1",
+      "w2_s0",
+      "w2_s1",
+      "w3_s0",
+      "w3_s1",
+      "w4_s0",
+      "w4_s1"
+    ],
+    "nodes": [
+      "n0"
+    ],
+    "total_topologies": 1,
+    "num_mappings": 1,
+    "sampled": false,
+    "mappings": [
+      {
+        "w0_s0": "n0",
+        "w0_s1": "n0",
+        "w1_s0": "n0",
+        "w1_s1": "n0",
+        "w2_s0": "n0",
+        "w2_s1": "n0",
+        "w3_s0": "n0",
+        "w3_s1": "n0",
+        "w4_s0": "n0",
+        "w4_s1": "n0"
+      }
+    ]
+  },
+  "M6_N1": {
+    "M": 6,
+    "N": 1,
+    "services_per_wf": 2,
+    "num_services": 12,
+    "num_nodes": 1,
+    "services": [
+      "w0_s0",
+      "w0_s1",
+      "w1_s0",
+      "w1_s1",
+      "w2_s0",
+      "w2_s1",
+      "w3_s0",
+      "w3_s1",
+      "w4_s0",
+      "w4_s1",
+      "w5_s0",
+      "w5_s1"
+    ],
+    "nodes": [
+      "n0"
+    ],
+    "total_topologies": 1,
+    "num_mappings": 1,
+    "sampled": false,
+    "mappings": [
+      {
+        "w0_s0": "n0",
+        "w0_s1": "n0",
+        "w1_s0": "n0",
+        "w1_s1": "n0",
+        "w2_s0": "n0",
+        "w2_s1": "n0",
+        "w3_s0": "n0",
+        "w3_s1": "n0",
+        "w4_s0": "n0",
+        "w4_s1": "n0",
+        "w5_s0": "n0",
+        "w5_s1": "n0"
+      }
+    ]
+  },
+  "M7_N1": {
+    "M": 7,
+    "N": 1,
+    "services_per_wf": 2,
+    "num_services": 14,
+    "num_nodes": 1,
+    "services": [
+      "w0_s0",
+      "w0_s1",
+      "w1_s0",
+      "w1_s1",
+      "w2_s0",
+      "w2_s1",
+      "w3_s0",
+      "w3_s1",
+      "w4_s0",
+      "w4_s1",
+      "w5_s0",
+      "w5_s1",
+      "w6_s0",
+      "w6_s1"
+    ],
+    "nodes": [
+      "n0"
+    ],
+    "total_topologies": 1,
+    "num_mappings": 1,
+    "sampled": false,
+    "mappings": [
+      {
+        "w0_s0": "n0",
+        "w0_s1": "n0",
+        "w1_s0": "n0",
+        "w1_s1": "n0",
+        "w2_s0": "n0",
+        "w2_s1": "n0",
+        "w3_s0": "n0",
+        "w3_s1": "n0",
+        "w4_s0": "n0",
+        "w4_s1": "n0",
+        "w5_s0": "n0",
+        "w5_s1": "n0",
+        "w6_s0": "n0",
+        "w6_s1": "n0"
+      }
+    ]
+  },
+  "M8_N1": {
+    "M": 8,
+    "N": 1,
+    "services_per_wf": 2,
+    "num_services": 16,
+    "num_nodes": 1,
+    "services": [
+      "w0_s0",
+      "w0_s1",
+      "w1_s0",
+      "w1_s1",
+      "w2_s0",
+      "w2_s1",
+      "w3_s0",
+      "w3_s1",
+      "w4_s0",
+      "w4_s1",
+      "w5_s0",
+      "w5_s1",
+      "w6_s0",
+      "w6_s1",
+      "w7_s0",
+      "w7_s1"
+    ],
+    "nodes": [
+      "n0"
+    ],
+    "total_topologies": 1,
+    "num_mappings": 1,
+    "sampled": false,
+    "mappings": [
+      {
+        "w0_s0": "n0",
+        "w0_s1": "n0",
+        "w1_s0": "n0",
+        "w1_s1": "n0",
+        "w2_s0": "n0",
+        "w2_s1": "n0",
+        "w3_s0": "n0",
+        "w3_s1": "n0",
+        "w4_s0": "n0",
+        "w4_s1": "n0",
+        "w5_s0": "n0",
+        "w5_s1": "n0",
+        "w6_s0": "n0",
+        "w6_s1": "n0",
+        "w7_s0": "n0",
+        "w7_s1": "n0"
+      }
+    ]
+  }
+}

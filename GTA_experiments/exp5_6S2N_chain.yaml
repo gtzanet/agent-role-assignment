@@ -1,0 +1,67 @@
+# Experiment 5 — Scaling: Larger Service Count
+# 6 services across 2 nodes, 3 two-stage workflows.
+# All workflows are striped: root on node0, leaf on node1.
+# Both nodes are fully shared — tests TIG at larger scale.
+# Joint action space: 3^6 = 729 profiles (tractable).
+
+name: exp5_6S2N_chain
+
+system:
+  N: 2
+  M: 3
+  L: 10
+
+nodes:
+  - id: 0
+    f: 1000
+  - id: 1
+    f: 1000
+
+delta: 5
+
+workflows:
+  - id: 0
+    lambda: 30.0
+    services:
+      - id: 0
+        node: 0
+        replicas_baseline: 2
+        action_space: [1, 2, 3]
+      - id: 1
+        node: 1
+        replicas_baseline: 2
+        action_space: [1, 2, 3]
+  - id: 1
+    lambda: 30.0
+    services:
+      - id: 2
+        node: 0              # shares node0 with s0
+        replicas_baseline: 2
+        action_space: [1, 2, 3]
+      - id: 3
+        node: 1              # shares node1 with s1
+        replicas_baseline: 2
+        action_space: [1, 2, 3]
+  - id: 2
+    lambda: 30.0
+    services:
+      - id: 4
+        node: 0              # shares node0 with s0, s2
+        replicas_baseline: 2
+        action_space: [1, 2, 3]
+      - id: 5
+        node: 1              # shares node1 with s1, s3
+        replicas_baseline: 2
+        action_space: [1, 2, 3]
+
+tig:
+  C_max: 50
+  rho: 0.1
+  kpi_weights:
+    drop_rate:   0.5
+    utilization: 0.5
+  delta_method: "sii_marginalised"
+
+partitioning:
+  algorithm: "spectral"
+  n_agents: 2

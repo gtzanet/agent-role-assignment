@@ -166,6 +166,8 @@ J_initial = model.score(kpis0)
 # ── Coordinate-descent loop ───────────────────────────────────────────────────
 trajectory = []
 converged  = False
+no_change_streak = 0
+CONVERGENCE_STREAK = 10
 
 for iteration in range(1, MAX_ITER + 1):
     r_snap   = deepcopy(r)
@@ -229,9 +231,13 @@ for iteration in range(1, MAX_ITER + 1):
           + f"\n         r={ {f's{s}': r[s] for s in model.task_ids} }")
 
     if not changed:
-        converged = True
-        print(f"\nConverged at iteration {iteration}.")
-        break
+        no_change_streak += 1
+        if no_change_streak >= CONVERGENCE_STREAK:
+            converged = True
+            print(f"\nConverged at iteration {iteration} after {CONVERGENCE_STREAK} consecutive no-change rounds.")
+            break
+    else:
+        no_change_streak = 0
 
 if not converged:
     print(f"\nMax iterations ({MAX_ITER}) reached without convergence.")

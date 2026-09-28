@@ -1,0 +1,57 @@
+{
+  "scenario": "M4N3_B_striped",
+  "algorithm": "all_in_one",
+  "method": null,
+  "n_agents_requested": 3,
+  "n_agents_found": 1,
+  "C_max": 100,
+  "agents": [
+    {
+      "agent_id": 0,
+      "service_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "nodes": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        2,
+        1,
+        2
+      ],
+      "workflows": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        2,
+        3,
+        3
+      ],
+      "action_sizes": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "joint_space": 65536,
+      "within_C_max": false
+    }
+  ],
+  "cut_stats": {},
+  "all_within_C_max": false
+}

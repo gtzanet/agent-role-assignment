@@ -1,0 +1,13 @@
+type,id,node,workflow,replicas,C,lam_eff,rho
+service,s0,0,0,1,49.5,35.0,0.7071
+service,s1,1,0,4,38.0,35.0,0.9211
+service,s2,0,1,1,49.5,35.0,0.7071
+service,s3,1,1,4,38.0,35.0,0.9211
+service,s4,1,2,1,9.5,35.0,3.6842
+service,s5,2,2,1,49.5,9.5,0.1919
+service,s6,1,3,1,9.5,35.0,3.6842
+service,s7,2,3,1,49.5,9.5,0.1919
+workflow,wf0,,0,,38.0,35.0,0.9211
+workflow,wf1,,1,,38.0,35.0,0.9211
+workflow,wf2,,2,,49.5,35.0,0.7071
+workflow,wf3,,3,,49.5,35.0,0.7071

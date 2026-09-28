@@ -1,0 +1,52 @@
+delta: 25
+name: search
+nodes:
+- f: 1000
+  id: 0
+- f: 1000
+  id: 1
+partitioning:
+  algorithm: per_workflow
+  n_agents: 2
+system:
+  L: 10
+  M: 2
+  N: 2
+tig:
+  C_max: 100
+  delta_method: sii_marginalised
+  kpi_weights:
+    drop_rate: 0.5
+    utilization: 0.5
+  rho: 0.1
+workflows:
+- id: 0
+  lambda: 40
+  services:
+  - action_space:
+    - 1
+    - 2
+    id: 0
+    node: 0
+    replicas_baseline: 1
+  - action_space:
+    - 1
+    - 2
+    id: 1
+    node: 0
+    replicas_baseline: 1
+- id: 1
+  lambda: 40
+  services:
+  - action_space:
+    - 1
+    - 2
+    id: 2
+    node: 0
+    replicas_baseline: 1
+  - action_space:
+    - 1
+    - 2
+    id: 3
+    node: 1
+    replicas_baseline: 1
